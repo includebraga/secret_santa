@@ -23,7 +23,6 @@ group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   gem "factory_bot_rails"
   gem "faker"
-  gem "pry-byebug"
   gem "pry-remote"
   gem "rspec-rails", "~> 3.5.1"
   gem "rubocop", "0.43.0", require: false
@@ -41,6 +40,7 @@ end
 
 group :test do
   gem "database_cleaner"
+  gem "rails-controller-testing"
   gem "shoulda-matchers"
   gem "simplecov", require: false
 end

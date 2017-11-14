@@ -11,4 +11,18 @@ RSpec.describe User, type: :model do
       expect(user).to be_valid
     end
   end
+
+  describe "#with_validations" do
+    it "correctly assigns errors" do
+      user = build(:user, email: nil).with_validations
+
+      expect(user.errors[:email]).not_to be_empty
+    end
+
+    it "does not assign errors for valid models" do
+      user = build(:user).with_validations
+
+      expect(user.errors[:email]).to be_empty
+    end
+  end
 end

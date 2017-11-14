@@ -1,0 +1,10 @@
+= form_for @user do |f|
+  = f.label :email
+  br
+  = f.email_field :email
+  br
+  = error_field @user, :email
+
+  br
+  br
+  = f.submit
