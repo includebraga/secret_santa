@@ -7,6 +7,7 @@ end
 
 ruby "2.4.2"
 
+gem "email_validator"
 gem "foreman"
 gem "pg"
 gem "pry-rails"
@@ -21,6 +22,7 @@ group :development, :test do
   gem "awesome_print"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   gem "factory_bot_rails"
+  gem "faker"
   gem "pry-byebug"
   gem "pry-remote"
   gem "rspec-rails", "~> 3.5.1"
