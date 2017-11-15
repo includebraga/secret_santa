@@ -1,21 +1,27 @@
 class UsersController < ApplicationController
   def create
-    @user = User.new(user_params)
+    user_creation = UserCreation.new(user_params)
+    user_creation.perform
 
-    if @user.save
-      flash[:notice] = "Thank you for signing up!"
+    if user_creation.successful?
+      assign_success_variables(user_creation.user)
       render "confirmed"
     else
-      assign_session_variables(@user)
+      assign_failure_variables(user_params)
       redirect_to root_path
     end
   end
 
   private
 
-  def assign_session_variables(user)
+  def assign_failure_variables(user_params)
     flash[:error] = "Uh-oh, something went wrong..."
-    session[:user] = user.attributes
+    session[:user] = user_params
+  end
+
+  def assign_success_variables(user)
+    flash[:notice] = "Thank you for signing up!"
+    @user = user
   end
 
   def user_params
