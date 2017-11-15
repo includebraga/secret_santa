@@ -31,4 +31,18 @@ RSpec.describe User, type: :model do
       expect(user.errors[:email]).to be_empty
     end
   end
+
+  describe "#confirmed?" do
+    it "returns true when there is a confirmation date" do
+      user = create(:user)
+
+      expect(user).to be_confirmed
+    end
+
+    it "returns false when there is no confirmation date" do
+      user = create(:user, confirmed_at: nil)
+
+      expect(user).not_to be_confirmed
+    end
+  end
 end

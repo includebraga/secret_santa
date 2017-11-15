@@ -25,7 +25,7 @@ RSpec.describe UsersController, type: :controller do
 
         response = post :create, params: { user: params }
 
-        expect(response).to render_template("confirmed")
+        expect(response).to render_template("create")
       end
 
       it "does not assign any session variables" do

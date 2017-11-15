@@ -5,7 +5,6 @@ class UsersController < ApplicationController
 
     if user_creation.successful?
       assign_success_variables(user_creation.user)
-      render "confirmed"
     else
       assign_failure_variables(user_params)
       redirect_to root_path

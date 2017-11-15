@@ -21,4 +21,8 @@ class User < ApplicationRecord
     valid?
     self
   end
+
+  def confirmed?
+    confirmed_at != nil
+  end
 end
