@@ -1,10 +1,17 @@
 = form_for @user do |f|
-  = f.label :email
-  br
-  = f.email_field :email
-  br
-  = error_field @user, :email
+  div
+    = f.label :name
+    br
+    = f.text_field :name
+    br
+    = error_field @user, :name
 
-  br
+  div
+    = f.label :email
+    br
+    = f.email_field :email
+    br
+    = error_field @user, :email
+
   br
   = f.submit

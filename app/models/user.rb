@@ -5,6 +5,10 @@ class User < ApplicationRecord
     length: { maximum: 80 },
     email: { strict_mode: true }
 
+  validates :name,
+    presence: true,
+    length: { maximum: 80 }
+
   # Validations are only run when `User#valid?` is invoked
   # To load a user with validations, call `valid?` on `self`
   # and return the updated `self`
