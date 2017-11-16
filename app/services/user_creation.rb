@@ -6,7 +6,7 @@ class UserCreation
 
   def perform
     User.transaction do
-      create_user!
+      find_or_create_user!
       notify_user!
 
       @success = true
@@ -27,16 +27,15 @@ class UserCreation
 
   attr_reader :params, :success
 
-  def create_user!
-    @_user ||= User.create!(user_params)
+  def find_or_create_user!
+    @_user ||= User.find_or_create_by!(email: params[:email]) do |user|
+      user.name = params[:name]
+      user.confirmation_token = generate_random_token
+    end
   end
 
   def notify_user!
-    UserMailer.new_user(user).deliver_now
-  end
-
-  def user_params
-    params.merge(confirmation_token: generate_random_token)
+    UserMailer.new_user(user).deliver_now unless user.confirmed?
   end
 
   def generate_random_token

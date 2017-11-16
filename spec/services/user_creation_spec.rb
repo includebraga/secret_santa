@@ -73,6 +73,43 @@ RSpec.describe UserCreation, type: :model do
         expect(email).not_to have_received(:deliver_now)
       end
     end
+
+    context "when the user already exists" do
+      it "does not update the user" do
+        user = create(:user)
+        params = attributes_for(:user, email: user.email)
+        user_creation = UserCreation.new(params)
+
+        user_creation.perform
+
+        reloaded_user = User.find(user.id)
+        expect(reloaded_user).to eq(user)
+      end
+
+      it "emails if the user is unconfirmed" do
+        email = double("email", deliver_now: true)
+        allow(UserMailer).to receive(:new_user).and_return(email)
+        user = create(:user_with_confirmation_token)
+        params = attributes_for(:user, email: user.email)
+        user_creation = UserCreation.new(params)
+
+        user_creation.perform
+
+        expect(email).to have_received(:deliver_now)
+      end
+
+      it "does not email if the user is confirmed" do
+        email = double("email", deliver_now: true)
+        allow(UserMailer).to receive(:new_user).and_return(email)
+        user = create(:user)
+        params = attributes_for(:user, email: user.email)
+        user_creation = UserCreation.new(params)
+
+        user_creation.perform
+
+        expect(email).not_to have_received(:deliver_now)
+      end
+    end
   end
 
   describe "#successful?" do
