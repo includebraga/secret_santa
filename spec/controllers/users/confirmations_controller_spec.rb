@@ -4,7 +4,7 @@ RSpec.describe Users::ConfirmationsController, type: :controller do
   describe "GET #create" do
     context "with a valid token" do
       it "confirms the user" do
-        user = create(:user, confirmed_at: nil)
+        user = create(:user_with_confirmation_token)
 
         get :create, params: { token: user.confirmation_token }
 
@@ -12,7 +12,7 @@ RSpec.describe Users::ConfirmationsController, type: :controller do
       end
 
       it "renders the correct template" do
-        user = create(:user, confirmed_at: nil)
+        user = create(:user_with_confirmation_token)
 
         get :create, params: { token: user.confirmation_token }
 
@@ -20,7 +20,7 @@ RSpec.describe Users::ConfirmationsController, type: :controller do
       end
 
       it "404s if the token has already been used" do
-        user = create(:user, confirmed_at: nil)
+        user = create(:user_with_confirmation_token)
         get :create, params: { token: user.confirmation_token }
 
         get :create, params: { token: user.confirmation_token }
@@ -31,7 +31,7 @@ RSpec.describe Users::ConfirmationsController, type: :controller do
 
     context "with an invalid token" do
       it "404s" do
-        create(:user, confirmed_at: nil)
+        create(:user_with_confirmation_token)
 
         get :create, params: { token: "fake token" }
 

@@ -24,7 +24,7 @@ RSpec.describe UserConfirmation, type: :model do
 
     context "with an invalid token" do
       it "does not alter any existing users" do
-        user = create(:user, confirmed_at: nil)
+        user = create(:user_with_confirmation_token)
         user_confirmation = UserConfirmation.new("fake token")
 
         user_confirmation.perform
