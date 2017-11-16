@@ -25,7 +25,7 @@ group :development, :test do
   gem "faker"
   gem "pry-remote"
   gem "rspec-rails", "~> 3.5.1"
-  gem "rubocop", "0.43.0", require: false
+  gem "rubocop", require: false
   gem "scss_lint", require: false
 end
 

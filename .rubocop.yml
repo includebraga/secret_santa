@@ -9,15 +9,28 @@ AllCops:
     - "bin/**/*"
     - "vendor/**/*"
     - "node_modules/**/*"
-    - "spec/factories.rb"
     - "Gemfile"
   TargetRubyVersion: 2.4
 
 Metrics/LineLength:
   Enabled: false
 
-Style/AlignParameters:
+Layout/AlignParameters:
   EnforcedStyle: with_fixed_indentation
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Naming/PredicateName:
+  NamePrefixBlacklist:
+    - is_
+    - have_
 
 Style/ClassAndModuleChildren:
   Enabled: false
@@ -25,16 +38,8 @@ Style/ClassAndModuleChildren:
 Style/Documentation:
   Enabled: false
 
-Style/DotPosition:
-  EnforcedStyle: trailing
-
 Style/IfUnlessModifier:
   Enabled: false
-
-Style/PredicateName:
-  NamePrefixBlacklist:
-    - is_
-    - have_
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
@@ -45,12 +50,6 @@ Style/NumericLiterals:
 Style/SingleLineBlockParams:
   Enabled: false
 
-Style/MultilineOperationIndentation:
-  EnforcedStyle: indented
-
-Style/MultilineMethodCallIndentation:
-  EnforcedStyle: indented
-
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
 
@@ -59,3 +58,15 @@ Style/TrailingCommaInLiteral:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*.rb
+    - lib/tasks/**/*.rake
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*.rb

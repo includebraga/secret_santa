@@ -5,4 +5,4 @@ require_relative "config/application"
 
 Rails.application.load_tasks
 
-task default: %i(lint:all spec)
+task default: %i[lint:all spec]

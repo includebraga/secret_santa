@@ -1,4 +1,4 @@
-if %w(development test).include? Rails.env
+if %w[development test].include? Rails.env
   require "scss_lint/rake_task"
 
   namespace :lint do
