@@ -36,6 +36,9 @@
     "MAILER_HOST": {
       "required": true
     },
+    "MAILER_DOMAIN": {
+      "required": true
+    },
     "MAILER_ADDRESS": {
       "required": true
     },
