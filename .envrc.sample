@@ -1,0 +1,3 @@
+export MAILER_FROM_EMAIL="noreply@includebraga.org"
+export MAILER_FROM_NAME="Secret Santa Development"
+export MAILER_HOST="localhost:5000"

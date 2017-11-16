@@ -30,6 +30,17 @@ RSpec.describe UserCreation, type: :model do
         user = User.find_by(user_params)
         expect(user.confirmation_token).to be
       end
+
+      it "emails the newly created user" do
+        email = double("email", deliver_now: true)
+        allow(UserMailer).to receive(:new_user).and_return(email)
+        user_params = attributes_for(:user, confirmed_at: nil)
+        user_creation = UserCreation.new(user_params)
+
+        user_creation.perform
+
+        expect(email).to have_received(:deliver_now)
+      end
     end
 
     context "with invalid params" do
@@ -49,6 +60,17 @@ RSpec.describe UserCreation, type: :model do
         expect do
           user_creation.perform
         end.not_to change { User.count }
+      end
+
+      it "does not send any emails" do
+        email = double("email", deliver_now: true)
+        allow(UserMailer).to receive(:new_user).and_return(email)
+        user_params = attributes_for(:user, email: nil)
+        user_creation = UserCreation.new(user_params)
+
+        user_creation.perform
+
+        expect(email).not_to have_received(:deliver_now)
       end
     end
   end

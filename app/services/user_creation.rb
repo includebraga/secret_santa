@@ -32,6 +32,6 @@ class UserCreation
   end
 
   def notify_user!
-    # TODO: send email here
+    UserMailer.new_user(user).deliver_now
   end
 end
