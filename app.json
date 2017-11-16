@@ -20,6 +20,30 @@
     },
     "SECRET_KEY_BASE": {
       "required": true
+    },
+    "MAILER_FROM_EMAIL": {
+      "required": true
+    },
+    "MAILER_FROM_NAME": {
+      "required": true
+    },
+    "MAILER_USERNAME": {
+      "required": true
+    },
+    "MAILER_PASSWORD": {
+      "required": true
+    },
+    "MAILER_HOST": {
+      "required": true
+    },
+    "MAILER_ADDRESS": {
+      "required": true
+    },
+    "MAILER_PORT": {
+      "required": true
+    },
+    "BASIC_AUTH": {
+      "required": true
     }
   },
   "formation": {
