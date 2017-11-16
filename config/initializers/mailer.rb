@@ -1,5 +1,5 @@
 ActionMailer::Base.default_url_options = {
-  host: ENV.fetch("MAILER_HOST", "localhost:5000"),
+  host: Rails.application.secrets.mailer_host,
   protocol: "http",
 }
 
@@ -8,11 +8,11 @@ if %w(production staging).include?(Rails.env)
   ActionMailer::Base.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
-    user_name: ENV.fetch("MAILER_USERNAME"),
-    password: ENV.fetch("MAILER_PASSWORD"),
-    domain: ENV.fetch("MAILER_DOMAIN"),
-    address: ENV.fetch("MAILER_ADDRESS"),
-    port: ENV.fetch("MAILER_PORT").to_i,
+    user_name: Rails.application.secrets.mailer_username,
+    password: Rails.application.secrets.mailer_password,
+    domain: Rails.application.secrets.mailer_domain,
+    address: Rails.application.secrets.mailer_address,
+    port: Rails.application.secrets.mailer_port,
     :authentication => :plain,
     :enable_starttls_auto => true
   }

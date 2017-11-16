@@ -1,4 +1,7 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: ENV.fetch("MAILER_FROM_NAME") + "<#{ENV.fetch('MAILER_FROM_EMAIL')}>"
+  FROM_NAME = Rails.application.secrets.mailer_from_name.freeze
+  FROM_EMAIL = Rails.application.secrets.mailer_from_email.freeze
+
+  default from: "#{FROM_NAME} <#{FROM_EMAIL}>"
   layout "mailer"
 end
