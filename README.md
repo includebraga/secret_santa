@@ -1,24 +1,67 @@
-# README
+[trello]: https://trello.com/b/hADFEIB3
+[semaphore]: https://semaphoreci.com/fribmendes/secret_santa
+<!--
+[errors]: https://example.org
+[logs]: https://example.org
+-->
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Secret Santa
+============
 
-Things you may want to cover:
+[![Build Status](https://semaphoreci.com/api/v1/fribmendes/secret_santa/branches/master/badge.svg?style=flat-square)][semaphore]
+[![Trello](https://img.shields.io/badge/trello-board-blue.svg?style=flat-square)][trello]
+<!--
+[![Error Tracker](https://img.shields.io/badge/sentry-errors-blue.svg?style=flat-square)][errors]
+[![Production Logs](https://img.shields.io/badge/logs-production-blue.svg?style=flat-square)][logs]
+-->
 
-* Ruby version
+Secret Santa is a surprise for this Christmas. It's a secret. It's also a santa. \*You\* are also a santa.
 
-* System dependencies
+**Table of Contents**
 
-* Configuration
+* [Contributing](#contributing)
+* [Setup](#setup)
+* [Deploys](#deploys)
 
-* Database creation
+Contributing
+------------
 
-* Database initialization
+Everyone is welcome to contribute. If you found a bug, please report it in the [issues page](https://github.com/includebraga/secret_santa/issues). After reporting it, you are free to make a pull request to fix it.
 
-* How to run the test suite
+Please be aware that this project follows a set of rules and recommendations described in the [CONTRIBUTING.md](https://github.com/includebraga/secret_santa/blob/master/CONTRIBUTING.md).
 
-* Services (job queues, cache servers, search engines, etc.)
+There is a public roadmap available on our [Trello][trello] board which is constantly updated. Feel free to try and implement features described there.
 
-* Deployment instructions
+## Setup
 
-* ...
+We use scripts for pretty much everything. To clone and setup the project, use `bin/setup`:
+
+```
+git clone git@github.com:includebraga/secret_santa.git
+cd secret_santa
+bin/setup
+```
+
+To start the development server run:
+
+```
+bin/server
+```
+
+This will start the Rails application.
+
+## Deploys
+
+Deploys are run through [Semaphore][semaphore]. They are deployed automatically to staging when the build on master is green and manually to production.
+
+You can also add `production` and `staging` remotes to manage it through the Heroku CLI. We recommend using [`parity`](https://github.com/thoughtbot/parity) to manage it.
+
+```shell
+git remote add production <production_git_url>
+
+# deploying with parity:
+production deploy
+
+# deploying through git:
+git push production master
+```
