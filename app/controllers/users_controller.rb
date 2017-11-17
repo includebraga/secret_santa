@@ -1,13 +1,18 @@
 class UsersController < ApplicationController
+  def new
+    @user = user_from_session
+  end
+
   def create
     user_creation = UserCreation.new(user_params)
     user_creation.perform
 
     if user_creation.successful?
       assign_success_variables(user_creation.user)
+      render "create"
     else
       assign_failure_variables(user_params)
-      redirect_to root_path
+      redirect_to new_user_path
     end
   end
 
@@ -25,5 +30,17 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:email, :name)
+  end
+
+  def user_from_session
+    if user_session_params
+      User.new(user_session_params).with_validations
+    else
+      User.new
+    end
+  end
+
+  def user_session_params
+    @_user_params ||= session.delete(:user)
   end
 end
