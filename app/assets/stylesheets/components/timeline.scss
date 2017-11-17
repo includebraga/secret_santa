@@ -1,5 +1,7 @@
 .timeline {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   background-color: #161f28;
 
   &:hover {
@@ -22,6 +24,10 @@
   color: #fff;
   overflow: hidden;
   transition: width 0.5s ease;
+
+  @media (max-width: $max-tablet-size) {
+    min-width: 100vw;
+  }
 
   &:before,
   &:after {
@@ -87,12 +93,11 @@
   opacity: 0;
 
   h1 {
-    font-family: 'Pathway Gothic One', Helvetica Neue, Helvetica, Arial,
-      sans-serif;
+    font-family: $font-family-serif;
     text-transform: uppercase;
     color: #1779cf;
-    font-size: 1.44rem;
-    font-weight: normal;
+    // font-size: 1.44rem;
+    // font-weight: normal;
   }
 }
 
@@ -106,10 +111,10 @@
   border-bottom: 1px solid #fff;
 
   p {
-    font-family: 'Pathway Gothic One', Helvetica Neue, Helvetica, Arial,
-      sans-serif;
-    font-size: 1.728rem;
-    line-height: 0;
+    font-family: $font-family-serif;
+    font-size: $size-large;
+    margin: 0;
+    line-height: $size-xlarge;
   }
 }
 
