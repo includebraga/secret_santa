@@ -19,6 +19,7 @@ gem "slim-rails"
 gem "timber", "~> 2.2"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
+gem "administrate"
 
 group :development, :test do
   gem "awesome_print"
