@@ -6,6 +6,9 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
+    - if Rails.env.production?
+      = render 'shared/analytics'
+
   body
     = yield
 
