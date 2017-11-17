@@ -17,20 +17,25 @@ body {
 
 a {
   color: #d74a49;
-  -webkit-transition: all .35s;
-  -moz-transition: all .35s;
-  transition: all .35s; }
-  a:hover, a:focus {
-    color: #d74a49; }
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+a:hover,
+a:focus {
+  color: #d74a49;
+}
 
 hr {
   max-width: 100px;
   margin: 25px auto 0;
   border-width: 1px;
-  border-color: rgba(34, 34, 34, 0.1); }
+  border-color: rgba(34, 34, 34, 0.1);
+}
 
 hr.light {
-  border-color: white; }
+  border-color: white;
+}
 
 h1,
 h2,
@@ -39,119 +44,132 @@ h4,
 h5,
 h6 {
   font-weight: 200;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+}
 
 p {
   font-size: 18px;
   line-height: 1.5;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+}
 
-
-h-100{
-   height:100%!important;
+h-100 {
+  height: 100% !important;
 }
 
 header.masthead {
-
   padding-top: 150px;
   padding-bottom: 100px;
   position: relative;
   width: 100%;
   color: white;
-/*  background: #A1D7D9;*/
-  background:#161f28;
-
+  /*  background: #A1D7D9;*/
+  background: #161f28;
 }
 
 header.masthead .header-content {
-    max-width: 500px;
-    margin-bottom: 100px;
-    text-align: center;
+  max-width: 500px;
+  margin-bottom: 100px;
+  text-align: center;
 }
 
 header.masthead .header-content h1 {
-      font-size: 30px;
+  font-size: 30px;
 }
 
 header.masthead .device-container {
   max-width: 325px;
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: 992px) {
-    header.masthead {
-      height: 100vh;
-      min-height: 775px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+  header.masthead {
+    height: 100vh;
+    min-height: 775px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
-    header.masthead .header-content {
-        margin-bottom: 0;
-        text-align: left;
-    }
+  header.masthead .header-content {
+    margin-bottom: 0;
+    text-align: left;
+  }
 
-    header.masthead .header-content h1 {
-          font-size: 50px;
-    }
+  header.masthead .header-content h1 {
+    font-size: 50px;
+  }
 
-    header.masthead .device-container {
-        max-width: 325px;
-    }
+  header.masthead .device-container {
+    max-width: 325px;
+  }
 }
 
 section.features .section-heading h2 {
-  margin-top: 0; }
+  margin-top: 0;
+}
 section.features .section-heading p {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 section.features .device-container,
 section.features .feature-item {
   max-width: 325px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 section.features .device-container {
-  margin-bottom: 100px; }
-  @media (min-width: 992px) {
-    section.features .device-container {
-      margin-bottom: 0; } }
+  margin-bottom: 100px;
+}
+@media (min-width: 992px) {
+  section.features .device-container {
+    margin-bottom: 0;
+  }
+}
 
 section.features .feature-item {
   padding-top: 50px;
   padding-bottom: 50px;
-  text-align: center; }
-  section.features .feature-item h3 {
-    font-size: 30px; }
-  section.features .feature-item i {
-    font-size: 80px;
-    display: block;
-    margin-bottom: 15px;
-    background: #d74a49;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
+  text-align: center;
+}
+section.features .feature-item h3 {
+  font-size: 30px;
+}
+section.features .feature-item i {
+  font-size: 80px;
+  display: block;
+  margin-bottom: 15px;
+  background: #d74a49;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 section.cta {
   position: relative;
   padding: 250px 0;
-  background-image: url("background.jpg");
+  background-image: url('background.jpg');
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
-  section.cta .cta-content {
-    position: relative;
-    z-index: 1; }
-    section.cta .cta-content h2 {
-      font-size: 50px;
-      max-width: 450px;
-      margin-top: 0;
-      margin-bottom: 25px;
-      color: white; }
-    @media (min-width: 768px) {
-      section.cta .cta-content h2 {
-        font-size: 80px; } }
+  background-size: cover;
+}
+section.cta .cta-content {
+  position: relative;
+  z-index: 1;
+}
+section.cta .cta-content h2 {
+  font-size: 50px;
+  max-width: 450px;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: white;
+}
+@media (min-width: 768px) {
+  section.cta .cta-content h2 {
+    font-size: 80px;
+  }
+}
 
 section.cta .overlay {
   position: absolute;
@@ -159,7 +177,8 @@ section.cta .overlay {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 footer {
   padding: 25px 0;
@@ -178,13 +197,15 @@ footer ul {
   margin-bottom: 0;
 }
 
-
 footer ul li a {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.3);
 }
 
-footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li a.active {
+footer ul li a:hover,
+footer ul li a:focus,
+footer ul li a:active,
+footer ul li a.active {
   text-decoration: none;
 }
 
@@ -199,23 +220,25 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 
 .btn-outline {
   background-color: #f95252;
-  color:white;
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  transition:.5s;
+  color: white;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.btn-outline:hover, .btn-outline:focus, .btn-outline:active{
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
   background-color: #33cc77;
-  color:white;
+  color: white;
 }
 
 .btn {
-  font-size:16px;
+  font-size: 16px;
   border-radius: 300px;
-  font-weight:500;
+  font-weight: 500;
 }
 
 .btn-xl {
@@ -225,23 +248,24 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 .navbar {
   border-color: rgba(34, 34, 34, 0.05);
   background-color: white;
-  -webkit-transition: all .35s;
-  -moz-transition: all .35s;
-  transition: all .35s;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
   font-weight: 200;
   letter-spacing: 1px;
 }
 
 .navbar .navbar-brand {
   color: #d74a49;
-  font-size:20px;
-  letter-spacing:0;
+  font-size: 20px;
+  letter-spacing: 0;
   /*font-weight: 700;
   letter-spacing: 1px;*/
 }
 
-.navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
-  cursor:default;
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+  cursor: default;
   color: #d74a49;
 }
 
@@ -265,7 +289,8 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
     color: #161f28;
   }
 
-  .navbar.navbar-shrink .navbar-brand:hover, .navbar.navbar-shrink .navbar-brand:focus {
+  .navbar.navbar-shrink .navbar-brand:hover,
+  .navbar.navbar-shrink .navbar-brand:focus {
     color: #161f28;
   }
 
@@ -275,44 +300,44 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   }
 }
 
-.navbar.btn-link{
-  color:#f95252;
- /*color: #d74a49;*/
+.navbar.btn-link {
+  color: #f95252;
+  /*color: #d74a49;*/
 }
 
-.fa-hashtag{
-  color:white;
+.fa-hashtag {
+  color: white;
 }
 
-#page-top > header > div > div{
+#page-top > header > div > div {
   margin-top: 8%;
 }
 
 @media (min-width: 992px) {
-  #page-top > header > div > div{
+  #page-top > header > div > div {
     margin-top: 25%;
   }
 }
 
-#page-top > header > div > div > div.col-lg-7.my-auto > div > a{
-  border-radius:4px;
+#page-top > header > div > div > div.col-lg-7.my-auto > div > a {
+  border-radius: 4px;
   text-transform: uppercase;
-  background:none;
+  background: none;
   border: 1px solid;
   border-color: white;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
 
-#page-top > header > div > div > div.col-lg-7.my-auto > div > a:hover{
-  background:#33cc77;
-  border-color:#33cc77;
+#page-top > header > div > div > div.col-lg-7.my-auto > div > a:hover {
+  background: #33cc77;
+  border-color: #33cc77;
 }
 
-#page-top > div > div > div.navbar-header.pull-right > a:nth-child(3){
-  text-decoration:none;
+#page-top > div > div > div.navbar-header.pull-right > a:nth-child(3) {
+  text-decoration: none;
 }
 
-#page-top > header > div > div > div.col-lg-7.my-auto > div > h1 > p{
-  margin-top:10px;
+#page-top > header > div > div > div.col-lg-7.my-auto > div > h1 > p {
+  margin-top: 10px;
 }
