@@ -1,5 +1,44 @@
-h1 Secret Santa
-
-= render 'shared/flash'
-
-= render 'form'
+header.masthead
+  .container.h-100
+    .row.h-100
+      .col-lg-7.my-auto
+        .header-content.mx-auto
+          h1.mb-5
+            | Queres proporcionar um Natal mais feliz a crianças carenciadas de Braga?
+          p Inscreve-te para seres um Secret Santa.
+          a.btn.btn-outline.btn-xl.js-scroll-trigger href="users/sign_up"  Registar
+      .col-lg-5.my-auto
+        .device-container
+          = image_tag("chimney.png", :alt => "chimney", :class=>"img-responsive")
+section#features.features
+  .container
+    .section-heading.text-center
+      h2 Como funciona?
+      hr/
+    .row
+      .col-lg-12.my-auto
+        .container-fluid
+          .row
+            .col-lg-4
+              .feature-item
+                i.icon-note.text-primary
+                h3 Regista-te
+                p.text-muted Faz o registo para poderes vir a ser um Pai Natal Secreto.
+            .col-lg-4
+              .feature-item
+                i.icon-envelope.text-primary
+                h3 Recebe a carta
+                p.text-muted Nós iremos atribuir te a carta de uma criança.
+            .col-lg-4
+              .feature-item
+                i.icon-present.text-primary
+                h3 Entrega a prenda
+                p.text-muted Encontra-nos dia x de Dezembro no y.
+section.cta
+  .cta-content
+    .container
+      h2
+        | Change
+        | by giving.
+      a.btn.btn-outline.btn-xl.js-scroll-trigger href="#"  I want to help!
+  .overlay
