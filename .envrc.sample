@@ -1,9 +1,14 @@
+# These commented out variables are required to simulate a production environment
+# If you are simply running in development mode, leave them be
 # export BASIC_AUTH=""
 # export MAILER_USERNAME=""
 # export MAILER_PASSWORD=""
 # export MAILER_ADDRESS=""
 # export MAILER_PORT=""
 # export MAILER_DOMAIN=""
+# export RAVEN_DSN=""
+# export SECRET_KEY_BASE=""
+
 export MAILER_FROM_EMAIL="noreply@includebraga.org"
 export MAILER_FROM_NAME="Secret Santa Development"
 export MAILER_HOST="localhost:5000"
