@@ -1,0 +1,13 @@
+.Heading {
+  font-family: $font-family-serif;
+  font-size: $size-large;
+  line-height: $size-xxlarge;
+
+  @media(min-width: $max-tablet-size) {
+    font-size: $size-xlarge;
+  }
+}
+
+.Heading.Heading--white {
+  color: $color-white;
+}

@@ -7,6 +7,7 @@ end
 
 ruby "2.4.2"
 
+gem 'bootstrap-sass', '~> 3.2.0'
 gem "email_validator"
 gem "foreman"
 gem "pg"
@@ -15,6 +16,7 @@ gem "puma", "~> 3.7"
 gem "rails", "~> 5.1.3"
 gem "sass-rails", "~> 5.0"
 gem "sentry-raven"
+gem "simple-line-icons-rails"
 gem "slim-rails"
 gem "timber", "~> 2.2"
 gem "turbolinks", "~> 5"
