@@ -1,4 +1,5 @@
 .Heading {
+  color: $color-deep-blue;
   font-family: $font-family-serif;
   font-size: $size-large;
   line-height: $size-xxlarge;
@@ -10,4 +11,9 @@
 
 .Heading.Heading--white {
   color: $color-white;
+}
+
+.Heading.Heading--secondary {
+  font-size: $size-base;
+  line-height: $size-large;
 }
