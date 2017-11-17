@@ -10,6 +10,10 @@ test:
   <<: *default
   database: secret_santa_test
 
+staging:
+  <<: *default
+  database: secret_santa_staging
+
 production:
   <<: *default
   database: secret_santa
