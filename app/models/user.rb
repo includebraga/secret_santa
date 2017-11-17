@@ -10,7 +10,8 @@ class User < ApplicationRecord
     length: { maximum: 80 }
 
   validates :confirmation_token,
-    uniqueness: { case_sensitive: true }
+    uniqueness: { case_sensitive: true },
+    allow_nil: true
 
   # Validations are only run when `User#valid?` is invoked
   # To load a user with validations, call `valid?` on `self`

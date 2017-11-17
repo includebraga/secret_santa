@@ -16,6 +16,13 @@ RSpec.describe User, type: :model do
 
       expect(user).to be_valid
     end
+
+    it "ignores nils when testing the confirmation token's uniqueness" do
+      create(:user, confirmation_token: nil)
+      user = build(:user, confirmation_token: nil)
+
+      expect(user).to be_valid
+    end
   end
 
   describe "#with_validations" do
