@@ -86,6 +86,26 @@ RSpec.describe UserCreation, type: :model do
         expect(reloaded_user).to eq(user)
       end
 
+      it "is successful if the user is unconfirmed" do
+        user = create(:user, confirmed_at: nil)
+        params = attributes_for(:user, email: user.email)
+        user_creation = UserCreation.new(params)
+
+        user_creation.perform
+
+        expect(user_creation).to be_successful
+      end
+
+      it "is unsuccessful if the user is confirmed" do
+        user = create(:user)
+        params = attributes_for(:user, email: user.email)
+        user_creation = UserCreation.new(params)
+
+        user_creation.perform
+
+        expect(user_creation).not_to be_successful
+      end
+
       it "emails if the user is unconfirmed" do
         email = double("email", deliver_now: true)
         allow(UserMailer).to receive(:new_user).and_return(email)

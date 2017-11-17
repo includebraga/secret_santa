@@ -35,7 +35,9 @@ class UserCreation
   end
 
   def notify_user!
-    UserMailer.new_user(user).deliver_now unless user.confirmed?
+    raise ActiveRecord::ActiveRecordError if user.confirmed?
+
+    UserMailer.new_user(user).deliver_now
   end
 
   def generate_random_token
