@@ -205,6 +205,8 @@ GEM
       faraday (>= 0.7.6, < 1.0)
     shoulda-matchers (3.1.2)
       activesupport (>= 4.0.0)
+    simple-line-icons-rails (0.1.3)
+      railties (>= 3.2, < 5.2)
     simplecov (0.15.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -282,6 +284,7 @@ DEPENDENCIES
   scss_lint
   sentry-raven
   shoulda-matchers
+  simple-line-icons-rails
   simplecov
   slim-rails
   spring
