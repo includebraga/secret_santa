@@ -8,7 +8,7 @@ header.Header
       | Inscreve-te para seres um Secret Santa.
 
     .Header-cta
-      a.btn.btn-outline.btn-xl href="users/sign_up" Registar
+      = link_to "Registar", new_user_path, class: "btn btn-outline btn-xl"
 
   .Gift
     = image_tag "giftHead.png", alt: "chimney", class: "Gift-image"
