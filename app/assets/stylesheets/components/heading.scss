@@ -2,10 +2,11 @@
   color: $color-deep-blue;
   font-family: $font-family-serif;
   font-size: $size-large;
-  line-height: $size-xxlarge;
+  line-height: $size-xlarge;
 
   @media(min-width: $max-tablet-size) {
     font-size: $size-xlarge;
+    line-height: $size-xxlarge;
   }
 }
 
