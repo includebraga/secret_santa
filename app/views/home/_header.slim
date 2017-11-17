@@ -8,6 +8,8 @@ header.Header
       | Inscreve-te para seres um Secret Santa.
 
     .Header-cta
-      a.btn.btn-outline.btn-xl.js-scroll-trigger href="users/sign_up"  Registar
+      a.btn.btn-outline.btn-xl href="users/sign_up" Registar
 
-  = image_tag("chimney.png", :alt => "chimney", class: "Header-img")
+  .Gift
+    = image_tag "giftHead.png", alt: "chimney", class: "Gift-image"
+    = image_tag "giftBody.png", alt: "chimney", class: "Gift-image"
