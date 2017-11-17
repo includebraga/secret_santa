@@ -1,0 +1,11 @@
+body {
+  font-family: $font-family-mono;
+  font-size: $size-small;
+  font-weight: $font-weight-regular;
+  line-height: $size-base;
+
+  @media(min-width: $max-tablet-size) {
+    font-size: $size-base;
+    line-height: $size-large;
+  }
+}

@@ -1,0 +1,57 @@
+$Header-breakpoint: 960px;
+
+.Header {
+  background-color: $color-mirage;
+  color: $color-white;
+
+  font-family: $font-family-mono;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: $size-xxlarge;
+
+  @media(min-width: $Header-breakpoint) {
+    height: 100vh;
+    min-height: 75vh;
+
+    flex-direction: row;
+  }
+}
+
+.Header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 0;
+  margin-bottom: $size-xlarge;
+
+  text-align: center;
+
+  max-width: 500px;
+
+  @media(min-width: $Header-breakpoint) {
+    align-items: flex-start;
+
+    margin-right: $size-xlarge;
+    margin-bottom: 0;
+
+    text-align: left;
+  }
+}
+
+.Header-title {
+  margin-bottom: $size-large;
+}
+
+.Header-info {
+  margin-bottom: $size-large;
+}
+
+.Header-img {
+  max-width: 300px;
+}
