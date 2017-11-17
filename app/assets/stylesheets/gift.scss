@@ -1,0 +1,54 @@
+.Gift {
+  display: block;
+  max-width: 500px;
+}
+
+.Gift-image {
+  width: 100%;
+  position: relative;
+}
+
+.Gift-image:nth-child(1) {
+  z-index: 10;
+}
+
+.Gift-image:nth-child(1) {
+  animation: Gift-anim-shake 1s linear;
+}
+
+.Gift-image:nth-child(2) {
+  transform: translateY(-20px);
+  z-index: 1;
+}
+
+@keyframes Gift-anim-shake {
+  0% {
+    transform: translateY(0px);
+  }
+
+  20% {
+    transform: translateY(-30px);
+  }
+  30% {
+    transform: translateY(-30px) rotateZ(10deg);
+  }
+  40% {
+    transform: translateY(-30px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotateZ(-10deg);
+  }
+  60% {
+    transform: translateY(-30px) rotateZ(0deg);
+  }
+  70% {
+    transform: translateY(-30px) rotateZ(10deg);
+  }
+  80% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
