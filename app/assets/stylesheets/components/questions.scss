@@ -1,0 +1,23 @@
+.Questions {
+  display: flex;
+  justify-content: center;
+
+  padding: $size-xxlarge;
+}
+
+.Questions-content {
+  width: 100%;
+  max-width: $grid-size;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Questions-entry {
+  margin-bottom: $size-large;
+}
+
+.Questions-title {
+  font-weight: $font-weight-bold;
+  color: $color-red;
+}
