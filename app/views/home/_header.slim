@@ -1,15 +1,23 @@
 header.Header
   .Header-content
-    .Header-title
-      h1.Heading.Heading--white
-        | Queres proporcionar um Natal mais feliz a crianças carenciadas de Braga?
+    .Header-firstRow
+      .Header-info
+        .Header-title
+          h1.Heading.Heading--white
+            | Queres proporcionar um Natal mais feliz a crianças carenciadas de Braga?
 
-    .Header-info
-      | Inscreve-te para seres um Secret Santa.
+        .Header-text
+          | Inscreve-te para seres um Secret Santa.
 
-    .Header-cta
-      = link_to "Registar", new_user_path, class: "btn btn-outline btn-xl"
+        .Header-cta
+          = link_to "Registar", new_user_path, class: "btn btn-outline btn-xl"
 
-  .Gift
-    = image_tag "giftHead.png", alt: "chimney", class: "Gift-image"
-    = image_tag "giftBody.png", alt: "chimney", class: "Gift-image"
+      .Gift
+        = image_tag "giftHead.png", alt: "chimney", class: "Gift-image"
+        = image_tag "giftBody.png", alt: "chimney", class: "Gift-image"
+
+    .Header-secondRow
+      .Header-logo
+        .Header-logoLettering
+          .Logo.Logo--lettering.Logo--yellow #i
+        .Logo.Logo--yellow #include &lt;braga&gt;

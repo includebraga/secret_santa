@@ -21,3 +21,11 @@ $Logo-padding: 2px;
   font-size: $Logo-font-size-small;
   line-height: $size-small;
 }
+
+.Logo.Logo--lettering {
+  background-color: transparent;
+
+  &.Logo--yellow {
+    color: $color-yellow;
+  }
+}
