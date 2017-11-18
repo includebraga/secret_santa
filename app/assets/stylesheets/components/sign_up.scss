@@ -1,0 +1,34 @@
+.SignUp {
+  display: flex;
+  justify-content: center;
+
+  padding: $size-xxlarge $size-large;
+
+  @media(min-width: $max-tablet-size) {
+    padding: $size-xxlarge;
+  }
+}
+
+.SignUp-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: $grid-size;
+
+  @media(min-width: $max-tablet-size) {
+    align-items: center;
+  }
+}
+
+.SignUp-title {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: $size-large;
+}
+
+.SignUp-icon {
+  margin-right: $size-small;
+}

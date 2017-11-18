@@ -1,17 +1,21 @@
-= form_for @user do |f|
-  div
-    = f.label :name
-    br
-    = f.text_field :name
-    br
-    = error_field @user, :name
+.SignUp
+  .SignUp-content
+    .SignUp-form
+      .SignUp-title
+        .SignUp-icon
+          i.icon-mustache
+        .SignUp-heading
+          h1.Heading Regista-te
 
-  div
-    = f.label :email
-    br
-    = f.email_field :email
-    br
-    = error_field @user, :email
+      = form_for @user do |f|
+        div.form-group
+          = f.label :name, :class => 'control-label'
+          = f.text_field :name, :placeholder => 'Saint Nicholas', :class => 'form-control'
+          = error_field @user, :name
 
-  br
-  = f.submit
+        div.form-group
+          = f.label :email,  :class => 'control-label'
+          = f.email_field :email, :placeholder => 'saint_nicholas@gift.org', :class => 'form-control'
+          = error_field @user, :email
+          br
+          = f.submit 'Create Santa'
