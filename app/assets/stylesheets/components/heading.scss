@@ -1,4 +1,6 @@
 .Heading {
+  margin: 0 !important; // TODO: Remove this when we remove bootstrap
+
   color: $color-deep-blue;
   font-family: $font-family-serif;
   font-size: $size-large;
