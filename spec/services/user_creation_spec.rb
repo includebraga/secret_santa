@@ -87,7 +87,7 @@ RSpec.describe UserCreation, type: :model do
       end
 
       it "is successful if the user is unconfirmed" do
-        user = create(:user, confirmed_at: nil)
+        user = create(:user_with_confirmation_token)
         params = attributes_for(:user, email: user.email)
         user_creation = UserCreation.new(params)
 
