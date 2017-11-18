@@ -1,0 +1,32 @@
+.Section {
+  display: flex;
+  justify-content: center;
+
+  padding: $size-xxlarge $size-large;
+
+  @media(min-width: $max-tablet-size) {
+    padding: $size-xxlarge;
+  }
+}
+
+.Section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: $grid-size;
+}
+
+.Section-title {
+  margin-bottom: $size-xxlarge;
+
+  &::after {
+    border-bottom: 1px solid $color-deep-blue;
+  }
+}
+
+.Section-text {
+  text-align: center;
+}
