@@ -2,7 +2,11 @@
   display: flex;
   justify-content: center;
 
-  padding: $size-xxlarge;
+  padding: $size-xxlarge $size-large;
+
+  @media(min-width: $max-tablet-size) {
+    padding: $size-xxlarge;
+  }
 }
 
 .Questions-content {

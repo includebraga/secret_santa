@@ -1,7 +1,14 @@
 .Footer {
   display: flex;
   justify-content: center;
-  padding: $size-xxlarge;
+
+  padding: $size-xxlarge $size-large;
+
+  background-color: $color-deep-blue;
+
+  @media(min-width: $max-tablet-size) {
+    padding: $size-xxlarge;
+  }
 }
 
 .Footer-content {
