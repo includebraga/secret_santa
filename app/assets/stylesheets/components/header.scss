@@ -1,33 +1,58 @@
 $Header-breakpoint: 960px;
 
 .Header {
-  background-color: $color-deep-blue;
-  color: $color-white;
-
-  font-family: $font-family-mono;
-
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
-  padding: $size-xxlarge;
+  padding: $size-xxlarge $size-large;
+
+  background-color: $color-deep-blue;
 
   @media(min-width: $Header-breakpoint) {
     height: 100vh;
     min-height: 75vh;
 
-    flex-direction: row;
+    padding: $size-xxlarge;
   }
 }
 
 .Header-content {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: $grid-size;
+}
+
+.Header-firstRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  margin-bottom: $size-large;
+
+  @media(min-width: $Header-breakpoint) {
+    flex-direction: row;
+  }
+}
+
+.Header-secondRow {
+  align-self: center;
+
+  @media(min-width: $Header-breakpoint) {
+    align-self: flex-end;
+  }
+}
+
+.Header-info {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  margin-right: 0;
   margin-bottom: $size-xlarge;
 
   text-align: center;
@@ -37,21 +62,33 @@ $Header-breakpoint: 960px;
   @media(min-width: $Header-breakpoint) {
     align-items: flex-start;
 
-    margin-right: $size-xlarge;
     margin-bottom: 0;
 
     text-align: left;
   }
 }
 
-.Header-title {
+.Header-text {
+  color: $color-white;
+}
+
+.Header-title,
+.Header-text,
+.Header-cta {
   margin-bottom: $size-large;
 }
 
-.Header-info {
-  margin-bottom: $size-large;
+.Header-logo {
+  display: flex;
+  align-items: center;
 }
 
-.Header-img {
-  max-width: 300px;
+.Header-logoLettering {
+  display: none;
+
+  @media(min-width: $Header-breakpoint) {
+    display: initial;
+
+    margin-right: $size-xsmall;
+  }
 }
