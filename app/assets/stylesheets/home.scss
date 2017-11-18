@@ -15,17 +15,6 @@ body {
   height: 100%;
 }
 
-a {
-  color: #d74a49;
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
-}
-a:hover,
-a:focus {
-  color: #d74a49;
-}
-
 hr {
   max-width: 100px;
   margin: 25px auto 0;
@@ -178,7 +167,7 @@ footer {
   padding: 25px 0;
   text-align: center;
   color: rgba(255, 255, 255, 0.3);
-  background-color: #222222;
+  background-color: #161f28;
 }
 
 footer p {
@@ -187,39 +176,35 @@ footer p {
   margin: 0;
 }
 
-footer ul {
-  margin-bottom: 0;
+a.social-item{
+  padding: 10px;
+  color: #f95252;
+  opacity: 0.5;
 }
 
-footer ul li a {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.3);
+a.social-item:hover{
+  text-decoration:none;
+  opacity: 0.9;
+
 }
 
-footer ul li a:hover,
-footer ul li a:focus,
-footer ul li a:active,
-footer ul li a.active {
-  text-decoration: none;
+.btn-outline, a.social-item{
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+
 }
 
 .text-primary {
   color: #fdcc52;
 }
 
-.no-gutter > [class*='col-'] {
-  padding-right: 0;
-  padding-left: 0;
-}
 
 .btn-outline {
   background-color: #f95252;
   color: white;
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .btn-outline:hover,
@@ -334,4 +319,8 @@ footer ul li a.active {
 
 #page-top > header > div > div > div.col-lg-7.my-auto > div > h1 > p {
   margin-top: 10px;
+}
+
+span.emoji{
+  color: red;
 }
