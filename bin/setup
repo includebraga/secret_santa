@@ -2,7 +2,7 @@
 
 set -e
 
-cp .envrc.sample .envrc
+cp .env.sample .env
 
 bundle check || bundle install
 

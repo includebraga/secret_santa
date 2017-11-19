@@ -7,7 +7,7 @@ end
 
 ruby "2.4.2"
 
-gem 'bootstrap-sass', '~> 3.2.0'
+gem "bootstrap-sass", "~> 3.2.0"
 gem "email_validator"
 gem "foreman"
 gem "pg"
@@ -26,6 +26,8 @@ gem "administrate"
 group :development, :test do
   gem "awesome_print"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
+  gem "dotenv"
+  gem "dotenv-rails"
   gem "factory_bot_rails"
   gem "faker"
   gem "pry-remote"

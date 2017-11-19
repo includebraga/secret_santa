@@ -6,7 +6,8 @@ $Logo-padding: 2px;
 
   font-family: $font-family-mono;
   font-weight: $font-weight-bold;
-  vertical-align: middle;
+  vertical-align: text-bottom;
+  white-space: nowrap;
 
   background-color: $color-white;
   color: $color-deep-blue;

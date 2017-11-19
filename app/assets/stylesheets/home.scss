@@ -130,7 +130,6 @@ section.features .feature-item i {
 section.cta {
   position: relative;
   padding: 250px 0;
-  background-image: url('background.jpg');
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -176,31 +175,29 @@ footer p {
   margin: 0;
 }
 
-a.social-item{
+a.social-item {
   padding: 10px;
   color: #f95252;
   opacity: 0.5;
 }
 
-a.social-item:hover{
-  text-decoration:none;
+a.social-item:hover {
+  text-decoration: none;
   opacity: 0.9;
-
 }
 
-.btn-outline, a.social-item{
+.btn-outline,
+a.social-item {
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-
 }
 
 .text-primary {
   color: #fdcc52;
 }
-
 
 .btn-outline {
   background-color: #f95252;
