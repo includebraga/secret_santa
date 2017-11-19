@@ -8,13 +8,36 @@ function isElementInViewport (el) {
     );
 }
 
-window.addEventListener('scroll', function(e) {
+function animateGiftInViewport() {
   var gift = document.getElementsByClassName("Gift")[0];
 
-  if (isElementInViewport(gift)){
+  if (isElementInViewport(gift)) {
     gift.className = "Gift Gift--withAnimation";
-  }else{
+
+    setTimeout(function() {
+      gift.className = "Gift";
+    }, 1000);
+
+  } else {
     gift.className = "Gift";
   }
+}
 
+function animateGiftOnHover() {
+  var gift = document.getElementsByClassName("Gift")[0];
+
+  gift.addEventListener('mouseenter', function(e) {
+    gift.className = "Gift Gift--withAnimation";
+  });
+
+  gift.addEventListener('mouseleave', function(e) {
+    gift.className = "Gift";
+  });
+}
+
+window.addEventListener('scroll', animateGiftInViewport);
+
+document.addEventListener('DOMContentLoaded', function() {
+  animateGiftInViewport();
+  animateGiftOnHover();
 });
