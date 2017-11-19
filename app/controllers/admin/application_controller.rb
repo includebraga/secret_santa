@@ -13,6 +13,5 @@ module Admin
         ENV["BASIC_AUTH"].split(":") == [username, password]
       end
     end
-
   end
 end
