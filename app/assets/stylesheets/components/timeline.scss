@@ -124,18 +124,18 @@
   filter: grayscale(100%);
 
   &.open {
-    background-image: image_url('open.jpg');
+    background-image: asset_url('open.jpg');
   }
 
   &.match {
-    background-image: url('match.png');
+    background-image: asset_url('match.png');
   }
 
   &.gather {
-    background-image: url('gather.jpg');
+    background-image: asset_url('gather.jpg');
   }
 
   &.give {
-    background-image: url('give.jpg');
+    background-image: asset_url('give.jpg');
   }
 }
