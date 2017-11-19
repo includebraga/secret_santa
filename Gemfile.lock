@@ -77,6 +77,8 @@ GEM
     diff-lcs (1.3)
     docile (1.1.5)
     dotenv (0.7.0)
+    dotenv-rails (0.7.0)
+      dotenv (= 0.7.0)
     email_validator (1.6.0)
       activemodel
     erubi (1.7.0)
@@ -300,6 +302,8 @@ DEPENDENCIES
   bootstrap-sass (~> 3.2.0)
   byebug
   database_cleaner
+  dotenv
+  dotenv-rails
   email_validator
   factory_bot_rails
   faker
