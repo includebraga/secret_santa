@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     get "/confirm/:token", to: "confirmations#create", as: :confirmation
   end
 
+  get '/.well-known/acme-challenge/:id' => 'pages#letsencrypt'
+
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
