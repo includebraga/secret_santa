@@ -7,7 +7,7 @@ end
 
 ruby "2.4.2"
 
-gem 'bootstrap-sass', '~> 3.2.0'
+gem "bootstrap-sass", "~> 3.2.0"
 gem "email_validator"
 gem "foreman"
 gem "pg"
