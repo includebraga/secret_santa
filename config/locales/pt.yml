@@ -1,0 +1,10 @@
+pt:
+  activerecord:
+    attributes:
+      user:
+        name: "Nome"
+        submit: "Cenas"
+    errors:
+      messages:
+        blank: "Não pode estar em branco"
+        invalid: "É inválido"
