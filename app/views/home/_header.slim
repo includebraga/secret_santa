@@ -1,6 +1,6 @@
 header.Header
   .Header-content
-    .Header-firstRow
+    .Header-firstCol
       .Header-info
         .Header-title
           h1.Heading.Heading--white
@@ -12,11 +12,12 @@ header.Header
         .Header-cta
           = link_to "Registar", new_user_path, class: "btn btn-outline btn-xl"
 
-      .Gift
-        = image_tag "giftHead.png", alt: "chimney", class: "Gift-image"
-        = image_tag "giftBody.png", alt: "chimney", class: "Gift-image"
+    .Header-secondCol
+      .Header-img
+        .Gift
+          = image_tag "giftHead.png", alt: "chimney", class: "Gift-image"
+          = image_tag "giftBody.png", alt: "chimney", class: "Gift-image"
 
-    .Header-secondRow
       .Header-logo
         .Header-logoLettering
           .Logo.Logo--lettering.Logo--yellow #i
