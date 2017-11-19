@@ -3,8 +3,8 @@ pt:
     attributes:
       user:
         name: "Nome"
-        submit: "Cenas"
     errors:
       messages:
         blank: "Não pode estar em branco"
+        taken: "Utilizador já existe"
         invalid: "É inválido"
