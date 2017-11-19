@@ -35,8 +35,6 @@ function animateGiftOnHover() {
   });
 }
 
-window.addEventListener('scroll', animateGiftInViewport);
-
 document.addEventListener('DOMContentLoaded', function() {
   animateGiftInViewport();
   animateGiftOnHover();
