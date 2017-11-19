@@ -12,13 +12,15 @@
   z-index: 10;
 }
 
-.Gift-image:nth-child(1) {
-  animation: Gift-anim-shake 1s linear .5s;
-}
-
 .Gift-image:nth-child(2) {
   transform: translateY(-20px);
   z-index: 1;
+}
+
+.Gift.Gift--withAnimation {
+  .Gift-image:nth-child(1) {
+    animation: Gift-anim-shake 1s linear .5s;
+  }
 }
 
 @keyframes Gift-anim-shake {
