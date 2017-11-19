@@ -11,8 +11,7 @@ $Header-info-max-width: 550px;
   background-color: $color-deep-blue;
 
   @media(min-width: $Header-breakpoint) {
-    height: 100vh;
-    min-height: 75vh;
+    height: 75vh;
 
     padding: $size-xxlarge;
   }
