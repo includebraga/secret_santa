@@ -1,4 +1,5 @@
 $Header-breakpoint: 960px;
+$Header-info-max-width: 550px;
 
 .Header {
   display: flex;
@@ -62,7 +63,7 @@ $Header-breakpoint: 960px;
 
   text-align: center;
 
-  max-width: 500px;
+  max-width: $Header-info-max-width;
 
   @media(min-width: $Header-breakpoint) {
     align-items: flex-start;
