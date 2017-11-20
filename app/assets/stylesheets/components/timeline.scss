@@ -4,7 +4,8 @@
   flex-wrap: wrap;
   background-color: #161f28;
 
-  &:hover {
+  &:hover,
+  &:focus {
     .tl-item {
       width: 23.3333%;
     }
@@ -54,7 +55,8 @@
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     width: 30% !important;
 
     &:after {
