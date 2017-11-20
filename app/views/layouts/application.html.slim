@@ -9,8 +9,7 @@ html
 
     meta name="viewport" content="width=device-width, initial-scale=1"
 
-    - if controller.controller_name == 'home'
-      = render 'shared/seo'
+    = render 'shared/seo'
 
     - if Rails.env.production?
       = render 'shared/analytics'
