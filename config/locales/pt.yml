@@ -8,3 +8,9 @@ pt:
         blank: "Não pode estar em branco"
         taken: "Utilizador já existe"
         invalid: "É inválido"
+  date:
+    formats:
+      default: "%d/%m/%Y"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
