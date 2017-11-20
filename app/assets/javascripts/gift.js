@@ -1,4 +1,6 @@
-function isElementInViewport (el) {
+var animatedOnViewport = false;
+
+var isElementInViewport = function(el) {
     var rect = el.getBoundingClientRect();
     return (
         rect.top >= 0 &&
@@ -8,22 +10,25 @@ function isElementInViewport (el) {
     );
 }
 
-function animateGiftInViewport() {
+var animateGiftInViewport = function() {
   var gift = document.getElementsByClassName("Gift")[0];
 
   if (isElementInViewport(gift)) {
-    gift.className = "Gift Gift--withAnimation";
+    if(!animatedOnViewport) {
+      gift.className = "Gift Gift--withAnimation";
 
-    setTimeout(function() {
-      gift.className = "Gift";
-    }, 1000);
+      setTimeout(function() {
+        gift.className = "Gift";
+      }, 1000);
 
+      animatedOnViewport = true;
+    }
   } else {
-    gift.className = "Gift";
+    animatedOnViewport = false;
   }
 }
 
-function animateGiftOnHover() {
+var animateGiftOnHover = function() {
   var gift = document.getElementsByClassName("Gift")[0];
 
   gift.addEventListener('mouseenter', function(e) {
@@ -34,6 +39,8 @@ function animateGiftOnHover() {
     gift.className = "Gift";
   });
 }
+
+document.addEventListener('scroll', animateGiftInViewport);
 
 document.addEventListener('DOMContentLoaded', function() {
   animateGiftInViewport();
