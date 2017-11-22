@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  USER_LIMIT = 400
+
   validates :email,
     presence: true,
     uniqueness: { case_sensitive: false },
@@ -23,5 +25,9 @@ class User < ApplicationRecord
 
   def confirmed?
     confirmed_at != nil
+  end
+
+  def self.limit_reached?
+    User.count >= USER_LIMIT
   end
 end
