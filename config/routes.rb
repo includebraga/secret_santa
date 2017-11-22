@@ -13,6 +13,11 @@ Rails.application.routes.draw do
     get "/confirm/:token", to: "confirmations#create", as: :confirmation
   end
 
+  namespace :admin do
+    post "/confirm/:id", to: "users#confirm", as: :users_confirmation
+    post "/confirm/", to: "users#batch_confirm", as: :users_batch_confirmation
+  end
+
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end

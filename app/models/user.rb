@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   USER_LIMIT = 400
 
+  scope :unconfirmed, -> { where(confirmed_at: nil) }
+
   validates :email,
     presence: true,
     uniqueness: { case_sensitive: false },
