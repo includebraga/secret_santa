@@ -3,6 +3,8 @@ class User < ApplicationRecord
 
   scope :unconfirmed, -> { where(confirmed_at: nil) }
 
+  belongs_to :letter, optional: true
+
   validates :email,
     presence: true,
     uniqueness: { case_sensitive: false },

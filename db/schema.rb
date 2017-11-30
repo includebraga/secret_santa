@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171115154908) do
+ActiveRecord::Schema.define(version: 20171121213728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "letters", force: :cascade do |t|
+    t.string "name"
+    t.string "instituition"
+    t.text "observation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email"
@@ -22,8 +30,12 @@ ActiveRecord::Schema.define(version: 20171115154908) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.string "confirmation_token"
+    t.integer "letter_id"
+    t.datetime "redeemed_at"
+    t.datetime "delivered_at"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["letter_id"], name: "index_users_on_letter_id"
   end
 
 end
