@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   USER_LIMIT = 400
-
+  has_many :matches
+  has_many :receivers, through: :matches
   scope :unconfirmed, -> { where(confirmed_at: nil) }
 
   validates :email,

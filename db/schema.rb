@@ -10,10 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171115154908) do
+ActiveRecord::Schema.define(version: 20171206145156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "instituitions", force: :cascade do |t|
+    t.string "name"
+    t.string "short_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "receiver_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "receiver_id"], name: "index_matches_on_user_id_and_receiver_id"
+  end
+
+  create_table "receivers", force: :cascade do |t|
+    t.string "name"
+    t.text "letter"
+    t.bigint "instituition_id"
+    t.integer "matched_gifts"
+    t.integer "received_gifts"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["instituition_id"], name: "index_receivers_on_instituition_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email"
@@ -26,4 +52,5 @@ ActiveRecord::Schema.define(version: 20171115154908) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "receivers", "instituitions"
 end

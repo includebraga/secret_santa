@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class UserDashboard < Administrate::BaseDashboard
+class ReceiverDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -9,14 +9,15 @@ class UserDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     matches: Field::HasMany,
-    receivers: Field::HasMany,
+    users: Field::HasMany,
+    instituition: Field::BelongsTo,
     id: Field::Number,
-    email: Field::String,
-    confirmed_at: Field::DateTime,
+    name: Field::String,
+    letter: Field::Text,
+    matched_gifts: Field::Number,
+    received_gifts: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    name: Field::String,
-    confirmation_token: Field::String,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -26,34 +27,39 @@ class UserDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     id
-    email
     name
-    confirmed_at
+    instituition
+    matched_gifts
+    received_gifts
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
-    id
-    email
     name
-    confirmed_at
+    instituition
+    matched_gifts
+    received_gifts
+    letter
+    matches
+    users
+    id
     created_at
     updated_at
-    confirmation_token
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    email
+    instituition
     name
-    confirmed_at
-    confirmation_token
+    letter
+    matched_gifts
+    received_gifts
   ].freeze
 
-  def display_resource(user)
-    "🎅u#{user.email.split('@')[0]}"
+  def display_resource(receiver)
+    "🙈 ##{receiver.id}"
   end
 end
