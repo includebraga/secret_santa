@@ -30,7 +30,7 @@ class UserCreation
   def find_or_create_user!
     @_user ||= User.find_or_create_by!(email: params[:email]) do |user|
       user.name = params[:name]
-      user.confirmation_token = generate_random_token
+      user.confirmation_token = new_random_token
     end
   end
 
@@ -40,18 +40,7 @@ class UserCreation
     UserMailer.new_user(user).deliver_now
   end
 
-  def generate_random_token
-    token_candidate = new_random_token
-
-    loop do
-      break unless User.find_by(confirmation_token: token_candidate)
-      token_candidate = new_random_token
-    end
-
-    token_candidate
-  end
-
   def new_random_token
-    SecureRandom.urlsafe_base64(32)
+    Crypto.unique_token { |token| User.find_by(confirmation_token: token) }
   end
 end

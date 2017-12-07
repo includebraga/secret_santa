@@ -32,6 +32,9 @@ Naming/PredicateName:
     - is_
     - have_
 
+Style/AndOr:
+  EnforcedStyle: conditionals
+
 Style/ClassAndModuleChildren:
   Enabled: false
 
