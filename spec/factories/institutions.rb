@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :instituition do
+  factory :institution do
     name "MyString"
     short_name "MyString"
   end

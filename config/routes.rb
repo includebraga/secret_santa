@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :users, :receivers, :matches, :instituitions
+    resources :users, :receivers, :matches, :institutions
 
     root to: "users#index"
   end

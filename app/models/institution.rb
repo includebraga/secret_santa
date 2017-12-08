@@ -1,4 +1,4 @@
-class Instituition < ApplicationRecord
+class Institution < ApplicationRecord
   has_many :receivers
 
   validates :name,

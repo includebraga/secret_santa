@@ -10,7 +10,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     matches: Field::HasMany,
     users: Field::HasMany,
-    instituition: Field::BelongsTo,
+    institution: Field::BelongsTo,
     id: Field::Number,
     name: Field::String,
     letter: Field::Text,
@@ -28,7 +28,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     name
-    instituition
+    institution
     matched_gifts
     received_gifts
   ].freeze
@@ -37,7 +37,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     name
-    instituition
+    institution
     matched_gifts
     received_gifts
     letter
@@ -52,7 +52,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    instituition
+    institution
     name
     letter
     matched_gifts

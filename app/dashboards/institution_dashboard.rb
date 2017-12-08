@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class InstituitionDashboard < Administrate::BaseDashboard
+class InstitutionDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -45,7 +45,7 @@ class InstituitionDashboard < Administrate::BaseDashboard
     short_name
   ].freeze
 
-  def display_resource(instituition)
-    instituition.name
+  def display_resource(institution)
+    institution.name
   end
 end

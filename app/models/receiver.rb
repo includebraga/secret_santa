@@ -1,11 +1,11 @@
 class Receiver < ApplicationRecord
   has_many :matches
   has_many :users, through: :matches
-  belongs_to :instituition
+  belongs_to :institution
 
   validates :name,
     presence: true,
     length: { maximum: 80 }
 
-  validates :letter, :instituition_id, presence: true
+  validates :letter, :institution_id, presence: true
 end
