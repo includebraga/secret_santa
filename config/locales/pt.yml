@@ -1,8 +1,22 @@
 pt:
   activerecord:
+    models:
+      user: "Santa"
+      institution: "Instituição"
+      receiver: "Presenteado"
     attributes:
       user:
         name: "Nome"
+      institution:
+        name: "Nome"
+        short_name: "Abreviatura"
+      match:
+        user: "Secret Santa"
+        receiver: "Presenteado"
+      receiver:
+        name: "Nome"
+        letter: "Carta"
+        institution: "Instituição"
     errors:
       messages:
         blank: "Não pode estar em branco"
