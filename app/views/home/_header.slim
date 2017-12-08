@@ -6,16 +6,8 @@ header.Header
           h1.Heading.Heading--white
             | Queres proporcionar um Natal mais feliz a crianças de instituições de Braga?
 
-        - if User.limit_reached?
-          .Header-text
-            | Chegamos ao nosso limite de prendas! Muito obrigado a todos os que se inscreveram! Em breve teremos as cartas disponíveis.
-
-        - else
-          .Header-text
-            | Inscreve-te para seres um Secret Santa.
-
-          .Header-cta
-            = link_to "Inscreve-me!", new_user_path, class: "Button"
+        .Header-text
+          | Chegamos ao nosso limite de prendas! Muito obrigado a todos os que se inscreveram! Em breve teremos as cartas disponíveis.
 
     .Header-secondCol
       .Header-img

@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  USER_LIMIT = 400
   has_many :matches
   has_many :receivers, through: :matches
+
   scope :unconfirmed, -> { where(confirmed_at: nil) }
 
   validates :email,
@@ -28,9 +28,5 @@ class User < ApplicationRecord
 
   def confirmed?
     confirmed_at != nil
-  end
-
-  def self.limit_reached?
-    User.count >= USER_LIMIT
   end
 end

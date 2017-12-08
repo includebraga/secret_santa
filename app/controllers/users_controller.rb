@@ -1,11 +1,7 @@
 class UsersController < ApplicationController
   def new
-    if User.limit_reached?
-      render "closed"
-    else
-      @user = user_from_session
-      render "new"
-    end
+    @user = user_from_session
+    render "new"
   end
 
   def create

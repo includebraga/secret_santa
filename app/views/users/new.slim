@@ -1,18 +1,9 @@
-.SignUp
-  .SignUp-content
-    .SignUp-form
-      .SignUp-title
-        h1.Heading 🎄 Regista-te
+.Section
+  .Section-content
+    .Section-title
+      h1.Heading Inscrições fechadas!
 
-      = form_for @user do |f|
-        div.form-group
-          = f.label :name, :class => 'control-label'
-          = f.text_field :name, :placeholder => 'Saint Nicholas', :class => 'form-control'
-          = error_field @user, :name
-
-        div.form-group
-          = f.label :email,  :class => 'control-label'
-          = f.email_field :email, :placeholder => 'saint_nicholas@gift.org', :class => 'form-control'
-          = error_field @user, :email
-          br
-          = f.submit 'Torna-te num Secret Santa', class: 'Button'
+    .Section-text
+      p Chegamos ao nosso limite de prendas!
+      p Muito obrigado a todos os que se inscreveram!
+      p Em breve teremos as cartas disponíveis.
