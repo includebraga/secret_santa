@@ -3,7 +3,6 @@ class Instituition < ApplicationRecord
 
   validates :name,
     presence: true,
-    uniqueness: { case_sensitive: false },
     length: { maximum: 80 }
 
   validates :short_name,
