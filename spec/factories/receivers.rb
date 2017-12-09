@@ -1,9 +1,10 @@
 FactoryBot.define do
   factory :receiver do
-    name "MyString"
-    letter "MyText"
-    institution nil
-    matched_gifts 1
-    received_gifts 1
+    name { Faker::Name.name }
+    letter { Faker::RickAndMorty.quote }
+    matched_gifts 0
+    received_gifts 0
+    golden_santa false
+    institution
   end
 end

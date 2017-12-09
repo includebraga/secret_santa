@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   root "home#index"
 
   resources :users, only: [:create, :new]
+  get "/redeem/:token", to: "matches#new"
+  post "/redeem/:token", to: "matches#create", as: :match
 
   namespace :users do
     get "/confirm/:token", to: "confirmations#create", as: :confirmation

@@ -4,8 +4,8 @@ class CreateReceivers < ActiveRecord::Migration[5.1]
       t.string :name
       t.text :letter
       t.references :institution, foreign_key: true
-      t.integer :matched_gifts
-      t.integer :received_gifts
+      t.integer :matched_gifts, default: 0
+      t.integer :received_gifts, default: 0
 
       t.timestamps
     end
