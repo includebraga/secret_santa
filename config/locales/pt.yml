@@ -25,9 +25,11 @@ pt:
         institution: "Instituição"
     errors:
       messages:
-        blank: "Não pode estar em branco"
-        taken: "Utilizador já existe"
-        invalid: "É inválido"
+        blank: "não pode estar em branco"
+        required: "é obrigatório"
+        inclusion: "não está incluído na lista"
+        taken: "já existe"
+        invalid: "é inválido"
   date:
     formats:
       default: "%d/%m/%Y"
