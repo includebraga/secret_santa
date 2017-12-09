@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171208142751) do
+ActiveRecord::Schema.define(version: 20171209160619) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,14 +20,17 @@ ActiveRecord::Schema.define(version: 20171208142751) do
     t.string "short_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["short_name"], name: "index_institutions_on_short_name", unique: true
   end
 
   create_table "matches", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "receiver_id"
+    t.bigint "user_id"
+    t.bigint "receiver_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id", "receiver_id"], name: "index_matches_on_user_id_and_receiver_id"
+    t.index ["receiver_id"], name: "index_matches_on_receiver_id"
+    t.index ["user_id", "receiver_id"], name: "index_matches_on_user_id_and_receiver_id", unique: true
+    t.index ["user_id"], name: "index_matches_on_user_id"
   end
 
   create_table "receivers", force: :cascade do |t|
@@ -49,9 +52,13 @@ ActiveRecord::Schema.define(version: 20171208142751) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.string "confirmation_token"
+    t.string "redeem_token"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["redeem_token"], name: "index_users_on_redeem_token", unique: true
   end
 
+  add_foreign_key "matches", "receivers"
+  add_foreign_key "matches", "users"
   add_foreign_key "receivers", "institutions"
 end

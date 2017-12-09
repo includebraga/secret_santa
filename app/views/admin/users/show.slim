@@ -8,7 +8,7 @@ header.main-content__header[role="banner"]
         [:edit, namespace, page.resource],
         class: "button")
 
-  div
+  div style="margin-left: 10px"
     = link_to("Resend Email",
           admin_users_confirmation_path(page.resource.id),
           class: "button",

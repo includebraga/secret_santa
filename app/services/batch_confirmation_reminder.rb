@@ -13,14 +13,10 @@ class BatchConfirmationReminder
 
   def perform
     @reminders_sent = users.inject(0) do |acc, user|
-      if remind(user)
-        acc + 1
-      else
-        acc
-      end
+      remind(user) ? acc + 1 : acc
     end
 
-    @success = true
+    @success = reminders_sent != 0
   end
 
   private

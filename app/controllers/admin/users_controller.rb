@@ -24,5 +24,15 @@ module Admin
 
       redirect_to admin_users_path
     end
+
+    def batch_assign
+      redeem_token_allocation = RedeemTokenAllocation.new
+      redeem_token_allocation.perform
+
+      nr_users = redeem_token_allocation.updated_users
+      flash[:notice] = "Assigned a redeem token to #{nr_users} users"
+
+      redirect_to admin_users_path
+    end
   end
 end

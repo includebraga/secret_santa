@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   namespace :admin do
     post "/confirm/:id", to: "users#confirm", as: :users_confirmation
     post "/confirm/", to: "users#batch_confirm", as: :users_batch_confirmation
+    post "/assign", to: "users#batch_assign", as: :users_batch_assign
   end
 
   if Rails.env.development?

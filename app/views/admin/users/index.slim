@@ -17,10 +17,18 @@ header.main-content__header role="banner"
         class: "button",                                                            \
       ) if valid_action? :new
 
-  div
+  div style="margin-left: 10px"
     = link_to(                                                                      \
         "Resend confirmation emails",                                               \
         admin_users_batch_confirmation_path,                                        \
+        class: "button",                                                            \
+        method: :post                                                               \
+      )
+
+  div style="margin-left: 10px"
+    = link_to(                                                                      \
+        "Assign redeem tokens",                                                     \
+        admin_users_batch_assign_path,                                              \
         class: "button",                                                            \
         method: :post                                                               \
       )

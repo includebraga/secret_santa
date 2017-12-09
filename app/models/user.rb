@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :receivers, through: :matches
 
   scope :unconfirmed, -> { where(confirmed_at: nil) }
+  scope :confirmed, -> { where.not(confirmed_at: nil) }
 
   validates :email,
     presence: true,
@@ -15,6 +16,10 @@ class User < ApplicationRecord
     length: { maximum: 80 }
 
   validates :confirmation_token,
+    uniqueness: { case_sensitive: true },
+    allow_nil: true
+
+  validates :redeem_token,
     uniqueness: { case_sensitive: true },
     allow_nil: true
 
