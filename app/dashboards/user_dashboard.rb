@@ -54,6 +54,6 @@ class UserDashboard < Administrate::BaseDashboard
   ].freeze
 
   def display_resource(user)
-    "🎅u#{user.email.split('@')[0]}"
+    user.name
   end
 end
