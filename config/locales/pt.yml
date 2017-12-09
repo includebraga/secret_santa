@@ -1,9 +1,15 @@
 pt:
   activerecord:
     models:
-      user: "Santa"
-      institution: "Instituição"
-      receiver: "Presenteado"
+      user:
+        one: "Santa"
+        other: "Santas"
+      institution:
+        one: "Instituição"
+        other: "Instituições"
+      receiver:
+        one: "Presenteado"
+        other: "Presenteados"
     attributes:
       user:
         name: "Nome"
