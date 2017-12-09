@@ -8,7 +8,6 @@ class UserConfirmation
     User.transaction do
       load_user!
       update_user!
-      notify_user!
 
       @success = true
     end
@@ -34,9 +33,5 @@ class UserConfirmation
 
   def update_user!
     @_user.update!(confirmed_at: Time.now, confirmation_token: nil)
-  end
-
-  def notify_user!
-    # TODO
   end
 end
