@@ -12,5 +12,5 @@ class Receiver < ApplicationRecord
     :received_gifts,
     :matched_gifts
 
-  validates :golden_santa, inclusion: { in: [true, false] }
+  validates :golden, inclusion: { in: [true, false] }
 end

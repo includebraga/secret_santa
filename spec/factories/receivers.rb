@@ -4,7 +4,7 @@ FactoryBot.define do
     letter { Faker::RickAndMorty.quote }
     matched_gifts 0
     received_gifts 0
-    golden_santa false
+    golden false
     institution
   end
 end

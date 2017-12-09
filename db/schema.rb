@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171209160619) do
+ActiveRecord::Schema.define(version: 20171209232537) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20171209160619) do
     t.integer "received_gifts"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "golden_santa", default: false
+    t.boolean "golden", default: false
     t.index ["institution_id"], name: "index_receivers_on_institution_id"
   end
 
