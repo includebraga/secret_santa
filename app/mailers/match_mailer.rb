@@ -1,4 +1,5 @@
 class MatchMailer < ApplicationMailer
+  add_template_helper(ReceiverHelper)
   add_template_helper(UserHelper)
 
   def match_ready(user)

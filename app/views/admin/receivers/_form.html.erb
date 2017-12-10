@@ -1,0 +1,73 @@
+<%#
+# Form Partial
+
+This partial is rendered on a resource's `new` and `edit` pages,
+and renders all form fields for a resource's editable attributes.
+
+## Local variables:
+
+- `page`:
+  An instance of [Administrate::Page::Form][1].
+  Contains helper methods to display a form,
+  and knows which attributes should be displayed in the resource's form.
+
+[1]: http://www.rubydoc.info/gems/administrate/Administrate/Page/Form
+%>
+
+<% content_for :javascript do %>
+  <script>
+    var converter = new showdown.Converter();
+
+    function onClick(){
+      var receiverLetter = document.getElementById("receiver_letter").value;
+      var markdownLetter = converter.makeHtml(receiverLetter);
+
+      document.getElementById("MarkdownPreview").innerHTML=markdownLetter;
+    }
+  </script>
+
+  <style>
+    #MarkdownPreview {
+      border: 1px solid #dfe0e1;
+      border-radius: 4px;
+      padding: 8px;
+    }
+  </style>
+<% end %>
+
+<%= form_for([namespace, page.resource], html: { class: "form" }) do |f| %>
+  <% if page.resource.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(page.resource.errors.count, "error") %>
+        prohibited this <%= page.resource_name %> from being saved:
+      </h2>
+
+      <ul>
+        <% page.resource.errors.full_messages.each do |message| %>
+          <li class="flash-error"><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% page.attributes.each do |attribute| -%>
+    <div class="field-unit field-unit--<%= attribute.html_class %>">
+      <%= render_field attribute, f: f %>
+    </div>
+  <% end -%>
+
+  <div class="field-unit field-unit--text">
+    <div class="field-unit__label">
+      <label>
+        Markdown Carta
+      </label>
+    </div>
+    <div id="MarkdownPreview" class="field-unit__field"></div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit %>
+    <button type="button" onclick="onClick()">Preview</button>
+  </div>
+<% end %>
