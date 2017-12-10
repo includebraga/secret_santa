@@ -45,6 +45,7 @@ class UserDashboard < Administrate::BaseDashboard
     confirmation_token
     redeem_token
     match_notice_sent
+    receivers
   ].freeze
 
   # FORM_ATTRIBUTES
