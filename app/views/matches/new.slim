@@ -1,3 +1,87 @@
-p You are about to become a santa.
+.Section
+  .Section-content
+    .Section-title
+      h1.Heading.Heading--centered
+        ' Olá #{first_name(@user)}!
+        br
+        ' O tão aguardado momento chegou! 😍
 
-p Click #{link_to "here", @url, method: :post}
+    .Section-text
+      .Heading 💌💌💌
+
+      br
+
+      p Antes de te atribuirmos a carta que te transforma num Secret Santa, aqui vão algumas coisas que deves saber.
+
+      br
+
+      p
+        ' As cartas contém informações privadas e por isso
+        strong
+          ' não
+        ' partilhes a tua com mais ninguém. Em especial,
+        strong
+          ' não
+        ' partilhes nas redes sociais.
+
+      br
+
+      p
+        ' A recolha das prendas será durante a semana de
+        strong
+          | 11 a 16 de Dezembro
+        '. Estaremos no Complexo Pedagógico Nº1 da Universidade do Minho e no
+        = link_to "Braga i/o", "https://goo.gl/maps/NYYbkoCYvvF2", target: "_blank"
+        strong
+          '  das 10h às 18h.
+
+      br
+
+      p
+        ' Se não te puderes descolar a estes locais,
+        strong
+          ' podes enviar-nos por correio
+        ' para Fernando Mendes, Subvisual - Pólo de Negócios de Braga, Avenida D. JOAO II 404, 4º andar, Sala 45, 4715-275 Braga.
+
+      br
+
+      p
+        ' A tua prenda deve ser escolhida com
+        strong
+          | amor
+        ' , apelamos à
+        strong
+          ' originalidade
+        ' e
+        strong
+          ' criatividade
+        ' de cada um, surpreende a tua criança! Apelamos também ao teu
+        strong
+          ' bom senso
+        ' 😊 As crianças vão receber as prendas em conjunto e por isso devemos evitar grandes discrepâncias. Sendo assim, não ofereças nada velho ou descartável mas também te pedimos para não exagerares no preço da tua prenda.
+
+      br
+
+      p Quando carregares no link ser-te-á atribuída a carta de uma criança. A carta vai aparecer na página e vais receber uma cópia por e-mail. A partir desse momento contamos com a tua participação. Se não quiseres participar, nós compreendemos e ainda vais a tempo de cancelar a tua participação. Apenas te pedimos para não carregares no link abaixo.
+
+      hr
+      br
+
+      p
+        strong Tudo a postos? 😄 Só precisas de clicar #{link_to "neste link", @url, method: :post} para te ser atribuída a tua carta.
+
+      hr
+      br
+
+      p
+        ' Qualquer problema ou dúvida que tenhas, por favor, entra em connosco através do email
+        = link_to "includebraga@gmail.com", "mailto:includebraga@gmail.com"
+        '  ou da
+        = link_to "nossa página no Facebook", "https://fb.com/includebraga", target: :_blank
+        | .
+
+      br
+      hr
+      br
+
+      p O nosso mais sincero obrigado por toda a tua ajuda ❤️

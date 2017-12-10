@@ -2,10 +2,22 @@ require "rails_helper"
 
 RSpec.describe MatchesController, type: :controller do
   describe "GET #new" do
-    it "generates the create url" do
-      get :new, params: { token: "123" }
+    context "for an existing token" do
+      it "generates the create url" do
+        user = user_with_redeem_token
 
-      expect(assigns[:url]).to eq(match_path("123"))
+        get :new, params: { token: user.redeem_token }
+
+        expect(assigns[:url]).to eq(match_path(user.redeem_token))
+      end
+    end
+
+    context "for a non-existent token" do
+      it "404s" do
+        get :new, params: { token: "badjerous" }
+
+        expect(response.status).to eq(404)
+      end
     end
   end
   describe "POST #create" do

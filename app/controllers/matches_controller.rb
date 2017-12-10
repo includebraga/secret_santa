@@ -1,6 +1,12 @@
 class MatchesController < ApplicationController
   def new
-    @url = match_path(params[:token])
+    @user = User.find_by(redeem_token: params[:token])
+
+    if @user
+      @url = match_path(params[:token])
+    else
+      not_found
+    end
   end
 
   def create
