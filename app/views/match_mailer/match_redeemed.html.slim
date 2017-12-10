@@ -2,11 +2,11 @@ h1.null
   span style=("font-family:source sans pro,helvetica neue,helvetica,arial,sans-serif")
     span style="color:#FFFFFF"
       strong
-        span style="background-color:#2D3E50" Olá #{@user.name}!
+        span style="background-color:#2D3E50" Olá #{first_name(@user)}!
 
 #lipsum
   p
     img data-file-id="382703" height="192" src="https://gallery.mailchimp.com/20a509be43c63647cb47ef653/images/83945be4-789d-4412-926a-d2ef1bc06dfd.png" style=("border: 0px none; margin: 0px; float: left;") width="137"
 
-    = @receiver.letter
+    = raw letter_html(@receiver)
 

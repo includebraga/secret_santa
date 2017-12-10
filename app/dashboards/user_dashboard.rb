@@ -17,6 +17,8 @@ class UserDashboard < Administrate::BaseDashboard
     updated_at: Field::DateTime,
     name: Field::String,
     confirmation_token: Field::String,
+    redeem_token: Field::String,
+    match_notice_sent: Field::Boolean,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -41,6 +43,8 @@ class UserDashboard < Administrate::BaseDashboard
     created_at
     updated_at
     confirmation_token
+    redeem_token
+    match_notice_sent
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -50,7 +54,6 @@ class UserDashboard < Administrate::BaseDashboard
     email
     name
     confirmed_at
-    confirmation_token
   ].freeze
 
   def display_resource(user)

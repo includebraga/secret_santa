@@ -1,4 +1,6 @@
 class MatchRedeem
+  MAX_GIFTS_FOR_GOLDEN = 1
+
   def initialize(user)
     @success = false
     @user = user
@@ -50,7 +52,21 @@ class MatchRedeem
   end
 
   def next_receiver
-    Receiver.order(:matched_gifts).first
+    golden_query.
+      or(regular_query).
+      order(:matched_gifts).
+      first
+  end
+
+  def golden_query
+    Receiver.
+      where(golden: true).
+      where("matched_gifts < ?", MAX_GIFTS_FOR_GOLDEN)
+  end
+
+  def regular_query
+    Receiver.
+      where(golden: false)
   end
 
   def notify_user!

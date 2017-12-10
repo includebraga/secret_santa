@@ -2,8 +2,9 @@ class User < ApplicationRecord
   has_many :matches
   has_many :receivers, through: :matches
 
-  scope :unconfirmed, -> { where(confirmed_at: nil) }
   scope :confirmed, -> { where.not(confirmed_at: nil) }
+  scope :unconfirmed, -> { where(confirmed_at: nil) }
+  scope :unnotified, -> { where(match_notice_sent: false) }
 
   validates :email,
     presence: true,
@@ -33,5 +34,9 @@ class User < ApplicationRecord
 
   def confirmed?
     confirmed_at != nil
+  end
+
+  def notified?
+    match_notice_sent
   end
 end
