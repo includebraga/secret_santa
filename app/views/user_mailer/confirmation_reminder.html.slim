@@ -2,14 +2,14 @@ h1.null
   span style=("font-family:source sans pro,helvetica neue,helvetica,arial,sans-serif")
     span style="color:#FFFFFF"
       strong
-        span style="background-color:#2D3E50"  &nbsp;Secret Santa&nbsp;
+        span style="color:#FFFFFF; background-color:#2D3E50"  &nbsp;Secret Santa&nbsp;
 
 #lipsum
   p Olá #{@user.name}!
   p Ainda não confirmaste o teu e-mail. Pedimos que o faças para poderes receber a tua carta.
   p Caso contrário não poderemos contactar-te 😞
 
-  p Para confirmar, clicka #{link_to "neste link", @confirmation_url}.
+  p Para confirmar, clica #{link_to "neste link", @confirmation_url}.
   p Se não funcionou, copia e cola na barra de endereços do teu browser: #{@confirmation_url}
 
   p Sorrisos 😊
