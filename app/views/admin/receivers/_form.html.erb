@@ -18,12 +18,14 @@ and renders all form fields for a resource's editable attributes.
   <script>
     var converter = new showdown.Converter();
 
-    function onClick(){
+    function renderMarkdown(){
       var receiverLetter = document.getElementById("receiver_letter").value;
       var markdownLetter = converter.makeHtml(receiverLetter);
 
       document.getElementById("MarkdownPreview").innerHTML=markdownLetter;
     }
+
+    document.addEventListener('DOMContentLoaded', renderMarkdown);
   </script>
 <% end %>
 
@@ -60,6 +62,6 @@ and renders all form fields for a resource's editable attributes.
 
   <div class="form-actions">
     <%= f.submit %>
-    <button type="button" onclick="onClick()">Preview</button>
+    <button type="button" onclick="renderMarkdown()">Preview</button>
   </div>
 <% end %>
