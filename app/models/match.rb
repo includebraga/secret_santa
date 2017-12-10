@@ -8,4 +8,8 @@ class Match < ApplicationRecord
 
   validates :receiver_id, presence: true
   validates :email_sent, inclusion: { in: [true, false] }
+
+  def email_sent?
+    email_sent
+  end
 end

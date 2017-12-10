@@ -16,9 +16,8 @@ class MatchRedeem
     return unless user
 
     ActiveRecord::Base.transaction(joinable: false) do
-      @match = Match.find_or_create_by!(user: user) do |match|
-        match.receiver = assign_and_update_receiver!
-      end
+      find_or_create_match!
+      notify_user!
 
       @success = true
     end
@@ -29,6 +28,12 @@ class MatchRedeem
   private
 
   attr_reader :user, :match
+
+  def find_or_create_match!
+    @match = Match.find_or_create_by!(user: user) do |match|
+      match.receiver = assign_and_update_receiver!
+    end
+  end
 
   def assign_and_update_receiver!
     Receiver.transaction do
@@ -46,5 +51,13 @@ class MatchRedeem
 
   def next_receiver
     Receiver.order(:matched_gifts).first
+  end
+
+  def notify_user!
+    return if match.email_sent?
+
+    match.update!(email_sent: true)
+
+    MatchMailer.match_redeemed(user, match.receiver).deliver_now
   end
 end

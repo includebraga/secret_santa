@@ -48,6 +48,18 @@ RSpec.describe MatchRedeem, type: :model do
 
         expect(match_redeem.receiver).to eq(receiver)
       end
+
+      it "emails the user" do
+        email = double("email", deliver_now: true)
+        allow(MatchMailer).to receive(:match_redeemed).and_return(email)
+        create(:receiver)
+        user = create(:user)
+        match_redeem = MatchRedeem.new(user)
+
+        match_redeem.perform
+
+        expect(email).to have_received(:deliver_now)
+      end
     end
 
     context "for a user with an existing match" do
@@ -91,6 +103,19 @@ RSpec.describe MatchRedeem, type: :model do
         match_redeem.perform
 
         expect(match_redeem.receiver).to eq(receiver)
+      end
+
+      it "does not email the user" do
+        email = double("email", deliver_now: true)
+        allow(MatchMailer).to receive(:match_redeemed).and_return(email)
+        receiver = create(:receiver)
+        user = create(:user)
+        create(:match, receiver: receiver, user: user)
+        match_redeem = MatchRedeem.new(user)
+
+        match_redeem.perform
+
+        expect(email).not_to have_received(:deliver_now)
       end
     end
 
