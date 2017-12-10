@@ -34,5 +34,30 @@ module Admin
 
       redirect_to admin_users_path
     end
+
+    def match
+      user = User.find(params[:id])
+      match_notification = MatchNotification.new(user, force_resend: true)
+
+      match_notification.perform
+
+      if match_notification.successful?
+        flash[:notice] = "Sent the match notification"
+      else
+        flash[:error] = "Something went wrong. Maybe the user doesn't have a redeem token?"
+      end
+
+      redirect_to admin_user_path(user)
+    end
+
+    def batch_match
+      match_notification = BatchMatchNotification.new
+      match_notification.perform
+
+      nr_users = match_notification.notifications_sent
+      flash[:notice] = "Notified #{nr_users} users"
+
+      redirect_to admin_users_path
+    end
   end
 end

@@ -4,7 +4,7 @@ RSpec.describe MatchesController, type: :controller do
   describe "GET #new" do
     context "for an existing token" do
       it "generates the create url" do
-        user = user_with_redeem_token
+        user = create(:user_with_redeem_token)
 
         get :new, params: { token: user.redeem_token }
 
@@ -24,7 +24,7 @@ RSpec.describe MatchesController, type: :controller do
     context "for users with no matches" do
       it "creates a new match" do
         create(:receiver)
-        user = user_with_redeem_token
+        user = create(:user_with_redeem_token)
 
         expect do
           post :create, params: { token: user.redeem_token }
@@ -33,7 +33,7 @@ RSpec.describe MatchesController, type: :controller do
 
       it "assigns the correct receiver" do
         create(:receiver)
-        user = user_with_redeem_token
+        user = create(:user_with_redeem_token)
 
         post :create, params: { token: user.redeem_token }
 
@@ -44,7 +44,7 @@ RSpec.describe MatchesController, type: :controller do
 
     context "for users with a match" do
       it "doesn't create a match" do
-        user = user_with_redeem_token
+        user = create(:user_with_redeem_token)
         receiver = create(:receiver)
         create(:match, user: user, receiver: receiver)
 
@@ -54,7 +54,7 @@ RSpec.describe MatchesController, type: :controller do
       end
 
       it "assigns the user's receiver" do
-        user = user_with_redeem_token
+        user = create(:user_with_redeem_token)
         receiver = create(:receiver)
         create(:match, user: user, receiver: receiver)
 
@@ -71,15 +71,5 @@ RSpec.describe MatchesController, type: :controller do
         expect(response.status).to eq(404)
       end
     end
-  end
-
-  private
-
-  def user_with_redeem_token
-    user = create(:user)
-
-    RedeemTokenAllocation.new([user]).perform
-
-    user.reload
   end
 end
