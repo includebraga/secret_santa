@@ -146,6 +146,18 @@ RSpec.describe MatchRedeem, type: :model do
         expect(first_redeem.receiver).to eq(third_redeem.receiver)
         expect(third_redeem.receiver.matched_gifts).to eq(2)
       end
+
+      it "does not repeat golden receivers" do
+        golden = create(:receiver, golden: true)
+        regular = create(:receiver, golden: false)
+
+        create_list(:user, 4).each do |user|
+          MatchRedeem.new(user).perform
+        end
+
+        expect(golden.reload.matched_gifts).to eq(1)
+        expect(regular.reload.matched_gifts).to eq(3)
+      end
     end
 
     context "when no receivers exist" do

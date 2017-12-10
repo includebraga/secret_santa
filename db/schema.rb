@@ -38,8 +38,8 @@ ActiveRecord::Schema.define(version: 20171209235616) do
     t.string "name"
     t.text "letter"
     t.bigint "institution_id"
-    t.integer "matched_gifts"
-    t.integer "received_gifts"
+    t.integer "matched_gifts", default: 0
+    t.integer "received_gifts", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "golden", default: false
