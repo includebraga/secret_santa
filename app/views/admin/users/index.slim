@@ -25,21 +25,21 @@ header.main-content__header role="banner"
         method: :post                                                               \
       )
 
-  / div style="margin-left: 10px"
-  /   = link_to(                                                                      \
-  /       "Send match emails",                                                        \
-  /       admin_users_batch_match_path,                                               \
-  /       class: "button",                                                            \
-  /       method: :post                                                               \
-  /     )
+  div style="margin-left: 10px"
+    = link_to(                                                                      \
+        "Send match emails",                                                        \
+        admin_users_batch_match_path,                                               \
+        class: "button",                                                            \
+        method: :post                                                               \
+      )
 
-  / div style="margin-left: 10px"
-  /   = link_to(                                                                      \
-  /       "Assign redeem tokens",                                                     \
-  /       admin_users_batch_assign_path,                                              \
-  /       class: "button",                                                            \
-  /       method: :post                                                               \
-  /     )
+  div style="margin-left: 10px"
+    = link_to(                                                                      \
+        "Assign redeem tokens",                                                     \
+        admin_users_batch_assign_path,                                              \
+        class: "button",                                                            \
+        method: :post                                                               \
+      )
 
 section.main-content__body.main-content__body--flush
   = render(                       \
