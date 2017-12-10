@@ -11,7 +11,7 @@ class InstitutionDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     short_name: Field::String,
-    receivers: Field::HasMany,
+    receivers: Field::HasMany.with_options(limit: 20),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
