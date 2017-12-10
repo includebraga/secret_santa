@@ -25,24 +25,6 @@ and renders all form fields for a resource's editable attributes.
       document.getElementById("MarkdownPreview").innerHTML=markdownLetter;
     }
   </script>
-
-  <style>
-    #MarkdownPreview {
-      border: 1px solid #dfe0e1;
-      border-radius: 4px;
-      padding: 8px;
-    }
-
-    #MarkdownPreview i,
-    #MarkdownPreview em {
-      color: #f95252;
-    }
-
-    #MarkdownPreview b,
-    #MarkdownPreview strong {
-      color: #2d3e50;
-    }
-  </style>
 <% end %>
 
 <%= form_for([namespace, page.resource], html: { class: "form" }) do |f| %>
@@ -73,7 +55,7 @@ and renders all form fields for a resource's editable attributes.
         Markdown Carta
       </label>
     </div>
-    <div id="MarkdownPreview" class="field-unit__field"></div>
+    <div id="MarkdownPreview" class="field-unit__field MarkdownLetter"></div>
   </div>
 
   <div class="form-actions">

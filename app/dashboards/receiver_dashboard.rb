@@ -13,7 +13,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
     institution: Field::BelongsTo,
     id: Field::Number,
     name: Field::String,
-    letter: Field::Text,
+    letter: MarkdownField,
     matched_gifts: Field::Number,
     received_gifts: Field::Number,
     golden: Field::Boolean,
