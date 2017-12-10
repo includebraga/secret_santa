@@ -18,7 +18,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
     received_gifts: Field::Number,
     golden: Field::Boolean,
     age: Field::Number,
-    gender: SelectField.with_options(choices: Receiver.genders),
+    gender: SelectField.with_options(choices: Receiver.genders.keys),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -65,6 +65,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
     golden
     letter
     received_gifts
+    matched_gifts
   ].freeze
 
   def display_resource(receiver)

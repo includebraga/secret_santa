@@ -6,7 +6,9 @@ class SelectField < Administrate::Field::Base
   end
 
   def choices
-    options.fetch(:choices)
+    choices = options.fetch(:choices)
+
+    choices.zip(choices)
   end
 
   def selected_choice
