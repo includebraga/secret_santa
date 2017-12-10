@@ -3,6 +3,8 @@ class Receiver < ApplicationRecord
   has_many :users, through: :matches
   belongs_to :institution
 
+  enum gender: %w[unknown male female other]
+
   validates :name,
     presence: true,
     length: { maximum: 80 }

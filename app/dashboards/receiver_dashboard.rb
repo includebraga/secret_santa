@@ -16,6 +16,9 @@ class ReceiverDashboard < Administrate::BaseDashboard
     letter: Field::Text,
     matched_gifts: Field::Number,
     received_gifts: Field::Number,
+    golden: Field::Boolean,
+    age: Field::Number,
+    gender: SelectField.with_options(choices: Receiver.genders),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -29,6 +32,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
     id
     name
     institution
+    golden
     matched_gifts
     received_gifts
   ].freeze
@@ -36,14 +40,16 @@ class ReceiverDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
-    name
-    institution
-    matched_gifts
-    received_gifts
-    letter
-    matches
-    users
     id
+    name
+    age
+    gender
+    institution
+    golden
+    received_gifts
+    matched_gifts
+    letter
+    users
     created_at
     updated_at
   ].freeze
@@ -54,8 +60,10 @@ class ReceiverDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     institution
     name
+    age
+    gender
+    golden
     letter
-    matched_gifts
     received_gifts
   ].freeze
 
