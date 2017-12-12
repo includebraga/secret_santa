@@ -9,6 +9,12 @@ header.main-content__header[role="banner"]
         class: "button")
 
   div style="margin-left: 10px"
+    = link_to("Assign redeem token",
+          admin_users_assign_path(page.resource.id),
+          class: "button",
+          method: :post)
+
+  div style="margin-left: 10px"
     = link_to("Resend Email",
           admin_users_confirmation_path(page.resource.id),
           class: "button",

@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   namespace :admin do
     post "/confirm/:id", to: "users#confirm", as: :users_confirmation
     post "/confirm/", to: "users#batch_confirm", as: :users_batch_confirmation
+    post "/assign/:id", to: "users#assign", as: :users_assign
     post "/assign", to: "users#batch_assign", as: :users_batch_assign
     post "/match/:id", to: "users#match", as: :users_match
     post "/match/", to: "users#batch_match", as: :users_batch_match

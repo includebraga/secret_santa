@@ -38,6 +38,20 @@ module Admin
       redirect_to admin_users_path
     end
 
+    def assign
+      user = User.find(params[:id])
+      redeem_token_allocation = RedeemTokenAllocation.new([user])
+      redeem_token_allocation.perform
+
+      if redeem_token_allocation.updated_users == 1
+        flash[:notice] = "Redeem token assigned!"
+      else
+        flash[:error] = "Something went wrong, token was not assigned"
+      end
+
+      redirect_to admin_user_path(user)
+    end
+
     def batch_assign
       redeem_token_allocation = RedeemTokenAllocation.new
       redeem_token_allocation.perform
