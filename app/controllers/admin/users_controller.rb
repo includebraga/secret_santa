@@ -1,5 +1,18 @@
 module Admin
   class UsersController < Admin::ApplicationController
+    def create
+      user_creation = UserCreation.new(user_params)
+      user_creation.perform
+
+      if user_creation.successful?
+        flash[:notice] = "User created!"
+        redirect_to admin_user_path(user_creation.user)
+      else
+        flash[:error] = "Something went wrong."
+        redirect_to admin_users_path
+      end
+    end
+
     def confirm
       user = User.find(params[:id])
       confirmation_reminder = ConfirmationReminder.new(user)
@@ -58,6 +71,12 @@ module Admin
       flash[:notice] = "Notified #{nr_users} users"
 
       redirect_to admin_users_path
+    end
+
+    private
+
+    def user_params
+      params.require(:user).permit(:name, :email)
     end
   end
 end

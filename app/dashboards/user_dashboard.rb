@@ -54,7 +54,6 @@ class UserDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     email
     name
-    confirmed_at
   ].freeze
 
   def display_resource(user)
