@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users, :receivers, :matches, :institutions
 
-    root to: "users#index"
+    root "pages#index"
   end
 
   root "home#index"

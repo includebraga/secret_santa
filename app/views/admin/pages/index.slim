@@ -1,0 +1,42 @@
+.main-content__header
+  h1.main-content__page-title Stats
+
+.main-content__body
+  strong
+    ' Receivers with 1 gift:
+  = @remaining_receivers
+
+  br
+  br
+
+  strong
+    ' Receivers with 3 gifts:
+  = @exceeding_receivers
+
+  br
+  br
+
+  strong
+    ' Users that haven't redeemed:
+  = @users_without_redeem
+
+  br
+  br
+
+  strong
+    ' Gifts received:
+  = @gifts_received
+
+  br
+  br
+
+  strong
+    ' Gifts matched:
+  = @gifts_matched
+
+  br
+  br
+
+  strong
+    ' Total receivers:
+  = @total_receivers

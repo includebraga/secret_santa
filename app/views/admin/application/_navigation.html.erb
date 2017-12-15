@@ -1,0 +1,10 @@
+<nav class="navigation" role="navigation">
+  <% Administrate::Namespace.new(namespace).resources.each do |resource| %>
+    <% next if resource.resource == 'pages' %>
+    <%= link_to(
+      display_resource_name(resource),
+      [namespace, resource.path],
+      class: "navigation__link navigation__link--#{nav_link_state(resource)}"
+    ) %>
+  <% end %>
+</nav>
