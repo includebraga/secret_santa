@@ -1,6 +1,13 @@
 <nav class="navigation" role="navigation">
+  <%= link_to(
+    "Home",
+    admin_root_path,
+    class: "navigation__link navigation__link--#{nav_link_state("pages")}")
+  %>
+
   <% Administrate::Namespace.new(namespace).resources.each do |resource| %>
     <% next if resource.resource == 'pages' %>
+
     <%= link_to(
       display_resource_name(resource),
       [namespace, resource.path],

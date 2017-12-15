@@ -12,11 +12,11 @@ module Admin
     private
 
     def remaining_receivers
-      Receiver.where(golden: false, received_gifts: 1)
+      Receiver.where(golden: false, matched_gifts: 1)
     end
 
     def exceeding_receivers
-      Receiver.where(golden: false, received_gifts: 3)
+      Receiver.where(golden: false, matched_gifts: 3)
     end
 
     def gifts_received
