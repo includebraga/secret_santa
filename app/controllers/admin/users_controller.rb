@@ -87,6 +87,36 @@ module Admin
       redirect_to admin_users_path
     end
 
+    def receive
+      user = User.find(params[:id])
+      gift_reception = GiftReception.new(user)
+
+      gift_reception.perform
+
+      if gift_reception.successful?
+        flash[:notice] = "Gift received!"
+      else
+        flash[:error] - "Something went wrong. Maybe the user has no matches?"
+      end
+
+      redirect_to admin_user_path(user)
+    end
+
+    def revert_receive
+      user = User.find(params[:id])
+      gift_reception_reversion = GiftReceptionReversion.new(user)
+
+      gift_reception_reversion.perform
+
+      if gift_reception_reversion.successful?
+        flash[:notice] = "Gift reception reverted!"
+      else
+        flash[:error] - "Something went wrong. Maybe the user has no matches?"
+      end
+
+      redirect_to admin_user_path(user)
+    end
+
     private
 
     def user_params

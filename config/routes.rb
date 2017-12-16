@@ -22,6 +22,8 @@ Rails.application.routes.draw do
     post "/assign", to: "users#batch_assign", as: :users_batch_assign
     post "/match/:id", to: "users#match", as: :users_match
     post "/match/", to: "users#batch_match", as: :users_batch_match
+    post "/receive/:id", to: "users#receive", as: :users_receive
+    post "/revert/:id", to: "users#revert_receive", as: :users_revert
   end
 
   if Rails.env.development?
