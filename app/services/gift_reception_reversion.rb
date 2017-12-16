@@ -14,7 +14,7 @@ class GiftReceptionReversion
     Match.transaction do
       update_match!
       # TODO: ignore this for now
-      # decrement_gifts!
+      decrement_gifts!
 
       @success = true
     end

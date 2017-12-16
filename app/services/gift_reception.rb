@@ -13,8 +13,7 @@ class GiftReception
 
     Match.transaction do
       update_match!
-      # TODO: ignore this for now
-      # increment_gifts!
+      increment_gifts!
 
       @success = true
     end
