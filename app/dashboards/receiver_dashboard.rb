@@ -69,6 +69,6 @@ class ReceiverDashboard < Administrate::BaseDashboard
   ].freeze
 
   def display_resource(receiver)
-    "🙈 ##{receiver.id}"
+    "🙈 #{receiver.institution.short_name}#{receiver.id}"
   end
 end
