@@ -24,24 +24,6 @@ By default, it renders:
   <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.4/showdown.js"%>
   <%= render "stylesheet" %>
   <%= csrf_meta_tags %>
-
-  <style>
-    #MarkdownPreview {
-      border: 1px solid #dfe0e1;
-      border-radius: 4px;
-      padding: 8px;
-    }
-
-    .MarkdownLetter i,
-    .MarkdownLetter em {
-      color: #f95252;
-    }
-
-    .MarkdownLetter b,
-    .MarkdownLetter strong {
-      color: #2d3e50;
-    }
-  </style>
 </head>
 <body>
   <%= render "icons" %>
