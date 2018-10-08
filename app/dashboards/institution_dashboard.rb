@@ -13,7 +13,7 @@ class InstitutionDashboard < Administrate::BaseDashboard
     short_name: Field::String,
     receivers: Field::HasMany.with_options(limit: 20),
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES

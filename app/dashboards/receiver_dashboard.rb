@@ -20,7 +20,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
     age: Field::Number,
     gender: SelectField.with_options(choices: Receiver.genders.keys),
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES

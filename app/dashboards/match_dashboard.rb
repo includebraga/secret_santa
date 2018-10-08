@@ -13,7 +13,7 @@ class MatchDashboard < Administrate::BaseDashboard
     id: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    received: Field::Boolean,
+    received: Field::Boolean
   }.freeze
 
   # COLLECTION_ATTRIBUTES
