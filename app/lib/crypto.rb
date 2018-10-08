@@ -5,6 +5,7 @@ module Crypto
 
       loop do
         break unless yield token_candidate
+
         token_candidate = new_random_token
       end
 

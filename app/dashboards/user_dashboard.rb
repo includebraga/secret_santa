@@ -18,7 +18,7 @@ class UserDashboard < Administrate::BaseDashboard
     name: Field::String,
     confirmation_token: Field::String,
     redeem_token: Field::String,
-    match_notice_sent: Field::Boolean,
+    match_notice_sent: Field::Boolean
   }.freeze
 
   # COLLECTION_ATTRIBUTES

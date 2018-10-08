@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby "2.4.2"
+ruby "2.5.1"
 
 gem "bootstrap-sass", "~> 3.2.0"
 gem "email_validator"
@@ -13,7 +13,7 @@ gem "foreman"
 gem "pg"
 gem "pry-rails"
 gem "puma", "~> 3.7"
-gem "rails", "~> 5.1.3"
+gem "rails", "~> 5.2.1"
 gem "redcarpet"
 gem "sass-rails", "~> 5.0"
 gem "sentry-raven"

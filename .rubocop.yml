@@ -2,6 +2,7 @@ AllCops:
   Include:
     - "**/Rakefile"
     - "**/config.ru"
+    - "app/**/*.rb"
   Exclude:
     - "db/**/*"
     - "config/**/*"
@@ -10,7 +11,7 @@ AllCops:
     - "vendor/**/*"
     - "node_modules/**/*"
     - "Gemfile"
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.5.2
 
 Metrics/LineLength:
   Enabled: false
@@ -31,6 +32,9 @@ Naming/PredicateName:
   NamePrefixBlacklist:
     - is_
     - have_
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
 
 Style/AndOr:
   EnforcedStyle: conditionals
@@ -56,7 +60,7 @@ Style/SingleLineBlockParams:
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
 
-Style/TrailingCommaInLiteral:
+Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: comma
 
 Style/FrozenStringLiteralComment:
