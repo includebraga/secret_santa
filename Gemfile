@@ -23,6 +23,8 @@ gem "timber", "~> 2.2"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "administrate"
+gem 'webpacker'
+gem 'react-rails'
 
 group :development, :test do
   gem "awesome_print"
