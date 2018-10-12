@@ -26,8 +26,9 @@ fi
 echo "[setup] Setting up .env file"
 cp .env.sample .env
 
-echo "[setup]: Installing dependencies with bundler"
+echo "[setup]: Installing dependencies with bundler and yarn"
 bundle check || bundle install
+yarn
 
 echo "[setup]: Preparing database"
 bundle exec rake db:create || true
