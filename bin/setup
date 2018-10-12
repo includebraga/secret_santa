@@ -3,7 +3,7 @@
 set -e
 
 echo "[setup]: Installing required languages"
-if [ -z "$(command -v asdf)" ]; then
+if [ -x "$(command -v asdf)" ]; then
   set +e
   asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git 2>/dev/null
   asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git 2>/dev/null
