@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Merriweather');
+
+$font-family-mono: 'Fira Mono', monospace;
+$font-family-serif: 'Merriweather', serif;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+$color-black: #000000;
+$color-dark-blue-grey: #2d3e50;
+$color-deep-blue: #161f28;
+$color-green: #33cc77;
+$color-red: #f95252;
+$color-white: #ffffff;
+$color-yellow: #e5c650;
+
+$size-xsmall: 11px;
+$size-small: 16px;
+$size-base: 23px;
+$size-large: 32px;
+$size-xlarge: 45px;
+$size-xxlarge: 64px;
+
+$max-tablet-size: 768px;
+
+$grid-size: 992px;
+
+$Header-breakpoint: 960px;
+$Header-info-max-width: 550px;
+

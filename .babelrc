@@ -1,0 +1,32 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": "> 1%",
+          "uglify": true
+        },
+        "useBuiltIns": true
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    [
+      "react-css-modules",
+      {
+        "generateScopedName": "[folder]__[local]__[hash]"
+      }
+    ],
+    "syntax-dynamic-import",
+    "transform-object-rest-spread",
+    [
+      "transform-class-properties",
+      {
+        "spec": true
+      }
+    ]
+  ]
+}

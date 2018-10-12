@@ -1,7 +1,6 @@
-$Header-breakpoint: 960px;
-$Header-info-max-width: 550px;
+@import "../../styles/variables.css";
 
-.Header {
+.root {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,14 +9,14 @@ $Header-info-max-width: 550px;
 
   background-color: $color-deep-blue;
 
-  @media(min-width: $Header-breakpoint) {
+  @media (min-width: $Header-breakpoint) {
     height: 75vh;
 
     padding: $size-xxlarge;
   }
 }
 
-.Header-content {
+.content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,34 +24,34 @@ $Header-info-max-width: 550px;
   width: 100%;
   max-width: $grid-size;
 
-  @media(min-width: $Header-breakpoint) {
+  @media (min-width: $Header-breakpoint) {
     flex-direction: row;
   }
 }
 
-.Header-firstCol {
+.first-col {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  @media(min-width: $Header-breakpoint) {
+  @media (min-width: $Header-breakpoint) {
     flex-direction: row;
   }
 }
 
-.Header-secondCol {
+.second-col {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  @media(min-width: $Header-breakpoint) {
+  @media (min-width: $Header-breakpoint) {
     align-items: flex-start;
   }
 }
 
-.Header-info {
+.info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,7 +63,7 @@ $Header-info-max-width: 550px;
 
   max-width: $Header-info-max-width;
 
-  @media(min-width: $Header-breakpoint) {
+  @media (min-width: $Header-breakpoint) {
     align-items: flex-start;
 
     margin-bottom: 0;
@@ -73,34 +72,20 @@ $Header-info-max-width: 550px;
   }
 }
 
-.Header-text {
+.text {
   color: $color-white;
 }
 
-.Header-title,
-.Header-text {
+.title,
+.text {
   margin-bottom: $size-large;
+  color: $color-white;
 }
 
-.Header-logo {
-  display: flex;
-  align-items: center;
-}
-
-.Header-logoLettering {
-  display: none;
-
-  @media(min-width: $Header-breakpoint) {
-    display: initial;
-
-    margin-right: $size-xsmall;
-  }
-}
-
-.Header-img {
+.img {
   margin-bottom: $size-large;
 
-  @media(min-width: $Header-breakpoint) {
+  @media (min-width: $Header-breakpoint) {
     margin-bottom: 0;
   }
 }

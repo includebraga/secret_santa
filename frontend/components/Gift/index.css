@@ -1,29 +1,29 @@
-.Gift {
+.root {
   display: block;
   max-width: 300px;
 }
 
-.Gift-image {
+.image {
   width: 100%;
   position: relative;
 }
 
-.Gift-image:nth-child(1) {
+.image:nth-child(1) {
   z-index: 10;
 }
 
-.Gift-image:nth-child(2) {
+.image:nth-child(2) {
   transform: translateY(-20px);
   z-index: 1;
 }
 
-.Gift.Gift--withAnimation {
-  .Gift-image:nth-child(1) {
-    animation: Gift-anim-shake 1s linear;
+.withAnimation {
+  .image:nth-child(1) {
+    animation: anim-shake 1s linear;
   }
 }
 
-@keyframes Gift-anim-shake {
+@keyframes anim-shake {
   0% {
     transform: translateY(0px);
   }
