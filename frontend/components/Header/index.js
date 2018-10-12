@@ -1,11 +1,11 @@
 import React from "react";
 import Heading from "../Heading";
 import Gift from "../Gift";
-
-import "./index.css";
 import Logo from "../Logo";
 
-export default class HomeHeader extends React.Component {
+import "./index.css";
+
+export default class Header extends React.Component {
   render() {
     return (
       <header styleName="root">
