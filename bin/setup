@@ -3,13 +3,15 @@
 set -e
 
 echo "[setup]: Installing required languages"
-if command -v asdf &>/dev/null; then
+if [ -x "$(command -v asdf)" ]; then
   set +e
   asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git 2>/dev/null
   asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git 2>/dev/null
   set -e
 
   asdf install
+
+  echo "[setup]: Installing bundler"
 
   gem install bundler
 else
@@ -21,6 +23,7 @@ else
   "
 fi
 
+echo "[setup] Setting up .env file"
 cp .env.sample .env
 
 echo "[setup]: Installing dependencies with bundler"
