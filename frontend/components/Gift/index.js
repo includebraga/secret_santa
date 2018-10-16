@@ -1,34 +1,35 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import giftHead from "../../images/giftHead.png";
-import giftBody from "../../images/giftBody.png";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import giftHead from '../../images/giftHead.png';
+import giftBody from '../../images/giftBody.png';
 
-import "./index.css";
+import './index.css';
 
-const isElementInViewport = function(el) {
-  var rect = el.getBoundingClientRect();
+const isElementInViewport = el => {
+  const rect = el.getBoundingClientRect();
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
     rect.bottom <=
       (window.innerHeight ||
-        document.documentElement.clientHeight) /*or $(window).height() */ &&
+        document.documentElement.clientHeight) /* or $(window).height() */ &&
     rect.right <=
       (window.innerWidth ||
-        document.documentElement.clientWidth) /*or $(window).width() */
+        document.documentElement.clientWidth) /* or $(window).width() */
   );
 };
 
 export default class Gift extends Component {
   state = {
-    animate: false
+    animate: false,
   };
 
   componentDidMount() {
-    var gift = document.getElementById("gift");
+    const { animate } = this.state;
+    const gift = document.getElementById('gift');
 
     if (isElementInViewport(gift)) {
-      if (!this.state.animate) {
+      if (!animate) {
         this.setState({ animate: true });
 
         setTimeout(() => {
@@ -47,7 +48,8 @@ export default class Gift extends Component {
   };
 
   render() {
-    const styles = classNames("root", { withAnimation: this.state.animate });
+    const { animate } = this.state;
+    const styles = classNames('root', { withAnimation: animate });
 
     return (
       <div
