@@ -4,8 +4,8 @@
   "scripts": {
     "lint": "eslint frontend",
     "lint-fix": "eslint --fix frontend",
-    "lint-styles": "stylelint frontend/**/*.css",
-    "lint-styles-fix": "stylelint --fix frontend/**/*.css"
+    "lint-styles": "stylelint \"frontend/**/*.css\" \"app/**/*.scss\"",
+    "lint-styles-fix": "stylelint \"frontend/**/*.css\" \"app/**/*.scss\" --fix"
   },
   "dependencies": {
     "@rails/webpacker": "3.5",

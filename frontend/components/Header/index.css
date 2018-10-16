@@ -32,8 +32,8 @@
 .first-col {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   @media (min-width: $Header-breakpoint) {
     flex-direction: row;
@@ -43,8 +43,8 @@
 .second-col {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   @media (min-width: $Header-breakpoint) {
     align-items: flex-start;
@@ -54,14 +54,14 @@
 .info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
+  max-width: $Header-info-max-width;
 
   margin-bottom: $size-xlarge;
 
   text-align: center;
-
-  max-width: $Header-info-max-width;
 
   @media (min-width: $Header-breakpoint) {
     align-items: flex-start;
@@ -79,6 +79,7 @@
 .title,
 .text {
   margin-bottom: $size-large;
+
   color: $color-white;
 }
 

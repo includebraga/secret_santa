@@ -6,7 +6,7 @@
 
   background-color: $color-deep-blue;
 
-  @media(min-width: $max-tablet-size) {
+  @media (min-width: $max-tablet-size) {
     padding: $size-xxlarge;
   }
 }
@@ -38,19 +38,22 @@
 
   &:hover {
     color: darken($color-red, 20%);
+
     text-decoration: none;
   }
 
   &:active, &:focus {
     color: $color-red;
+
     text-decoration: none;
   }
 }
 
 .Footer-tagline {
+
+  color: $color-white;
+
   font-family: $font-family-serif;
   font-size: $size-small;
   line-height: $size-base;
-
-  color: $color-white;
 }

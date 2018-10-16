@@ -6,13 +6,13 @@ $Logo-padding: 2px;
 .root {
   padding: $Logo-padding;
 
+  background-color: $color-white;
+  color: $color-deep-blue;
+
   font-family: $font-family-mono;
   font-weight: $font-weight-bold;
   vertical-align: text-bottom;
   white-space: nowrap;
-
-  background-color: $color-white;
-  color: $color-deep-blue;
 }
 
 .yellow {
@@ -32,6 +32,7 @@ $Logo-padding: 2px;
 
 .lettering {
   display: none;
+
   background-color: transparent;
 
   @media (min-width: $Header-breakpoint) {

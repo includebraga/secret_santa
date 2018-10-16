@@ -1,16 +1,20 @@
 ul,
 ol {
-  list-style-type: none;
-  margin: 0;
   padding: 0;
+
+  margin: 0;
+
+  list-style-type: none;
 }
 
 dl {
   margin-bottom: $small-spacing;
 
   dt {
-    font-weight: $bold-font-weight;
+
     margin-top: $small-spacing;
+
+    font-weight: $bold-font-weight;
   }
 
   dd {
