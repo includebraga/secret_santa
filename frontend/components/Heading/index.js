@@ -6,7 +6,7 @@ import "./index.css";
 
 export default class Heading extends Component {
   static propTypes = {
-    color: PropTypes.oneOf(["white", "red"]),
+    color: PropTypes.oneOf(["white", "red", "black"]),
     secondary: PropTypes.bool.isRequired,
     centered: PropTypes.bool.isRequired
   };
