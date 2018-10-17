@@ -4,8 +4,10 @@
 }
 
 .image {
-  width: 100%;
+
   position: relative;
+
+  width: 100%;
 }
 
 .image:nth-child(1) {
@@ -13,8 +15,10 @@
 }
 
 .image:nth-child(2) {
-  transform: translateY(-20px);
+
   z-index: 1;
+
+  transform: translateY(-20px);
 }
 
 .withAnimation {

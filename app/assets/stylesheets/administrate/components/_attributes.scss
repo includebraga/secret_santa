@@ -1,11 +1,13 @@
 .attribute-label {
   @include data-label;
-  clear: left;
   float: left;
-  margin-bottom: $base-spacing;
-  margin-top: 0;
-  text-align: right;
+  clear: left;
+
   width: calc(15% - 1rem);
+  margin-top: 0;
+  margin-bottom: $base-spacing;
+
+  text-align: right;
 }
 
 .preserve-whitespace {
@@ -15,12 +17,14 @@
 
 .attribute-data {
   float: left;
+  width: calc(85% - 1rem);
   margin-bottom: $base-spacing;
   margin-left: 2rem;
-  width: calc(85% - 1rem);
 }
 
 .attribute--nested {
-  border: $base-border;
+
   padding: $small-spacing;
+
+  border: $base-border;
 }

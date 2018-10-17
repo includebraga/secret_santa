@@ -1,7 +1,8 @@
 @mixin administrate-clearfix {
   &::after {
-    clear: both;
     content: "";
+
     display: block;
+    clear: both;
   }
 }

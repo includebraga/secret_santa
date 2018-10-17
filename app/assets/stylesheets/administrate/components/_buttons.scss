@@ -3,24 +3,31 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-  appearance: none;
+
+  display: inline-block;
+
+  padding: $small-spacing $base-spacing;
+
   background-color: $action-color;
   border: 0;
   border-radius: $base-border-radius;
   color: $white;
   cursor: pointer;
-  display: inline-block;
+
   font-family: $base-font-family;
   font-size: $base-font-size;
   -webkit-font-smoothing: antialiased;
   font-weight: $bold-font-weight;
   line-height: 1;
-  padding: $small-spacing $base-spacing;
+
   text-decoration: none;
-  transition: background-color $base-duration $base-timing;
-  user-select: none;
+
   vertical-align: middle;
   white-space: nowrap;
+
+  transition: background-color $base-duration $base-timing;
+  appearance: none;
+  user-select: none;
 
   &:hover {
     background-color: mix($black, $action-color, 20%);

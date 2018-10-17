@@ -2,20 +2,25 @@ $_navigation-link-padding: 0.6em;
 
 .navigation {
   flex: 1 0 10rem;
-  padding-bottom: $base-spacing;
-  padding-right: calc(#{$base-spacing} - #{$_navigation-link-padding});
   padding-top: $base-spacing;
+  padding-right: calc(#{$base-spacing} - #{$_navigation-link-padding});
+  padding-bottom: $base-spacing;
 }
 
 .navigation__link {
+
+  display: block;
+  padding: $_navigation-link-padding;
+
+  margin-left: -($_navigation-link-padding);
+
   background-color: transparent;
   color: $base-font-color;
-  display: block;
+
   line-height: 1;
-  margin-left: -($_navigation-link-padding);
-  padding: $_navigation-link-padding;
+
   transition: background-color $base-duration $base-timing,
-              color $base-duration $base-timing;
+    color $base-duration $base-timing;
 
   &:not(:last-of-type) {
     margin-bottom: $small-spacing;

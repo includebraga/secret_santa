@@ -1,5 +1,6 @@
 body {
   color: $base-font-color;
+
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
@@ -11,10 +12,12 @@ h3,
 h4,
 h5,
 h6 {
+
+  margin: 0;
+
   font-family: $heading-font-family;
   font-size: $base-font-size;
   line-height: $heading-line-height;
-  margin: 0;
 }
 
 p {
@@ -24,6 +27,7 @@ p {
 a {
   color: $action-color;
   text-decoration-skip: ink;
+
   transition: color $base-duration $base-timing;
 
   &:hover {
@@ -37,9 +41,11 @@ a {
 }
 
 hr {
+
+  margin: $base-spacing 0;
+
+  border-top: 0;
+  border-right: 0;
   border-bottom: $base-border;
   border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  margin: $base-spacing 0;
 }

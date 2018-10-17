@@ -4,13 +4,13 @@ $Logo-padding: 2px;
 .Logo {
   padding: $Logo-padding;
 
+  background-color: $color-white;
+  color: $color-deep-blue;
+
   font-family: $font-family-mono;
   font-weight: $font-weight-bold;
   vertical-align: text-bottom;
   white-space: nowrap;
-
-  background-color: $color-white;
-  color: $color-deep-blue;
 }
 
 .Logo.Logo--yellow {

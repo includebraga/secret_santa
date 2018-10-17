@@ -4,7 +4,7 @@
 
   padding: $size-xxlarge $size-large;
 
-  @media(min-width: $max-tablet-size) {
+  @media (min-width: $max-tablet-size) {
     padding: $size-xxlarge;
   }
 }
@@ -17,7 +17,7 @@
   width: 100%;
   max-width: $grid-size;
 
-  @media(min-width: $max-tablet-size) {
+  @media (min-width: $max-tablet-size) {
     align-items: center;
   }
 }

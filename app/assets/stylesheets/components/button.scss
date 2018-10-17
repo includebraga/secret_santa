@@ -2,33 +2,33 @@ $Button-border-radius: 300px;
 $Button-padding: 15px 45px;
 
 .Button {
-    display: inline-block;
-    margin-bottom: 0;
-    padding: $Button-padding;
+  display: inline-block;
+  padding: $Button-padding;
+  margin-bottom: 0;
 
-    border: 1px solid transparent;
-    border-radius: $Button-border-radius;
+  background-color: $color-red;
+  background-image: none;
+
+  border: 1px solid transparent;
+  border-radius: $Button-border-radius;
+  color: $color-white;
+  cursor: pointer;
+
+  font-family: $font-family-serif;
+  font-size: $size-small;
+  line-height: $size-base;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  transition: 0.5s;
+  user-select: none;
+
+  &:hover,
+  &:focus {
+    background-color: $color-green;
     color: $color-white;
 
-    font-family: $font-family-serif;
-    font-size: $size-small;
-    line-height: $size-base;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
-
-    background-color: $color-red;
-    background-image: none;
-    cursor: pointer;
-
-    transition: 0.5s;
-    user-select: none;
-
-    &:hover,
-    &:focus {
-      background-color: $color-green;
-      color: $color-white;
-
-      text-decoration: none;
-    }
+    text-decoration: none;
+  }
 }

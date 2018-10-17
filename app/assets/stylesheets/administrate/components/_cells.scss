@@ -8,15 +8,20 @@
 
     svg {
       fill: $action-color;
+
       transform: rotate(180deg);
     }
   }
 
   a {
-    color: inherit;
+
     display: inline-block;
-    transition: color $base-duration $base-timing;
+
     width: 100%;
+
+    color: inherit;
+
+    transition: color $base-duration $base-timing;
   }
 }
 
@@ -26,16 +31,20 @@
 }
 
 .cell-label__sort-indicator {
-  display: inline-block;
-  overflow: hidden;
+
   position: absolute;
   right: 0;
 
+  display: inline-block;
+  overflow: hidden;
+
   svg {
-    fill: $hint-grey;
-    height: 13px;
-    transition: transform $base-duration $base-timing;
     width: 13px;
+    height: 13px;
+
+    fill: $hint-grey;
+
+    transition: transform $base-duration $base-timing;
   }
 }
 
