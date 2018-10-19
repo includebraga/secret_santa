@@ -1,4 +1,6 @@
-.HowItWorks {
+@import "../../styles/variables.css";
+
+.root {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,11 +16,11 @@
   }
 }
 
-.HowItWorks-title {
+.title {
   margin-bottom: $size-xxlarge;
 }
 
-.HowItWorks-list {
+.list {
   display: flex;
   flex-direction: column;
 
@@ -28,7 +30,7 @@
   }
 }
 
-.HowItWorks-listItem {
+.list-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,7 +46,7 @@
   }
 }
 
-.HowItWorks-icon {
+.icon {
   font-size: $size-xxlarge;
 
   i[class^='icon-'] {
@@ -52,7 +54,7 @@
   }
 }
 
-.HowItWorks-text {
+.text {
 
   max-width: 300px;
 

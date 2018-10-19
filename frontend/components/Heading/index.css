@@ -23,6 +23,10 @@
   color: $color-red;
 }
 
+.black {
+  color: $color-black;
+}
+
 .secondary {
   font-size: $size-base;
   line-height: $size-large;
