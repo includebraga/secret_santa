@@ -2,7 +2,7 @@ require "administrate/field/base"
 
 class ReceiverField < Administrate::Field::Base
   def to_s
-    "#{institution.short_name}#{resource.id}"
+    "#{institution.short_name}#{resource.id}" if institution
   end
 
   private
@@ -12,6 +12,6 @@ class ReceiverField < Administrate::Field::Base
   end
 
   def institution
-    resource.institution
+    resource&.institution
   end
 end
