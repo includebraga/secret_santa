@@ -1,12 +1,18 @@
 .section {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
   padding-top: 150px;
   padding-bottom: 100px;
-  position: relative;
-  width: 100%;
-  color: #ddd;
-  text-align: center;
+
   background: #161f28;
-  height: 100%;
+
+  color: #ddd;
+
+  text-align: center;
 }
 
 html,
@@ -18,8 +24,10 @@ body {
 hr {
   max-width: 100px;
   margin: 25px auto 0;
-  border-width: 1px;
+
   border-color: rgba(34, 34, 34, 0.1);
+
+  border-width: 1px;
 }
 
 hr.light {
@@ -41,18 +49,22 @@ h-100 {
 }
 
 header.masthead {
+
+  position: relative;
+
+  width: 100%;
   padding-top: 150px;
   padding-bottom: 100px;
-  position: relative;
-  width: 100%;
-  color: white;
   /*  background: #A1D7D9;*/
   background: #161f28;
+
+  color: white;
 }
 
 header.masthead .header-content {
   max-width: 500px;
   margin-bottom: 100px;
+
   text-align: center;
 }
 
@@ -76,6 +88,7 @@ header.masthead .device-container {
 
   header.masthead .header-content {
     margin-bottom: 0;
+
     text-align: left;
   }
 
@@ -113,23 +126,29 @@ section.features .device-container {
 section.features .feature-item {
   padding-top: 50px;
   padding-bottom: 50px;
+
   text-align: center;
 }
 section.features .feature-item h3 {
   font-size: 30px;
 }
 section.features .feature-item i {
-  font-size: 80px;
+
   display: block;
   margin-bottom: 15px;
+
   background: #d74a49;
+
+  font-size: 80px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 section.cta {
   position: relative;
+
   padding: 250px 0;
+
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -141,11 +160,14 @@ section.cta .cta-content {
   z-index: 1;
 }
 section.cta .cta-content h2 {
-  font-size: 50px;
+
   max-width: 450px;
   margin-top: 0;
   margin-bottom: 25px;
+
   color: white;
+
+  font-size: 50px;
 }
 @media (min-width: 768px) {
   section.cta .cta-content h2 {
@@ -157,33 +179,43 @@ section.cta .overlay {
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
+
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 footer {
   padding: 25px 0;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.3);
+
   background-color: #161f28;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  text-align: center;
 }
 
 footer p {
+
+  margin: 0;
+
   font-size: 14px;
   letter-spacing: 1px;
-  margin: 0;
 }
 
 a.social-item {
   padding: 10px;
+
   color: #f95252;
   opacity: 0.5;
 }
 
 a.social-item:hover {
-  text-decoration: none;
+
   opacity: 0.9;
+
+  text-decoration: none;
 }
 
 .btn-outline,
@@ -212,8 +244,11 @@ a.social-item {
 }
 
 .btn {
-  font-size: 16px;
+
   border-radius: 300px;
+
+  font-size: 16px;
+
   font-weight: 500;
 }
 
@@ -222,17 +257,20 @@ a.social-item {
 }
 
 .navbar {
-  border-color: rgba(34, 34, 34, 0.05);
   background-color: white;
+  border-color: rgba(34, 34, 34, 0.05);
+
+  font-weight: 200;
+  letter-spacing: 1px;
+
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  font-weight: 200;
-  letter-spacing: 1px;
 }
 
 .navbar .navbar-brand {
   color: #d74a49;
+
   font-size: 20px;
   letter-spacing: 0;
   /*font-weight: 700;
@@ -241,14 +279,14 @@ a.social-item {
 
 .navbar .navbar-brand:hover,
 .navbar .navbar-brand:focus {
-  cursor: default;
   color: #d74a49;
+  cursor: default;
 }
 
 @media (min-width: 992px) {
   .navbar {
-    border-color: transparent;
     background-color: transparent;
+    border-color: transparent;
   }
 
   .navbar .navbar-brand {
@@ -256,13 +294,13 @@ a.social-item {
   }
 
   .navbar.navbar-shrink {
-    border-color: rgba(34, 34, 34, 0.1);
     background-color: white;
+    border-color: rgba(34, 34, 34, 0.1);
   }
 
   .navbar.navbar-shrink .navbar-brand {
-    cursor: default;
     color: #161f28;
+    cursor: default;
   }
 
   .navbar.navbar-shrink .navbar-brand:hover,
@@ -296,11 +334,14 @@ a.social-item {
 }
 
 #page-top > header > div > div > div.col-lg-7.my-auto > div > a {
-  border-radius: 4px;
-  text-transform: uppercase;
+
   background: none;
   border: 1px solid;
   border-color: white;
+  border-radius: 4px;
+
+  text-transform: uppercase;
+
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }

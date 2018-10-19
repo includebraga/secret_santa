@@ -28,7 +28,7 @@ export default class Header extends React.Component {
             <div styleName="img">
               <Gift />
             </div>
-            <Logo prefixed/>
+            <Logo prefixed />
           </div>
         </div>
       </header>

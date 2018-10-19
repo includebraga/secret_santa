@@ -1,30 +1,37 @@
 .field-unit {
   @include administrate-clearfix;
-  align-items: center;
-  display: flex;
-  margin-bottom: $base-spacing;
+
   position: relative;
+
+  display: flex;
+  align-items: center;
+
   width: 100%;
+  margin-bottom: $base-spacing;
 }
 
 .field-unit__label {
   float: left;
-  margin-left: 1rem;
-  text-align: right;
+
   width: calc(15% - 1rem);
+  margin-left: 1rem;
+
+  text-align: right;
 }
 
 .field-unit__field {
   float: left;
-  margin-left: 2rem;
   width: 45%;
+  margin-left: 2rem;
 }
 
 .field-unit--nested {
-  border: $base-border;
-  margin-left: 7.5%;
-  padding: $small-spacing;
   width: 50%;
+  padding: $small-spacing;
+
+  margin-left: 7.5%;
+
+  border: $base-border;
 
   .field-unit__field {
     width: calc(75% - 1rem);

@@ -1,25 +1,32 @@
 fieldset {
+  padding: 0;
+
+  margin: 0;
+
   background-color: transparent;
   border: 0;
-  margin: 0;
-  padding: 0;
 }
 
 legend {
-  font-weight: $bold-font-weight;
-  margin: 0;
   padding: 0;
+
+  margin: 0;
+
+  font-weight: $bold-font-weight;
 }
 
 label {
   display: block;
-  font-weight: $bold-font-weight;
+
   margin: 0;
+
+  font-weight: $bold-font-weight;
 }
 
 input,
 select {
   display: block;
+
   font-family: $base-font-family;
   font-size: $base-font-size;
 }
@@ -28,6 +35,7 @@ input,
 select,
 textarea {
   display: block;
+
   font-family: $base-font-family;
   font-size: 16px;
 }
@@ -47,13 +55,17 @@ textarea {
 [type="week"],
 input:not([type]),
 textarea {
-  appearance: none;
+
+  width: 100%;
+
+  padding: 0.5em;
+
   background-color: $white;
   border: $base-border;
   border-radius: $base-border-radius;
-  padding: 0.5em;
+
   transition: border-color $base-duration $base-timing;
-  width: 100%;
+  appearance: none;
 
   &:hover {
     border-color: mix($black, $base-border-color, 20%);

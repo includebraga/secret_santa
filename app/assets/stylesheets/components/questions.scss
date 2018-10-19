@@ -4,17 +4,17 @@
 
   padding: $size-xxlarge $size-large;
 
-  @media(min-width: $max-tablet-size) {
+  @media (min-width: $max-tablet-size) {
     padding: $size-xxlarge;
   }
 }
 
 .Questions-content {
-  width: 100%;
-  max-width: $grid-size;
 
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: $grid-size;
 }
 
 .Questions-heading {
@@ -26,6 +26,8 @@
 }
 
 .Questions-title {
-  font-weight: $font-weight-bold;
+
   color: $color-red;
+
+  font-weight: $font-weight-bold;
 }

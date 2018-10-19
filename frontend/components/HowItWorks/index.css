@@ -11,8 +11,8 @@
   background-color: $color-white;
   color: $color-deep-blue;
 
-  @media(min-width: $max-tablet-size) {
-    padding: calc(2 * $size-xxlarge) $size-xxlarge;
+  @media (min-width: $max-tablet-size) {
+    padding: calc(2 * #{$size-xxlarge}) $size-xxlarge;
   }
 }
 
@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
 
-  @media(min-width: $max-tablet-size) {
+  @media (min-width: $max-tablet-size) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -37,7 +37,7 @@
 
   margin-bottom: $size-xlarge;
 
-  @media(min-width: $max-tablet-size) {
+  @media (min-width: $max-tablet-size) {
     margin-bottom: 0;
 
     &:not(:last-child) {
@@ -55,9 +55,10 @@
 }
 
 .text {
+
+  max-width: 300px;
+
   font-size: $size-small;
   line-height: $size-base;
   text-align: center;
-
-  max-width: 300px;
 }

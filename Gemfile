@@ -36,7 +36,6 @@ group :development, :test do
   gem "pry-remote"
   gem "rspec-rails", "~> 3.5.1"
   gem "rubocop", require: false
-  gem "scss_lint", require: false
 end
 
 group :development do

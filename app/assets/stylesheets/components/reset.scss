@@ -4,7 +4,7 @@ body {
   font-weight: $font-weight-regular;
   line-height: $size-base;
 
-  @media(min-width: $max-tablet-size) {
+  @media (min-width: $max-tablet-size) {
     font-size: $size-base;
     line-height: $size-large;
   }
