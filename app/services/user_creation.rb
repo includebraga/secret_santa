@@ -30,6 +30,7 @@ class UserCreation
   def find_or_create_user!
     @_user ||= User.find_or_create_by!(email: params[:email]) do |user|
       user.name = params[:name]
+      user.observations = params[:observations]
       user.confirmation_token = new_random_token
     end
   end

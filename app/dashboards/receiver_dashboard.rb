@@ -19,6 +19,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
     golden: Field::Boolean,
     age: Field::Number,
     gender: SelectField.with_options(choices: Receiver.genders.keys),
+    observations: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime
   }.freeze
@@ -49,6 +50,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
     received_gifts
     matched_gifts
     letter
+    observations
     users
     created_at
     updated_at
@@ -64,6 +66,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
     gender
     golden
     letter
+    observations
     received_gifts
     matched_gifts
   ].freeze

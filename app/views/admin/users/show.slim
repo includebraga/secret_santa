@@ -27,7 +27,7 @@ header.main-content__header[role="banner"]
           method: :post)
 
   / I'm so sorry for the next line
-  - if page.resource.matches.first.received?
+  - if page.resource.matches.first&.received?
     div style="margin-left: 10px"
       = link_to("Revert receive",
             admin_users_revert_path(page.resource.id),

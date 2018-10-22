@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2017_12_16_150421) do
+ActiveRecord::Schema.define(version: 2018_10_19_195026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2017_12_16_150421) do
     t.boolean "golden", default: false
     t.integer "gender", default: 0
     t.integer "age"
+    t.text "observations"
     t.index ["institution_id"], name: "index_receivers_on_institution_id"
   end
 
@@ -58,6 +59,7 @@ ActiveRecord::Schema.define(version: 2017_12_16_150421) do
     t.string "confirmation_token"
     t.string "redeem_token"
     t.boolean "match_notice_sent", default: false
+    t.text "observations"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["redeem_token"], name: "index_users_on_redeem_token", unique: true

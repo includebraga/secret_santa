@@ -16,6 +16,7 @@ class UserDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     name: Field::String,
+    observations: Field::Text,
     confirmation_token: Field::String,
     redeem_token: Field::String,
     match_notice_sent: Field::Boolean
@@ -30,6 +31,7 @@ class UserDashboard < Administrate::BaseDashboard
     id
     email
     name
+    observations
     confirmed_at
   ].freeze
 
@@ -40,6 +42,7 @@ class UserDashboard < Administrate::BaseDashboard
     receivers
     email
     name
+    observations
     confirmed_at
     created_at
     updated_at
@@ -54,6 +57,7 @@ class UserDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     email
     name
+    observations
   ].freeze
 
   def display_resource(user)

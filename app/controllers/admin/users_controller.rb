@@ -120,7 +120,7 @@ module Admin
     private
 
     def user_params
-      params.require(:user).permit(:name, :email)
+      params.require(:user).permit(:name, :email, :observations)
     end
   end
 end
