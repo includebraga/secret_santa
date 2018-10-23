@@ -22,7 +22,7 @@ gem "slim-rails"
 gem "timber", "~> 2.2"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
-gem "administrate"
+gem "administrate", github: "substancelab/administrate", branch: "276-collection_filters"
 gem 'webpacker'
 gem 'react-rails'
 

@@ -1,6 +1,10 @@
 require "administrate/base_dashboard"
 
 class ReceiverDashboard < Administrate::BaseDashboard
+  COLLECTION_FILTERS = {
+    golden: ->(resources) { resources.golden }
+  }.freeze
+
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
