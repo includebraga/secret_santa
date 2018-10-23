@@ -11,14 +11,6 @@ header.main-content__header role="banner"
         resource_name: display_resource_name(page.resource_name) \
       )
 
-  div style="margin-right: 10px"
-    = link_to(                                                                      \
-        "Display Goldens",                                                          \
-        request.params.merge(golden: true, authenticity_token: nil, _method: nil),  \
-        class: "button",                                                            \
-        method: :get                                                                \
-      )
-
   div
     = link_to(                                                                              \
         t("administrate.actions.new_resource", name: page.resource_name.titleize.downcase), \
