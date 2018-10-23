@@ -1,3 +1,20 @@
+GIT
+  remote: https://github.com/substancelab/administrate.git
+  revision: 25d851c45b5162cb129199d1a861b8c47c34c679
+  branch: 276-collection_filters
+  specs:
+    administrate (0.11.0)
+      actionpack (>= 4.2, < 6.0)
+      actionview (>= 4.2, < 6.0)
+      activerecord (>= 4.2, < 6.0)
+      autoprefixer-rails (>= 6.0)
+      datetime_picker_rails (~> 0.0.7)
+      jquery-rails (>= 4.0)
+      kaminari (>= 1.0)
+      momentjs-rails (~> 2.8)
+      sass-rails (~> 5.0)
+      selectize-rails (~> 0.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -44,20 +61,9 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    administrate (0.11.0)
-      actionpack (>= 4.2, < 6.0)
-      actionview (>= 4.2, < 6.0)
-      activerecord (>= 4.2, < 6.0)
-      autoprefixer-rails (>= 6.0)
-      datetime_picker_rails (~> 0.0.7)
-      jquery-rails (>= 4.0)
-      kaminari (>= 1.0)
-      momentjs-rails (~> 2.8)
-      sass-rails (~> 5.0)
-      selectize-rails (~> 0.6)
     arel (9.0.0)
     ast (2.4.0)
-    autoprefixer-rails (9.1.4)
+    autoprefixer-rails (9.3.0)
       execjs
     awesome_print (1.8.0)
     babel-source (5.8.35)
@@ -319,7 +325,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  administrate
+  administrate!
   awesome_print
   better_errors
   binding_of_caller

@@ -15,4 +15,6 @@ class Receiver < ApplicationRecord
     :matched_gifts
 
   validates :golden, inclusion: { in: [true, false] }
+
+  scope :golden, -> { where(golden: true) }
 end
