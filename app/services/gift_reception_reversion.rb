@@ -13,8 +13,6 @@ class GiftReceptionReversion
 
     Match.transaction do
       update_match!
-      # TODO: ignore this for now
-      decrement_gifts!
 
       @success = true
     end
@@ -32,9 +30,5 @@ class GiftReceptionReversion
 
   def update_match!
     match.update!(received: false)
-  end
-
-  def decrement_gifts!
-    match.receiver.decrement!(:received_gifts)
   end
 end

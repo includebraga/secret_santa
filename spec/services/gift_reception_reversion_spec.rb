@@ -24,16 +24,5 @@ RSpec.describe GiftReceptionReversion, type: :model do
       match.reload
       expect(match).not_to be_received
     end
-
-    # it "increments the number of received gifts" do
-    #   user = create(:user)
-    #   receiver = create(:receiver)
-    #   create(:match, user: user, receiver: receiver)
-    #   gift_reception = GiftReceptionReversion.new(user)
-
-    #   expect do
-    #     gift_reception.perform
-    #   end.to change { receiver.reload.received_gifts }.by(-1)
-    # end
   end
 end

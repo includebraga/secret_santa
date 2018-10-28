@@ -6,13 +6,9 @@ class Match < ApplicationRecord
     presence: true,
     uniqueness: { scope: :receiver_id }
 
+  validates :code, presence: true
   validates :receiver_id, presence: true
-  validates :email_sent, inclusion: { in: [true, false] }
   validates :received, inclusion: { in: [true, false] }
-
-  def email_sent?
-    email_sent
-  end
 
   def received?
     received

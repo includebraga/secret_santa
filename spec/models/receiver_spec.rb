@@ -6,6 +6,4 @@ RSpec.describe Receiver, type: :model do
 
   it { should validate_presence_of(:letter) }
   it { should validate_presence_of(:institution_id) }
-  it { should validate_presence_of(:matched_gifts) }
-  it { should validate_presence_of(:received_gifts) }
 end

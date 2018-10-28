@@ -4,6 +4,7 @@ FactoryBot.define do
     receiver
 
     received false
-    email_sent true
+
+    sequence(:code) { |n| "#{Faker::TwinPeaks.location} #{n}" }
   end
 end

@@ -10,7 +10,6 @@ RSpec.describe User, type: :model do
     it { should validate_length_of(:email).is_at_most(80) }
 
     it { should validate_uniqueness_of(:confirmation_token) }
-    it { should validate_uniqueness_of(:redeem_token) }
 
     it "can have an empty confirmation timestamp" do
       user = build(:user, confirmed_at: nil)
