@@ -117,6 +117,18 @@ module Admin
       redirect_to admin_user_path(user)
     end
 
+    def toggle_registrations
+      registrations_enabled = Settings.toggle_registrations
+
+      flash[:notice] = if registrations_enabled
+                         "User registrations enabled!"
+                       else
+                         "User registrations disabled!"
+                       end
+
+      redirect_to admin_users_path
+    end
+
     private
 
     def user_params

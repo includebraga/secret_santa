@@ -7,6 +7,7 @@ end
 
 ruby "2.5.1"
 
+gem "administrate", github: "substancelab/administrate", branch: "276-collection_filters"
 gem "bootstrap-sass", "~> 3.2.0"
 gem "email_validator"
 gem "foreman"
@@ -14,6 +15,7 @@ gem "pg"
 gem "pry-rails"
 gem "puma", "~> 3.7"
 gem "rails", "~> 5.2.1"
+gem "react-rails"
 gem "redcarpet"
 gem "sass-rails", "~> 5.0"
 gem "sentry-raven"
@@ -22,9 +24,7 @@ gem "slim-rails"
 gem "timber", "~> 2.2"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
-gem "administrate", github: "substancelab/administrate", branch: "276-collection_filters"
-gem 'webpacker'
-gem 'react-rails'
+gem "webpacker"
 
 group :development, :test do
   gem "awesome_print"

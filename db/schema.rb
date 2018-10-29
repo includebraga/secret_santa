@@ -48,6 +48,12 @@ ActiveRecord::Schema.define(version: 2018_10_28_195523) do
     t.index ["institution_id"], name: "index_receivers_on_institution_id"
   end
 
+  create_table "settings", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "value", null: false
+    t.index ["key"], name: "index_settings_on_key", unique: true
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.datetime "confirmed_at"
