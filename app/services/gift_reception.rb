@@ -13,7 +13,6 @@ class GiftReception
 
     Match.transaction do
       update_match!
-      increment_gifts!
 
       @success = true
     end
@@ -31,9 +30,5 @@ class GiftReception
 
   def update_match!
     match.update!(received: true)
-  end
-
-  def increment_gifts!
-    match.receiver.increment!(:received_gifts)
   end
 end

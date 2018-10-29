@@ -9,10 +9,7 @@ class Receiver < ApplicationRecord
     presence: true,
     length: { maximum: 80 }
 
-  validates_presence_of :letter,
-    :institution_id,
-    :received_gifts,
-    :matched_gifts
+  validates_presence_of :letter, :institution_id
 
   validates :golden, inclusion: { in: [true, false] }
 

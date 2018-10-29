@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_191403) do
+ActiveRecord::Schema.define(version: 2018_10_28_195523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 2018_10_28_191403) do
     t.bigint "receiver_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "email_sent", default: false
     t.boolean "received", default: false
+    t.string "code"
     t.index ["receiver_id"], name: "index_matches_on_receiver_id"
     t.index ["user_id", "receiver_id"], name: "index_matches_on_user_id_and_receiver_id", unique: true
     t.index ["user_id"], name: "index_matches_on_user_id"
@@ -39,8 +39,6 @@ ActiveRecord::Schema.define(version: 2018_10_28_191403) do
     t.string "name"
     t.text "letter"
     t.bigint "institution_id"
-    t.integer "matched_gifts", default: 0
-    t.integer "received_gifts", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "golden", default: false
@@ -63,12 +61,9 @@ ActiveRecord::Schema.define(version: 2018_10_28_191403) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.string "confirmation_token"
-    t.string "redeem_token"
-    t.boolean "match_notice_sent", default: false
     t.text "observations"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["redeem_token"], name: "index_users_on_redeem_token", unique: true
   end
 
   add_foreign_key "matches", "receivers"

@@ -24,17 +24,5 @@ RSpec.describe GiftReception, type: :model do
       match.reload
       expect(match).to be_received
     end
-
-    # TODO: Ignore this for now
-    # it "increments the number of received gifts" do
-    #   user = create(:user)
-    #   receiver = create(:receiver)
-    #   create(:match, user: user, receiver: receiver)
-    #   gift_reception = GiftReception.new(user)
-
-    #   expect do
-    #     gift_reception.perform
-    #   end.to change { receiver.reload.received_gifts }.by(1)
-    # end
   end
 end

@@ -9,8 +9,4 @@ FactoryBot.define do
     confirmed_at nil
     confirmation_token { |n| n }
   end
-
-  factory :user_with_redeem_token, parent: :user do
-    redeem_token { |n| n }
-  end
 end

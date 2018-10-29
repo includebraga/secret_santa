@@ -20,10 +20,6 @@ class User < ApplicationRecord
     uniqueness: { case_sensitive: true },
     allow_nil: true
 
-  validates :redeem_token,
-    uniqueness: { case_sensitive: true },
-    allow_nil: true
-
   # Validations are only run when `User#valid?` is invoked
   # To load a user with validations, call `valid?` on `self`
   # and return the updated `self`
@@ -34,9 +30,5 @@ class User < ApplicationRecord
 
   def confirmed?
     confirmed_at != nil
-  end
-
-  def notified?
-    match_notice_sent
   end
 end
