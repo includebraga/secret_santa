@@ -8,9 +8,13 @@ class Settings < ApplicationRecord
 
   def self.toggle_registrations
     registrations_enabled = Settings.find_or_initialize_by(key: :registrations_enabled)
-    registrations_enabled.value = "false" unless registrations_enabled.value
 
-    registrations_enabled.value = registrations_enabled.value == "true" ? "false" : "true"
+    registrations_enabled.value = case registrations_enabled.value
+                                  when nil, "false"
+                                    "true"
+                                  when "true"
+                                    "false"
+                                  end
     registrations_enabled.save
 
     registrations_enabled.value == "true"
