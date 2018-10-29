@@ -3,8 +3,6 @@ FactoryBot.define do
     user
     receiver
 
-    received false
-
     sequence(:code) { |n| "#{Faker::TwinPeaks.location} #{n}" }
   end
 end
