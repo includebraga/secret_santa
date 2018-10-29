@@ -8,19 +8,27 @@ RSpec.describe Settings, type: :model do
 
   it { should validate_uniqueness_of(:key) }
 
-  it "should toggle the registrations_enabled value for the first time" do
+  it "should create a settings record if toggled for the first time" do
     expect do
       Settings.toggle_registrations
     end.to change { Settings.count }.by(1)
   end
 
-  it "should toggle the registrations_enabled value for the first time" do
-    expect(Settings.toggle_registrations).to be(false)
-  end
-
-  it "should toggle the registrations_enabled value for the first time" do
+  it "should not create additional settings record if toggled more than once" do
     Settings.toggle_registrations
 
+    expect do
+      Settings.toggle_registrations
+    end.to change { Settings.count }.by(0)
+  end
+
+  it "should activate registration if toggled for the first time" do
     expect(Settings.toggle_registrations).to be(true)
+  end
+
+  it "should deactivate registrations if it's already activated" do
+    Settings.toggle_registrations
+
+    expect(Settings.toggle_registrations).to be(false)
   end
 end
