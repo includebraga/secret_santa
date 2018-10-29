@@ -19,16 +19,16 @@ RSpec.describe Settings, type: :model do
 
     expect do
       Settings.toggle_registrations
-    end.to change { Settings.count }.by(0)
+    end.not_to change { Settings.count }
   end
 
   it "should activate registration if toggled for the first time" do
-    expect(Settings.toggle_registrations).to be(true)
+    expect(Settings.toggle_registrations).to be
   end
 
   it "should deactivate registrations if it's already activated" do
     Settings.toggle_registrations
 
-    expect(Settings.toggle_registrations).to be(false)
+    expect(Settings.toggle_registrations).not_to be
   end
 end
