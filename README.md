@@ -1,5 +1,5 @@
 [trello]: https://trello.com/b/hADFEIB3
-[semaphore]: https://semaphoreci.com/fribmendes/secret_santa
+[semaphore]: https://semaphoreci.com/includebraga/secret_santa
 <!--
 [errors]: https://example.org
 [logs]: https://example.org
