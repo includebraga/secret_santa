@@ -8,7 +8,7 @@
 Secret Santa
 ============
 
-[![Build Status](https://semaphoreci.com/api/v1/fribmendes/secret_santa/branches/master/badge.svg?style=flat-square)][semaphore]
+[![Build Status](https://semaphoreci.com/api/v1/includebraga/secret_santa/branches/master/badge.svg)](https://semaphoreci.com/includebraga/secret_santa)
 [![Trello](https://img.shields.io/badge/trello-board-blue.svg?style=flat-square)][trello]
 <!--
 [![Error Tracker](https://img.shields.io/badge/sentry-errors-blue.svg?style=flat-square)][errors]
