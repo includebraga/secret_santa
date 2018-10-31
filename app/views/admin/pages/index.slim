@@ -3,27 +3,6 @@
 
 .main-content__body
   strong
-    ' Receivers with 1 gift:
-  = @remaining_receivers
-
-  br
-  br
-
-  strong
-    ' Receivers with 3 gifts:
-  = @exceeding_receivers
-
-  br
-  br
-
-  strong
-    ' Users that haven't redeemed:
-  = @users_without_redeem
-
-  br
-  br
-
-  strong
     ' Gifts received:
   = @gifts_received
 
@@ -33,6 +12,27 @@
   strong
     ' Gifts matched:
   = @gifts_matched
+
+  br
+  br
+
+  strong
+    ' Gifts missing:
+  = @gifts_missing
+
+  br
+  br
+
+  strong
+    ' Normal receivers:
+  = @normal_receivers
+
+  br
+  br
+
+  strong
+    ' Golden receveirs:
+  = @golden_receivers
 
   br
   br
