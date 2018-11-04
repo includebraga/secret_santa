@@ -1,24 +1,15 @@
 class Users::ConfirmationsController < ApplicationController
   def create
-    user_confirmation = UserConfirmation.new(params[:token])
-    user_confirmation.perform
+    user_confirmation_flow = UserConfirmationFlow.new(params[:token])
+    user_confirmation_flow.perform
 
-    if user_confirmation.successful?
-      @user = user_confirmation.user
-      @receiver = match_assignment_receiver
-
-      not_found unless @receiver
+    if user_confirmation_flow.successful?
+      @user = user_confirmation_flow.user
+      @receiver = user_confirmation_flow.receiver
+    elsif user_confirmation_flow.user_deleted?
+      render "user_deleted"
     else
       not_found
     end
-  end
-
-  private
-
-  def match_assignment_receiver
-    match_assignment = MatchAssignment.new(@user)
-    match_assignment.perform
-
-    match_assignment.successful? ? match_assignment.receiver : nil
   end
 end

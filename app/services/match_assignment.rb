@@ -10,15 +10,13 @@ class MatchAssignment
     ActiveRecord::Base.transaction do
       rollback!("user already has match") if user.matches.any?
 
-      @receiver = available_receiver or (@must_close_registrations = true and rollback!("no receiver available"))
+      @receiver = available_receiver or rollback!("no receiver available")
       @match = create_match
 
       @success = true
     end
   rescue ActiveRecord::ActiveRecordError => e
     Rails.logger.error(e.message)
-  ensure
-    close_registrations if @must_close_registrations
   end
 
   def successful?
@@ -31,10 +29,6 @@ class MatchAssignment
 
   def available_receiver
     Receiver.left_joins(:matches).where(matches: { id: nil }).first
-  end
-
-  def close_registrations
-    Settings.put(Settings::REGISTRATIONS_ENABLED, false)
   end
 
   def create_match
