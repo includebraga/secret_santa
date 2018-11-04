@@ -1,5 +1,5 @@
 class Settings < ApplicationRecord
-  REGISTRATIONS_ENABLED = :REGIONSTRATIONS_ENABLED
+  REGISTRATIONS_ENABLED = :REGISTRATIONS_ENABLED
 
   validates :key, presence: true, uniqueness: true
   validates :value, presence: true
