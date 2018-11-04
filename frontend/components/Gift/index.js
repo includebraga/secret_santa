@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import giftHead from '../../images/giftHead.png';
-import giftBody from '../../images/giftBody.png';
+
+import giftHead from 'root/assets/giftHead.png';
+import giftBody from 'root/assets/giftBody.png';
 
 import './index.css';
 

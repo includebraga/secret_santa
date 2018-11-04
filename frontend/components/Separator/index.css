@@ -1,0 +1,50 @@
+@import '../../styles/layout.css';
+@import '../../styles/breakpoints.css';
+
+$circle-size: 50px;
+$line-size: 1px;
+
+@mixin white-line {
+  width: $seven-columns;
+  height: $line-size;
+
+  background-color: #fafafa;
+
+  border: solid calc($line-size / 2) #fafafa;
+
+  @include Breakpoint-tabletOnly {
+    width: $six-columns;
+  }
+
+  @include Breakpoint-mobileOnly {
+    width: 50%;
+  }
+}
+
+.root {
+  display: flex;
+  flex-direction: row;
+}
+
+.absolute-line {
+  @include white-line;
+
+  position: absolute;
+  left: 0;
+
+  width: 50%;
+}
+
+.line {
+  @include white-line;
+}
+
+.circle {
+  width: $circle-size;
+  height: $circle-size;
+
+  margin-top: calc(($circle-size / -2) + 1px);
+
+  background-color: white;
+  border-radius: 50%;
+}
