@@ -39,7 +39,7 @@ class UserConfirmationFlow
     user_confirmation = UserConfirmation.new(user_token)
     user_confirmation.perform
 
-    user_confirmation.successful? ? user_confirmation.user : nil
+    user_confirmation.user if user_confirmation.successful?
   end
 
   def receiver_from_match
@@ -48,7 +48,7 @@ class UserConfirmationFlow
 
     Settings.put(Settings::REGISTRATIONS_ENABLED, false) if User.confirmed.count == Receiver.count
 
-    match_assignment.successful? ? match_assignment.receiver : nil
+    match_assignment.receiver if match_assignment.successful?
   end
 
   def cleanup

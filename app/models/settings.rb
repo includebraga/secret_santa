@@ -27,10 +27,6 @@ class Settings < ApplicationRecord
   end
 
   def self.put(key, value)
-    key_value = Settings.find_or_initialize_by(key: key)
-
-    key_value.value = value.to_s
-
-    key_value.save
+    Settings.find_or_initialize_by(key: key).tap { |key_value| key_value.value = value.to_s }.save
   end
 end
