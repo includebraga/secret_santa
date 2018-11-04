@@ -7,6 +7,7 @@ class Users::ConfirmationsController < ApplicationController
       @user = user_confirmation.user
       @receiver = match_assignment_receiver
 
+      not_found unless @receiver
     else
       not_found
     end

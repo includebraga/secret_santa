@@ -17,15 +17,7 @@ RSpec.describe Users::ConfirmationsController, type: :controller do
 
         get :create, params: { token: user.confirmation_token }
 
-        expect(response).to render_template("create", partial: "with_letter")
-      end
-
-      it "renders the template with the 'without_letter' partial" do
-        user = create(:user_with_confirmation_token)
-
-        get :create, params: { token: user.confirmation_token }
-
-        expect(response).to render_template("create", partial: "without_letter")
+        expect(response).to render_template("create")
       end
 
       it "404s if the token has already been used" do

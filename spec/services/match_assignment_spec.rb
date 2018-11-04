@@ -25,6 +25,16 @@ RSpec.describe MatchAssignment, type: :model do
       expect(match_assignment).not_to be_successful
     end
 
+    it "close registrations if there are no receivers" do
+      Settings.put(Settings::REGISTRATIONS_ENABLED, true)
+      user = create(:user)
+      match_assignment = MatchAssignment.new(user)
+
+      match_assignment.perform
+
+      expect(Settings.registrations_enabled?).not_to be
+    end
+
     it "is unsuccesful if the user already has a match" do
       user = create(:user)
       create(:receiver)
