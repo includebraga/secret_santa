@@ -4,6 +4,7 @@ RSpec.describe Users::ConfirmationsController, type: :controller do
   describe "GET #create" do
     context "with a valid token" do
       it "confirms the user" do
+        create(:receiver)
         user = create(:user_with_confirmation_token)
 
         get :create, params: { token: user.confirmation_token }
@@ -12,6 +13,7 @@ RSpec.describe Users::ConfirmationsController, type: :controller do
       end
 
       it "renders the correct template" do
+        create(:receiver)
         user = create(:user_with_confirmation_token)
 
         get :create, params: { token: user.confirmation_token }
