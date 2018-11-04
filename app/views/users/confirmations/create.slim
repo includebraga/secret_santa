@@ -1,18 +1,4 @@
 - if @receiver
-  .Section
-    .Section-content
-      .Section-title
-        h1.Heading Secret Santa Confirmado!
-
-      .Section-text style="padding-bottom: 32px; border-bottom: 2px solid;"
-        p #{@user.name}, acabaste de te tornar num Secret Santa!
-        p Em baixo tens a carta da criança que te foi atribuída.
-        p Enviamos uma cópia da carta para o teu email caso não anotes esta!
-        p Vemo-nos em breve 🎅
-
-      .Section-text style="padding-top: 32px;"
-        p= raw letter_html(@receiver)
+  = render "with_letter"
 - else
-  .Section
-    .Section-content
-      .Section-title
+  = render "without_letter"
