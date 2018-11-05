@@ -24,9 +24,6 @@ RSpec.describe UserConfirmationFlow, type: :model do
 
       user_confirmation.perform
 
-      expect(user_confirmation).to be_successful
-      expect(user.reload).to be_confirmed
-      expect(user.reload.confirmation_token).not_to be
       expect(Settings.registrations_enabled?).not_to be
     end
 

@@ -46,7 +46,7 @@ class UserConfirmationFlow
     match_assignment = MatchAssignment.new(user)
     match_assignment.perform
 
-    Settings.put(Settings::REGISTRATIONS_ENABLED, false) if User.confirmed.count == Receiver.count
+    Settings.put(Settings::REGISTRATIONS_ENABLED, false) if Match.count == Receiver.count
 
     match_assignment.receiver if match_assignment.successful?
   end
