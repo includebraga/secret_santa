@@ -55,6 +55,7 @@ RSpec.describe UserConfirmationFlow, type: :model do
     end
 
     it "deletes the user and closes registrations if there are no receivers" do
+      enable_registrations
       user = create(:user, confirmed_at: nil)
       user_confirmation = UserConfirmationFlow.new(user.confirmation_token)
 
