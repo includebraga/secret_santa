@@ -4,10 +4,6 @@ import Header from 'root/components/Header';
 
 import './index.css';
 
-const HomePage = () => (
-  <div styleName="root">
-    <Header />
-  </div>
-);
+const HomePage = () => <Header />;
 
 export default HomePage;
