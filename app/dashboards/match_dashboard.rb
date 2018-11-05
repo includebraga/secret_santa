@@ -11,6 +11,7 @@ class MatchDashboard < Administrate::BaseDashboard
     user: Field::BelongsTo,
     receiver: Field::BelongsTo,
     id: Field::Number,
+    code: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     received: Field::Boolean
@@ -24,6 +25,7 @@ class MatchDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     user
     receiver
+    code
     created_at
   ].freeze
 
@@ -33,6 +35,7 @@ class MatchDashboard < Administrate::BaseDashboard
     user
     receiver
     id
+    code
     created_at
     updated_at
     received

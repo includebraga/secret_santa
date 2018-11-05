@@ -3,8 +3,11 @@
     .Section-title
       h1.Heading Secret Santa Confirmado!
 
-    .Section-text
+    .Section-text style="padding-bottom: 32px; border-bottom: 2px solid;"
       p #{@user.name}, acabaste de te tornar num Secret Santa!
-      p Daqui a 2 semanas vamos atribuir uma carta de uma criança a cada Secret Santa, para nos poderem ajudar a fazer alguém feliz.
-      p Não te esqueças de verificar o teu email para ver a carta da criança que te será atribuída.
+      p Em baixo tens a carta da criança que te foi atribuída.
+      p Enviamos uma cópia da carta para o teu email caso não anotes esta!
       p Vemo-nos em breve 🎅
+
+    .Section-text style="padding-top: 32px;"
+      p= raw letter_html(@receiver)
