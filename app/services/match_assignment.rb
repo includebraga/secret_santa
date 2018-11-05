@@ -12,6 +12,7 @@ class MatchAssignment
 
       @receiver = available_receiver or rollback!("no receiver available")
       @match = create_match
+      send_match_email
 
       @success = true
     end
@@ -41,6 +42,10 @@ class MatchAssignment
     obfuscated_short_name = receiver.institution.obfuscated_short_name
 
     "#{receiver.id}#{obfuscated_short_name}#{user.id}"
+  end
+
+  def send_match_email
+    MatchMailer.match_redeemed(match).deliver_now
   end
 
   def rollback!(msg)
