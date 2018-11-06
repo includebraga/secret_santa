@@ -1,11 +1,6 @@
 module ReceiverHelper
+  # Convert DOS, *NIX and MacOs
   def letter_html(receiver)
-    parser.render(receiver.letter)
-  end
-
-  private
-
-  def parser
-    @_parser ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    receiver.letter.gsub(/(?:\n\r?|\r\n?)/, "<br>")
   end
 end

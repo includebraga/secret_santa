@@ -17,7 +17,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
     institution: Field::BelongsTo,
     id: Field::Number,
     name: Field::String,
-    letter: MarkdownField,
+    letter: Field::Text,
     golden: Field::Boolean,
     age: Field::Number,
     gender: SelectField.with_options(choices: Receiver.genders.keys),
