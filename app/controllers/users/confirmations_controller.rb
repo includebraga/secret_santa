@@ -7,7 +7,7 @@ class Users::ConfirmationsController < ApplicationController
       @user = user_confirmation_flow.user
       @receiver = user_confirmation_flow.receiver
     elsif user_confirmation_flow.user_deleted?
-      render "user_deleted"
+      render "closed"
     else
       not_found
     end
