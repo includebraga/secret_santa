@@ -1,10 +1,8 @@
 doctype html
-html
+html lang="pt"
   head
     title Secret Santa | Include Braga
     = csrf_meta_tags
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application'
     = stylesheet_pack_tag 'application', media: 'all'
     = favicon_link_tag
 
@@ -17,3 +15,5 @@ html
 
   body
     = yield
+
+  = javascript_pack_tag 'application', defer: true
