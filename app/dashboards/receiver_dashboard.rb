@@ -18,8 +18,6 @@ class ReceiverDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     letter: MarkdownField,
-    matched_gifts: Field::Number,
-    received_gifts: Field::Number,
     golden: Field::Boolean,
     age: Field::Number,
     gender: SelectField.with_options(choices: Receiver.genders.keys),
@@ -38,8 +36,6 @@ class ReceiverDashboard < Administrate::BaseDashboard
     name
     institution
     golden
-    matched_gifts
-    received_gifts
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -51,8 +47,6 @@ class ReceiverDashboard < Administrate::BaseDashboard
     gender
     institution
     golden
-    received_gifts
-    matched_gifts
     letter
     observations
     users
@@ -71,8 +65,6 @@ class ReceiverDashboard < Administrate::BaseDashboard
     golden
     letter
     observations
-    received_gifts
-    matched_gifts
   ].freeze
 
   def display_resource(receiver)
