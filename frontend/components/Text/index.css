@@ -1,0 +1,38 @@
+@import '../../styles/typography.css';
+@import '../../styles/breakpoints.css';
+
+.root {
+  color: white;
+
+  font-size: $font-size-medium;
+  line-height: $line-height-medium;
+
+  @include Breakpoint-tabletAndAbove {
+    font-size: $font-size-large;
+    line-height: $line-height-large;
+  }
+}
+
+.sans-serif {
+  font-family: $font-family-sans-serif;
+}
+
+.mono {
+  font-family: $font-family-mono;
+}
+
+.regular {
+  font-weight: $font-weight-regular;
+}
+
+.bold {
+  font-weight: $font-weight-bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.white {
+  color: white;
+}

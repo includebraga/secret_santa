@@ -1,37 +1,75 @@
-@import "../../styles/variables.css";
+@import "../../styles/typography.css";
+@import "../../styles/breakpoints.css";
 
 .root {
-  margin: 0 !important;
+  color: white;
+}
 
-  color: $color-deep-blue;
+.sans-serif {
+  font-family: $font-family-sans-serif;
+}
 
-  font-family: $font-family-serif;
-  font-size: $size-large;
-  line-height: $size-xlarge;
+.mono {
+  font-family: $font-family-mono;
+}
 
-  @media (min-width: $max-tablet-size) {
-    font-size: $size-xlarge;
-    line-height: $size-xxlarge;
+.regular {
+  font-weight: $font-weight-regular;
+}
+
+.bold {
+  font-weight: $font-weight-bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.level1 {
+  font-size: $font-size-xxxLarge;
+  line-height: $line-height-xxxLarge;
+
+  @include Breakpoint-tabletOnly {
+    font-size: $font-size-xxLarge;
+    line-height: $line-height-xxLarge;
+  }
+
+  @include Breakpoint-mobileOnly {
+    font-size: $font-size-xLarge;
+    line-height: $line-height-xLarge;
+  }
+}
+
+.level2 {
+  font-size: $font-size-xxLarge;
+  line-height: $line-height-xxLarge;
+
+  @include Breakpoint-tabletOnly {
+    font-size: $font-size-xLarge;
+    line-height: $line-height-xLarge;
+  }
+
+  @include Breakpoint-mobileOnly {
+    font-size: $font-size-large;
+    line-height: $line-height-large;
+  }
+}
+
+.level3 {
+  font-size: $font-size-xLarge;
+  line-height: $line-height-xLarge;
+
+  @include Breakpoint-tabletOnly {
+    font-size: $font-size-large;
+    line-height: $line-height-large;
+  }
+
+  @include Breakpoint-mobileOnly {
+    font-size: $font-size-medium;
+    line-height: $line-height-medium;
   }
 }
 
 .white {
-  color: $color-white;
-}
-
-.red {
-  color: $color-red;
-}
-
-.black {
-  color: $color-black;
-}
-
-.secondary {
-  font-size: $size-base;
-  line-height: $size-large;
-}
-
-.centered {
-  text-align: center;
+  color: white;
 }
