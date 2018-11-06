@@ -47,7 +47,7 @@ RSpec.describe Users::ConfirmationsController, type: :controller do
 
         get :create, params: { token: user.confirmation_token }
 
-        expect(response).to render_template("user_deleted")
+        expect(response).to render_template("closed")
       end
     end
 

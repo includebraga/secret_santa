@@ -8,7 +8,7 @@ export default class Text extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     fontFamily: PropTypes.oneOf(['sans-serif', 'mono']),
-    color: PropTypes.oneOf(['navy-blue', 'light-blue', 'orange', 'white']),
+    color: PropTypes.oneOf(['black', 'white']),
     weight: PropTypes.oneOf(['regular', 'bold', 'italic']),
   };
 

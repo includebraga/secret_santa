@@ -1,13 +1,2 @@
-.Section
-  .Section-content
-    .Section-title
-      h1.Heading Secret Santa Confirmado!
+= render_react_component(component: "ConfirmationsCreate", props: { username: @user.name, letter: letter_html(@receiver) }, prerender: true)
 
-    .Section-text style="padding-bottom: 32px; border-bottom: 2px solid;"
-      p #{@user.name}, acabaste de te tornar num Secret Santa!
-      p Em baixo tens a carta da criança que te foi atribuída.
-      p Enviamos uma cópia da carta para o teu email caso não anotes esta!
-      p Vemo-nos em breve 🎅
-
-    .Section-text style="padding-top: 32px;"
-      p= raw letter_html(@receiver)
