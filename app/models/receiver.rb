@@ -14,4 +14,5 @@ class Receiver < ApplicationRecord
   validates :golden, inclusion: { in: [true, false] }
 
   scope :golden, -> { where(golden: true) }
+  scope :normal, -> { where(golden: false) }
 end
