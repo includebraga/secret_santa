@@ -26,30 +26,17 @@ class ImportReceiversFromCsv
 
   private
 
-<<<<<<< HEAD
-  attr_reader :csv, :receivers, :institution, :success
-=======
   attr_reader :csv_path, :receivers, :institution_id, :success
->>>>>>> jsf/csv
 
   def log_errors(receiver)
     Rails.logger.warn("Failed to save one of the models: #{receiver.errors.full_messages.join(' | ')}")
   end
 
   def build_receivers
-<<<<<<< HEAD
-    CSV.parse(csv, headers: true) do |row|
-      receiver = Receiver.new(row.to_hash.merge(institution_id: institution.id))
-
-      unless receiver.valid?
-        log_errors(receiver)
-      end
-=======
     CSV.foreach(csv_path, headers: true) do |row|
       receiver = Receiver.new(row.to_hash.merge(institution_id: institution_id))
 
       log_errors(receiver) unless receiver.valid?
->>>>>>> jsf/csv
 
       receivers << receiver
     end
