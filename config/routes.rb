@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     post "/receive/:id", to: "users#receive", as: :users_receive
     post "/revert/:id", to: "users#revert_receive", as: :users_revert
     post "/institution/:institution_id/import_receivers", to: "institutions#import_receivers", as: :institutions_import_receivers
+    post "/match/:match_id/received", to: "matches#received", as: :match_received
   end
 
   if Rails.env.development?
