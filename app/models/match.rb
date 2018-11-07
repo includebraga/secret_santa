@@ -10,6 +10,9 @@ class Match < ApplicationRecord
   validates :receiver_id, presence: true
   validates :received, inclusion: { in: [true, false] }
 
+  scope :received, -> { where(received: true) }
+  scope :not_received, -> { where(received: false) }
+
   def received?
     received
   end
