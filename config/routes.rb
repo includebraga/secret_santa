@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     post "/match/", to: "users#batch_match", as: :users_batch_match
     post "/receive/:id", to: "users#receive", as: :users_receive
     post "/revert/:id", to: "users#revert_receive", as: :users_revert
+    post "/institution/:institution_id/import_receivers", to: "institutions#import_receivers", as: :institutions_import_receivers
   end
 
   if Rails.env.development?

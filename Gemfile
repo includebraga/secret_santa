@@ -7,6 +7,7 @@ end
 
 ruby "2.5.1"
 
+gem "activerecord-import"
 gem "administrate", github: "substancelab/administrate", branch: "276-collection_filters"
 gem "bootstrap-sass", "~> 3.2.0"
 gem "email_validator"
