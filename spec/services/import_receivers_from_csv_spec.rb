@@ -1,10 +1,10 @@
 require "rails_helper"
 
-RSpec.describe ImportReceiversFromCsv, type: :model do
+RSpec.describe ImportReceiversFromCSV, type: :model do
   describe "#perform" do
     it "imports one receiver with the given data" do
       institution = create(:institution)
-      service = ImportReceiversFromCsv.new(path: file_fixture("receivers.csv"), institution_id: institution.id)
+      service = ImportReceiversFromCSV.new(path: file_fixture("receivers.csv"), institution_id: institution.id)
 
       service.perform
       receiver = Receiver.first
@@ -17,7 +17,7 @@ RSpec.describe ImportReceiversFromCsv, type: :model do
 
     it "imports all receivers" do
       institution = create(:institution)
-      service = ImportReceiversFromCsv.new(path: file_fixture("receivers.csv"), institution_id: institution.id)
+      service = ImportReceiversFromCSV.new(path: file_fixture("receivers.csv"), institution_id: institution.id)
 
       expect do
         service.perform
@@ -30,7 +30,7 @@ RSpec.describe ImportReceiversFromCsv, type: :model do
 
     it "fails to import bad receivers" do
       institution = create(:institution)
-      service = ImportReceiversFromCsv.new(path: file_fixture("receivers_bad.csv"), institution_id: institution.id)
+      service = ImportReceiversFromCSV.new(path: file_fixture("receivers_bad.csv"), institution_id: institution.id)
 
       expect do
         service.perform
@@ -43,7 +43,7 @@ RSpec.describe ImportReceiversFromCsv, type: :model do
 
     it "imports the good receivers and ignores the bad receivers" do
       institution = create(:institution)
-      service = ImportReceiversFromCsv.new(path: file_fixture("receivers_half_bad.csv"), institution_id: institution.id)
+      service = ImportReceiversFromCSV.new(path: file_fixture("receivers_half_bad.csv"), institution_id: institution.id)
 
       expect do
         service.perform

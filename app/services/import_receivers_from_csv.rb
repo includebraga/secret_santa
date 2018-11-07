@@ -1,6 +1,6 @@
 require "csv"
 
-class ImportReceiversFromCsv
+class ImportReceiversFromCSV
   attr_reader :failed_receivers, :imported_receivers
 
   def initialize(path:, institution_id:)
