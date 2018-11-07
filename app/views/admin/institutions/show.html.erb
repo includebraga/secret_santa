@@ -43,7 +43,7 @@ function enableButton(){
   </h1>
 
   <div style="margin: 0 20px 0 20px">
-    <%= form_tag({action: :import_receivers}, multipart: true) do %>
+    <%= form_tag({action: :import_receivers, institution_id: page.resource.id}, multipart: true) do %>
       <%= file_field_tag 'file', onchange: "enableButton()" %>
       <div style="margin-top: 10px">
         <%= submit_tag "Import receivers from csv", id: "submit_file" %>
