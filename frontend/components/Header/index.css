@@ -66,7 +66,7 @@
   }
 
   @include Breakpoint-mobileOnly {
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin-right: $gutter;
     margin-left: auto;
 
@@ -110,8 +110,7 @@
   @include Breakpoint-mobileOnly {
     margin-left: 0;
 
-    font-size: $font-size-medium;
-    line-height: $line-height-medium;
+    line-height: $line-height-large;
   }
 }
 
