@@ -1,11 +1,5 @@
 module ReceiverHelper
-  def letter_html(receiver)
-    parser.render(receiver.letter)
-  end
-
-  private
-
-  def parser
-    @_parser ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+  def convert_line_breaks_to_html(receiver)
+    receiver.letter.gsub(/(?:\n\r?|\r\n?)/, "<br>")
   end
 end

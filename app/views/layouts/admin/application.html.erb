@@ -21,7 +21,6 @@ By default, it renders:
   <title>
     <%= content_for(:title) %> - <%= Rails.application.class.parent_name.titlecase %>
   </title>
-  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.4/showdown.js"%>
   <%= render "stylesheet" %>
   <%= csrf_meta_tags %>
 </head>
