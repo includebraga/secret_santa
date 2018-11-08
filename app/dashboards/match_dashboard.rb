@@ -1,6 +1,11 @@
 require "administrate/base_dashboard"
 
 class MatchDashboard < Administrate::BaseDashboard
+  COLLECTION_FILTERS = {
+    received: ->(resources) { resources.received },
+    not_received: ->(resources) { !resources.received }
+  }.freeze
+
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -26,6 +31,7 @@ class MatchDashboard < Administrate::BaseDashboard
     user
     receiver
     code
+    received
     created_at
   ].freeze
 
@@ -47,6 +53,7 @@ class MatchDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     user
     receiver
+    received
   ].freeze
 
   # Overwrite this method to customize how matches are displayed
