@@ -66,7 +66,7 @@
   }
 
   @include Breakpoint-mobileOnly {
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin-right: $gutter;
     margin-left: auto;
 
@@ -75,7 +75,7 @@
 }
 
 .with-underline {
-  background-image: url("../../assets/underline.svg");
+  background-image: url('../../assets/underline.svg');
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: auto 16px;
@@ -110,7 +110,8 @@
   @include Breakpoint-mobileOnly {
     margin-left: 0;
 
-    line-height: $line-height-large;
+    font-size: $font-size-medium;
+    line-height: $line-height-medium;
   }
 }
 
