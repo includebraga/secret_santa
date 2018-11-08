@@ -5,7 +5,7 @@ $circle-size: 50px;
 $line-size: 1px;
 
 @mixin white-line {
-  width: $seven-columns;
+  width: calc($five-columns - $circle-size);
   height: $line-size;
 
   background-color: #fafafa;
@@ -13,7 +13,7 @@ $line-size: 1px;
   border: solid calc($line-size / 2) #fafafa;
 
   @include Breakpoint-tabletOnly {
-    width: $six-columns;
+    width: calc($four-columns - $circle-size);
   }
 
   @include Breakpoint-mobileOnly {
@@ -35,16 +35,21 @@ $line-size: 1px;
   width: 50%;
 }
 
-.line {
-  @include white-line;
-}
-
 .circle {
   width: $circle-size;
   height: $circle-size;
 
   margin-top: calc(($circle-size / -2) + 1px);
+  margin-left: calc($five-columns - $circle-size);
 
   background-color: white;
   border-radius: 50%;
+
+  @include Breakpoint-tabletOnly {
+    margin-left: calc($four-columns - $circle-size);
+  }
+
+  @include Breakpoint-mobileOnly {
+    margin-left: calc(50% - $circle-size);
+  }
 }

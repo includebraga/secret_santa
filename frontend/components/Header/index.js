@@ -12,18 +12,13 @@ const Header = () => (
       <div styleName="the-impossible">
         <Heading weight="bold">o impossível acontece.</Heading>
       </div>
-
       <div styleName="secret-santa">
-        <div styleName="with-underline">
-          <Heading level="2" weight="bold">
-            secret santa
-          </Heading>
-        </div>
+        <Heading level="2" weight="bold" underline>
+          secret santa
+        </Heading>
         <div styleName="include">#include &lt;braga&gt;</div>
       </div>
-
       <Separator />
-
       <div styleName="a-year-ago">
         <Text weight="bold">
           há um ano ajudamos mais de 160 crianças e idosos a passar um Natal

@@ -1,7 +1,10 @@
-@import "../../styles/typography.css";
-@import "../../styles/breakpoints.css";
+@import '../../styles/typography.css';
+@import '../../styles/breakpoints.css';
+@import '../../styles/layout.css';
 
 .root {
+  position: relative;
+
   color: white;
 }
 
@@ -76,4 +79,34 @@
 
 .black {
   color: black;
+}
+
+.underline::after {
+  content: '';
+
+  position: absolute;
+
+  bottom: -8px;
+  left: 0;
+
+  width: 100%;
+  height: 16px;
+
+  background-image: url('../../assets/underline.svg');
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: auto 16px;
+
+  @include Breakpoint-tabletOnly {
+    height: 11px;
+
+    background-size: auto 11px;
+  }
+
+  @include Breakpoint-mobileOnly {
+    height: 8px;
+
+    background-position: bottom right;
+    background-size: auto 8px;
+  }
 }

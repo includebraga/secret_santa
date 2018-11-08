@@ -11,6 +11,7 @@ export default class Heading extends React.Component {
     color: PropTypes.oneOf(['black', 'white']),
     level: PropTypes.oneOf(['1', '2', '3']),
     weight: PropTypes.oneOf(['regular', 'bold', 'italic']),
+    underline: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -18,16 +19,26 @@ export default class Heading extends React.Component {
     color: 'white',
     level: '1',
     weight: 'regular',
+    underline: false,
   };
 
   render() {
-    const { children, level, fontFamily, color, weight } = this.props;
+    const {
+      children,
+      level,
+      fontFamily,
+      color,
+      weight,
+      underline,
+    } = this.props;
     const styles = classNames('root', {
       [`level${level}`]: true,
       [fontFamily]: true,
       [color]: true,
       [weight]: true,
+      underline,
     });
+
     const HeadingComponent = `h${level}`;
 
     return <HeadingComponent styleName={styles}>{children}</HeadingComponent>;

@@ -5,10 +5,10 @@
   @include Breakpoint-desktopOnly {
     max-width: $content-width;
 
-    margin: $spacing-xxxLarge auto $spacing-xxxLarge auto;
+    margin: $spacing-112 auto $spacing-112 auto;
   }
 
   @include Breakpoint-tabletAndBelow {
-    margin: $spacing-xxLarge $gutter $spacing-xxLarge $gutter;
+    margin: $spacing-84 $gutter $spacing-84 $gutter;
   }
 }

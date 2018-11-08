@@ -33,7 +33,7 @@
 
 .content {
   @include Breakpoint-tabletAndAbove {
-    max-width: $content-width;
+    max-width: $inner-content;
 
     margin: 0 auto;
   }
@@ -42,11 +42,10 @@
 }
 
 .the-impossible {
-  margin-top: calc(2 * $spacing-xxxLarge);
-  margin-left: $column-spacing;
+  margin-top: $spacing-224;
 
   @include Breakpoint-tabletAndBelow {
-    margin-top: $spacing-xxxLarge;
+    margin-top: $spacing-112;
     margin-left: $gutter;
   }
 }
@@ -54,43 +53,26 @@
 .secret-santa {
   display: flex;
   flex-direction: row;
+  align-items: baseline;
 
-  margin-top: $spacing-xxxxLarge;
-  margin-bottom: $spacing-xxxLarge;
-  margin-left: $five-columns;
+  margin-top: 197px;
+  margin-bottom: 142px;
+  margin-left: calc($three-columns + $gutter);
 
   text-align: left;
 
   @include Breakpoint-tabletOnly {
-    margin-left: $four-columns;
+    align-items: stretch;
+    margin-left: calc($two-columns + $gutter);
   }
 
   @include Breakpoint-mobileOnly {
     flex-direction: column-reverse;
-    margin-right: $gutter;
+    align-items: stretch;
+    margin-right: calc($column + $gutter);
     margin-left: auto;
 
     text-align: right;
-  }
-}
-
-.with-underline {
-  background-image: url('../../assets/underline.svg');
-  background-position: 50% 100%;
-  background-repeat: no-repeat;
-  background-size: auto 16px;
-
-  @include Breakpoint-tabletOnly {
-    background-size: auto 11px;
-  }
-
-  @include Breakpoint-mobileOnly {
-    background-position: bottom right;
-    background-size: auto 8px;
-  }
-
-  h2 {
-    margin-bottom: $spacing-xxxSmall;
   }
 }
 
@@ -108,6 +90,7 @@
   }
 
   @include Breakpoint-mobileOnly {
+    margin-top: $spacing-8;
     margin-left: 0;
 
     font-size: $font-size-medium;
@@ -134,22 +117,15 @@
 .a-year-ago {
   display: flex;
   flex-direction: column;
-
   max-width: $three-columns;
-
-  margin-top: $spacing-xxxLarge;
-  margin-bottom: $spacing-xxxLarge;
-  margin-left: $gutter;
+  margin: 57px 0 187px $gutter;
 
   @include Breakpoint-tabletAndAbove {
     max-width: $five-columns;
-
-    margin-top: $spacing-xxxLarge;
-    margin-bottom: calc(2 * $spacing-xxxLarge);
-    margin-left: $column-spacing;
+    margin: $spacing-112 0 calc(2 * $spacing-112);
   }
 }
 
 .a-year-ago > *:not(:last-child) {
-  padding-bottom: $spacing-medium;
+  padding-bottom: $spacing-28;
 }
