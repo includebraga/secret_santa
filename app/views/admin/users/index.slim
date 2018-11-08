@@ -41,12 +41,14 @@ header.main-content__header role="banner"
         method: :post                                                               \
       )
 
+  - registrations_message = Settings.registrations_enabled? ? "Disable registrations" : "Enable registrations"
   div style="margin-left: 10px"
-    = link_to(                                                                             \
-        Settings.registrations_enabled? ? "Disable registrations" : "Enable registrations", \
-        admin_users_toggle_registrations_path,                                             \
-        class: "button",                                                                   \
-        method: :post                                                                      \
+    = link_to(                                                                                              \
+        registrations_message,                                                                              \
+        admin_users_toggle_registrations_path,                                                              \
+        class: "button",                                                                                    \
+        method: :post,                                                                                      \
+        data: {confirm: "WARNING! PERIGO!\nYOU ARE GOING TO #{registrations_message.upcase}\nARE YOU SURE?"} \
       )
 
 section.main-content__body.main-content__body--flush
