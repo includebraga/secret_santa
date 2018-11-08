@@ -10,7 +10,8 @@
       "required": true
     },
     "RAILS_ENV": {
-      "required": true
+      "required": true,
+      "value": "staging"
     },
     "RAILS_LOG_TO_STDOUT": {
       "required": true
@@ -22,28 +23,28 @@
       "required": true
     },
     "MAILER_FROM_EMAIL": {
-      "required": true
+      "required": false
     },
     "MAILER_FROM_NAME": {
-      "required": true
+      "required": false
     },
     "MAILER_USERNAME": {
-      "required": true
+      "required": false
     },
     "MAILER_PASSWORD": {
-      "required": true
+      "required": false
     },
     "MAILER_HOST": {
-      "required": true
+      "required": false
     },
     "MAILER_DOMAIN": {
-      "required": true
+      "required": false
     },
     "MAILER_ADDRESS": {
-      "required": true
+      "required": false
     },
     "MAILER_PORT": {
-      "required": true
+      "required": false
     },
     "BASIC_AUTH": {
       "required": true

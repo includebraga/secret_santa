@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   resources :users, only: [:create, :new]
 
+  namespace :api, as: "API" do
+    post "/slack", to: "slack#callback"
+  end
+
   namespace :users do
     get "/confirm/:token", to: "confirmations#create", as: :confirmation
   end

@@ -12,6 +12,7 @@ class Match < ApplicationRecord
 
   scope :received, -> { where(received: true) }
   scope :not_received, -> { where(received: false) }
+  scope :missing, -> { where(received: false) }
 
   def received?
     received
