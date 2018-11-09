@@ -117,14 +117,14 @@ module Admin
       redirect_to admin_user_path(user)
     end
 
-    def toggle_registrations
-      registrations_enabled = Settings.toggle_registrations
+    def set_registrations
+      registrations_enabled = ActiveRecord::Type::Boolean.new.cast(params[:value])
 
-      flash[:notice] = if registrations_enabled
-                         "User registrations enabled!"
-                       else
-                         "User registrations disabled!"
-                       end
+      return if registrations_enabled.nil?
+
+      Settings.put(:REGISTRATIONS_ENABLED, registrations_enabled)
+
+      flash[:notice] = registrations_enabled ? "User registrations enabled!" : "User registrations disabled!"
 
       redirect_to admin_users_path
     end

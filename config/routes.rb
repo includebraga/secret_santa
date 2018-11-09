@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     post "/confirm/", to: "users#batch_confirm", as: :users_batch_confirmation
     post "/assign/:id", to: "users#assign", as: :users_assign
     post "/assign", to: "users#batch_assign", as: :users_batch_assign
-    post "/toggle_registrations", to: "users#toggle_registrations", as: :users_toggle_registrations
+    post "/set_registrations", to: "users#set_registrations", as: :users_set_registrations
     post "/match/:id", to: "users#match", as: :users_match
     post "/match/", to: "users#batch_match", as: :users_batch_match
     post "/receive/:id", to: "users#receive", as: :users_receive
