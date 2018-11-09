@@ -13,9 +13,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: $spacing-medium;
+  margin-top: $spacing-28;
 }
 
 .text > *:not(:last-child) {
-  margin-bottom: $spacing-medium;
+  margin-bottom: $spacing-28;
 }

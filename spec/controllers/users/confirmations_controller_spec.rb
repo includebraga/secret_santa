@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Users::ConfirmationsController, type: :controller do
-  before(:each) { Settings.put(Settings::REGISTRATIONS_ENABLED, true) }
+  before(:each) { Settings.put(:REGISTRATIONS_ENABLED, true) }
 
   describe "GET #create" do
     context "with a valid token" do

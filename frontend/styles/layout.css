@@ -1,21 +1,23 @@
 $column: 73px;
-$gutter: 28px;
+$gutter: 47px;
 $column-spacing: calc($column + 2 * $gutter);
 
-$content-width: calc(12 * $column + 11 * $gutter);
+$content-width: calc(12 * $column + 12 * $gutter);
+$inner-content: calc(10 * $column + 9 * $gutter);
 $min-content-width: 320px;
 
-$spacing-xxxxSmall: 4px;
-$spacing-xxxSmall: 8px;
-$spacing-xxSmall: 16px;
-$spacing-xSmall: 20px;
-$spacing-small: 24px;
-$spacing-medium: 28px;
-$spacing-large: 40px;
-$spacing-xLarge: 56px;
-$spacing-xxLarge: 84px;
-$spacing-xxxLarge: 112px;
-$spacing-xxxxLarge: 168px;
+$spacing-4: 4px;
+$spacing-8: 8px;
+$spacing-16: 16px;
+$spacing-20: 20px;
+$spacing-24: 24px;
+$spacing-28: 28px;
+$spacing-40: 40px;
+$spacing-56: 56px;
+$spacing-84: 84px;
+$spacing-112: 112px;
+$spacing-168: 168px;
+$spacing-224: 224px;
 
 $two-columns: calc(2 * $column + $gutter);
 $three-columns: calc(3 * $column + 2 * $gutter);

@@ -14,18 +14,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: $spacing-xLarge;
-  margin-top: $spacing-medium;
+  padding-bottom: $spacing-56;
+  margin-top: $spacing-28;
 
   border-bottom: 2px solid black;
 }
 
 .text > *:not(:last-child) {
-  margin-bottom: $spacing-medium;
+  margin-bottom: $spacing-28;
 }
 
 .letter {
-  margin-top: $spacing-xLarge;
+  margin-top: $spacing-56;
 
   @include default-styles;
 }
