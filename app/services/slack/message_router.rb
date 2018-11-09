@@ -30,16 +30,10 @@ class Slack::MessageRouter
   attr_reader :command, :args, :successful
 
   def stats
-    analytics = Analytics.build
+    progress_update = Slack::ProgressUpdate.new
+    progress_update.perform
 
-    [
-      "Gifts Received - #{analytics.gifts_received}",
-      "Gifts Missing - #{analytics.gifts_missing}",
-      "Gifts Matched - #{analytics.gifts_matched}",
-      "Normal Receivers - #{analytics.normal_receivers}",
-      "Golden Receivers - #{analytics.golden_receivers}",
-      "Total Receivers - #{analytics.total_receivers}",
-    ].join("\n")
+    progress_update.reply
   end
 
   def known_command?
