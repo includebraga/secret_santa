@@ -46,7 +46,7 @@ class UserConfirmationFlow
     match_assignment = MatchAssignment.new(user)
     match_assignment.perform
 
-    Settings.put(Settings::REGISTRATIONS_ENABLED, false) if Match.count == Receiver.count
+    Settings.put(:REGISTRATIONS_ENABLED, false) if Match.count == Receiver.count
 
     match_assignment.receiver if match_assignment.successful?
   end
@@ -54,7 +54,7 @@ class UserConfirmationFlow
   def cleanup
     user&.destroy
 
-    Settings.put(Settings::REGISTRATIONS_ENABLED, false)
+    Settings.put(:REGISTRATIONS_ENABLED, false)
   end
 
   def rollback!(msg, cleanup: false)

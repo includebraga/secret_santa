@@ -69,10 +69,10 @@ RSpec.describe UserConfirmationFlow, type: :model do
   end
 
   def enable_registrations
-    Settings.put(Settings::REGISTRATIONS_ENABLED, true)
+    Settings.put(:REGISTRATIONS_ENABLED, true)
   end
 
   def disable_registrations
-    Settings.put(Settings::REGISTRATIONS_ENABLED, false)
+    Settings.put(:REGISTRATIONS_ENABLED, false)
   end
 end
