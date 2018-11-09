@@ -25,12 +25,15 @@ header.main-content__header role="banner"
         method: :post                                                               \
       )
 
-  div style="margin-left: 10px"
-    = link_to(                                                                              \
-        @registrations_enabled ? "Disable registrations" : "Enable registrations", \
-        admin_users_set_registrations_path(value: !@registrations_enabled),        \
-        class: "button",                                                                    \
-        method: :post                                                                       \
+  - registrations_message = @registrations_enabled ? "Disable registrations" : "Enable registrations"
+  
+  div style="margin-left: 10px"    
+    = link_to(                                                                                               \
+        registrations_message,                           \
+        admin_users_set_registrations_path(value: !@registrations_enabled),                                  \
+        class: "button",                                                                                     \
+        method: :post,                                                                                       \
+        data: {confirm: "I HEREBY DECLARE THAT I AM GOING TO #{registrations_message.upcase}\nDOUBLE CHECK\nTRIPLE CHECK\nCHECK AGAIN"} \
       )
 
 section.main-content__body.main-content__body--flush
