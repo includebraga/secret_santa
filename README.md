@@ -1,4 +1,3 @@
-[trello]: https://trello.com/b/hADFEIB3
 [semaphore]: https://semaphoreci.com/includebraga/secret_santa
 <!--
 [errors]: https://example.org
@@ -9,7 +8,6 @@ Secret Santa
 ============
 
 [![Build Status](https://semaphoreci.com/api/v1/includebraga/secret_santa/branches/master/badge.svg)][semaphore]
-[![Trello](https://img.shields.io/badge/trello-board-blue.svg?style=flat-square)][trello]
 <!--
 [![Error Tracker](https://img.shields.io/badge/sentry-errors-blue.svg?style=flat-square)][errors]
 [![Production Logs](https://img.shields.io/badge/logs-production-blue.svg?style=flat-square)][logs]
