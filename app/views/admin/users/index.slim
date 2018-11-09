@@ -26,25 +26,9 @@ header.main-content__header role="banner"
       )
 
   div style="margin-left: 10px"
-    = link_to(                                                                      \
-        "Send match emails",                                                        \
-        admin_users_batch_match_path,                                               \
-        class: "button",                                                            \
-        method: :post                                                               \
-      )
-
-  div style="margin-left: 10px"
-    = link_to(                                                                      \
-        "Assign redeem tokens",                                                     \
-        admin_users_batch_assign_path,                                              \
-        class: "button",                                                            \
-        method: :post                                                               \
-      )
-
-  div style="margin-left: 10px"
     = link_to(                                                                              \
-        Settings.registrations_enabled? ? "Disable registrations" : "Enable registrations", \
-        admin_users_set_registrations_path(value: !Settings.registrations_enabled?),        \
+        @registrations_enabled ? "Disable registrations" : "Enable registrations", \
+        admin_users_set_registrations_path(value: !@registrations_enabled),        \
         class: "button",                                                                    \
         method: :post                                                                       \
       )
