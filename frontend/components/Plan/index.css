@@ -7,18 +7,6 @@
 .copy {
   display: flex;
   flex-direction: column;
-
-  @include Breakpoint-tabletAndAbove {
-    width: $five-columns;
-
-    margin-left: auto;
-  }
-
-  @include Breakpoint-mobileOnly {
-    margin: 0 auto;
-
-    text-align: center;
-  }
 }
 
 .copy > *:not(:last-child) {
@@ -27,6 +15,10 @@
 
 .title {
   margin-bottom: $spacing-56;
+
+  @include Breakpoint-mobileOnly {
+    text-align: center;
+  }
 }
 
 .event {
@@ -41,6 +33,18 @@
 }
 
 .events {
+  @include Breakpoint-tabletAndAbove {
+    width: $five-columns;
+
+    margin-left: auto;
+  }
+
+  @include Breakpoint-mobileOnly {
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
   > *:not(:last-child) {
     margin-bottom: $spacing-56;
   }

@@ -9,12 +9,12 @@ import './index.css';
 
 const Plan = () => (
   <Section color="red" id="Plan">
-    <div styleName="title">
-      <Heading color="white" weight="bold" underline>
-        O Plano
-      </Heading>
-    </div>
     <div styleName="copy">
+      <div styleName="title">
+        <Heading color="white" weight="bold" underline>
+          O Plano
+        </Heading>
+      </div>
       <div styleName="events">
         {eventsList.map(event => (
           <Event key={event.day} {...event} />
