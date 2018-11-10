@@ -1,4 +1,4 @@
-- content_for(:title) { "#{t("administrate.actions.show")} #{page.page_title}" }
+- content_for(:title) { t("administrate.actions.show_resource", name: page.page_title) }
 header.main-content__header[role="banner"]
   h1.main-content__page-title
     = content_for(:title)

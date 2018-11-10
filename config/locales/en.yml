@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  administrate:
+    actions:
+      show_resource: "Show - %{name}"

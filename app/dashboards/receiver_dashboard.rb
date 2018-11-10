@@ -2,7 +2,8 @@ require "administrate/base_dashboard"
 
 class ReceiverDashboard < Administrate::BaseDashboard
   COLLECTION_FILTERS = {
-    golden: ->(resources) { resources.golden }
+    golden: ->(resources) { resources.golden },
+    normal: ->(resources) { resources.normal }
   }.freeze
 
   # ATTRIBUTE_TYPES
