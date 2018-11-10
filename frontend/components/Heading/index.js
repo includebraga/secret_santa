@@ -41,6 +41,6 @@ export default class Heading extends React.Component {
 
     const HeadingComponent = `h${level}`;
 
-    return <HeadingComponent styleName={styles}>{children}</HeadingComponent>;
+    return <div><HeadingComponent styleName={styles}>{children}</HeadingComponent></div>;
   }
 }

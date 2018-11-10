@@ -9,12 +9,10 @@ import './index.css';
 const Adventure = () => (
   <Section id="adventure">
     <div styleName="root">
-      <div styleName="title">
-        <Heading color="red" weight="bold" underline>
-          A Aventura
-        </Heading>
-      </div>
-      <div styleName="copy left">
+      <Heading color="red" weight="bold" underline>
+        A Aventura
+      </Heading>
+      <div styleName="copy">
         <Text color="black">
           Nós recolhemos cartas de crianças e idosos necessitados que se
           encontram ligados a instituições de Braga.
