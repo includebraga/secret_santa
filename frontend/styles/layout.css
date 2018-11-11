@@ -1,13 +1,13 @@
-$column: 73px;
-$gutter: 47px;
+$column: calc(100%/12);
+$gutter: 28px;
 $column-spacing: calc($column + 2 * $gutter);
 
-$content-width: calc(12 * $column + 12 * $gutter);
-$inner-content: calc(10 * $column + 9 * $gutter);
+$content-width: calc(12 * $column + 13 * $gutter);
 $min-content-width: 320px;
 
 $spacing-4: 4px;
 $spacing-8: 8px;
+$spacing-12: 12px;
 $spacing-16: 16px;
 $spacing-20: 20px;
 $spacing-24: 24px;
@@ -16,7 +16,7 @@ $spacing-40: 40px;
 $spacing-56: 56px;
 $spacing-84: 84px;
 $spacing-112: 112px;
-$spacing-168: 168px;
+$spacing-164: 164px;
 $spacing-224: 224px;
 
 $two-columns: calc(2 * $column + $gutter);

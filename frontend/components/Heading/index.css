@@ -1,6 +1,7 @@
 @import '../../styles/typography.css';
 @import '../../styles/breakpoints.css';
 @import '../../styles/layout.css';
+@import '../../styles/colors.css';
 
 .root {
   position: relative;
@@ -29,48 +30,18 @@
 }
 
 .level1 {
-  font-size: $font-size-xxxLarge;
-  line-height: $line-height-xxxLarge;
-
-  @include Breakpoint-tabletOnly {
-    font-size: $font-size-xxLarge;
-    line-height: $line-height-xxLarge;
-  }
-
-  @include Breakpoint-mobileOnly {
-    font-size: $font-size-xLarge;
-    line-height: $line-height-xLarge;
-  }
+  font-size: $font-size-large;
+  line-height: $line-height-large;
 }
 
 .level2 {
-  font-size: $font-size-xxLarge;
-  line-height: $line-height-xxLarge;
-
-  @include Breakpoint-tabletOnly {
-    font-size: $font-size-xLarge;
-    line-height: $line-height-xLarge;
-  }
-
-  @include Breakpoint-mobileOnly {
-    font-size: $font-size-large;
-    line-height: $line-height-large;
-  }
+  font-size: $font-size-medium;
+  line-height: $line-height-medium;
 }
 
 .level3 {
-  font-size: $font-size-xLarge;
-  line-height: $line-height-xLarge;
-
-  @include Breakpoint-tabletOnly {
-    font-size: $font-size-large;
-    line-height: $line-height-large;
-  }
-
-  @include Breakpoint-mobileOnly {
-    font-size: $font-size-medium;
-    line-height: $line-height-medium;
-  }
+  font-size: $font-size-small;
+  line-height: $line-height-small;
 }
 
 .white {
@@ -86,27 +57,22 @@
 
   position: absolute;
 
-  bottom: -8px;
+  bottom: calc(-$spacing-12 - 4px);
   left: 0;
 
   width: 100%;
-  height: 16px;
+  height: 4px;
 
-  background-image: url('../../assets/underline.svg');
+  background-color: $yellow;
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: auto 16px;
 
   @include Breakpoint-tabletOnly {
-    height: 11px;
 
-    background-size: auto 11px;
   }
 
   @include Breakpoint-mobileOnly {
-    height: 8px;
 
-    background-position: bottom right;
-    background-size: auto 8px;
   }
 }

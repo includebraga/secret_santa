@@ -5,7 +5,7 @@ import Header from 'root/components/Header';
 import './index.css';
 
 const HomePage = () => (
-  <div>
+  <div styleName="root">
     <Header />
   </div>
 );

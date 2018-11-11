@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Fira+Sans:400,700');
 
 $font-size-small: 16px;
 $font-size-medium: 20px;
@@ -13,6 +13,6 @@ $line-height-xLarge: 56px;
 $line-height-xxLarge: 84px;
 $line-height-xxxLarge: normal;
 $font-family-mono: 'Fira Mono', monospace;
-$font-family-sans-serif: 'Montserrat', sans-serif;
+$font-family-sans-serif: 'Fira Sans', sans-serif;
 $font-weight-regular: 400;
 $font-weight-bold: 700;
