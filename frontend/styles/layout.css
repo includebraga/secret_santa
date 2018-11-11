@@ -1,4 +1,4 @@
-$column: calc(100%/12);
+$column: 90px;
 $gutter: 28px;
 $column-spacing: calc($column + 2 * $gutter);
 

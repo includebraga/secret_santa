@@ -17,6 +17,11 @@
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
   @include Breakpoint-tabletAndAbove {
     width: 100%;
     max-width: $content-width;
@@ -64,13 +69,13 @@
 }
 
 .description {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
 
   margin: $spacing-224 $column-spacing $spacing-164 $column-spacing;
 
   @include Breakpoint-tabletOnly {
-    margin: $spacing-224 calc(3 * $gutter) $spacing-164 calc(3 * $gutter);
+    margin: $spacing-224 auto $spacing-164 auto;
   }
 
   @include Breakpoint-mobileOnly {
@@ -81,8 +86,6 @@
 }
 
 .include {
-  display: inline-block;
-
   height: $line-height-medium;
 
   padding: $spacing-12 $spacing-20 $spacing-12 $spacing-20;
@@ -103,7 +106,7 @@
   margin-left: $spacing-28;
 
   @include Breakpoint-mobileOnly {
-    flex-direction: column;
+    padding: 0 $spacing-28 0 $spacing-28;
 
     margin: $spacing-56 auto $spacing-56 auto;
 
@@ -119,9 +122,12 @@
   height: $line-height-medium;
 
   padding: $spacing-12 $spacing-20 $spacing-12 $spacing-20;
-  margin-left: auto;
 
   background-color: $yellow;
+
+  @include Breakpoint-desktopOnly {
+    margin-left: auto;
+  }
 
   @include Breakpoint-mobileOnly {
     margin: 0 auto;

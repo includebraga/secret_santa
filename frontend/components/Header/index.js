@@ -20,12 +20,14 @@ const Header = () => (
           </div>
         </div>
       </div>
+
       <div styleName="description">
         <div styleName="include">
           <Text fontFamily="mono" weight="bold">
             #include &lt;braga&gt;
           </Text>
         </div>
+
         <div styleName="a-year-ago">
           <Text>
             Há um ano ajudamos mais de 160 crianças e idosos a passar um Natal
@@ -33,6 +35,7 @@ const Header = () => (
           </Text>
           <Text weight="bold">Este ano somos muitos mais.</Text>
         </div>
+
         <div styleName="join-us" weight="bold">
           <Text fontFamily="mono" color="red" weight="bold">
             #inscreve-te
