@@ -99,7 +99,7 @@
   flex-direction: column;
   max-width: $four-columns;
 
-  margin-top: 4px;
+  margin-top: $spacing-12;
   margin-left: $spacing-28;
 
   @include Breakpoint-mobileOnly {
