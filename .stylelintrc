@@ -6,6 +6,7 @@
     "stylelint-config-prettier"
   ],
   "rules": {
+    "no-missing-end-of-source-newline": 2,
     "max-nesting-depth": 3,
     "indentation": 2,
     "order/order": [
