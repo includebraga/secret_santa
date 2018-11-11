@@ -2,7 +2,6 @@ import React from 'react';
 
 import Heading from 'root/components/Heading';
 import Text from 'root/components/Text';
-import Separator from 'root/components/Separator';
 
 import './index.css';
 
