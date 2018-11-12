@@ -1,0 +1,84 @@
+@import '../../styles/variables.css';
+@import '../../styles/typography.css';
+@import '../../styles/layout.css';
+@import '../../styles/breakpoints.css';
+@import '../../styles/colors.css';
+
+.copy {
+  display: flex;
+  flex-direction: column;
+
+  @include Breakpoint-tabletAndAbove {
+    width: $five-columns;
+  }
+
+  @include Breakpoint-mobileOnly {
+    margin: 0 auto;
+
+    text-align: center;
+  }
+}
+
+.copy > *:not(:last-child) {
+  padding-bottom: $spacing-28;
+}
+
+.adventure {
+  margin-bottom: $spacing-56;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  margin-top: $spacing-56;
+
+  @include Breakpoint-tabletAndAbove {
+    margin-left: auto;
+  }
+
+  @include Breakpoint-mobileOnly {
+    flex-direction: column;
+
+    margin: $spacing-112 auto;
+  }
+
+  input {
+    width: 320px;
+
+    padding: $spacing-8 0 $spacing-8 0;
+
+    border: none;
+    border-bottom: solid $yellow 4px;
+
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-medium;
+
+    @include Breakpoint-mobileOnly {
+      width: calc($min-content-width - $gutter - $gutter);
+
+      margin-bottom: $spacing-20;
+    }
+  }
+
+  input:focus {
+    outline: none;
+  }
+}
+
+.join-us {
+  padding: $spacing-12 $spacing-20 $spacing-12 $spacing-20;
+
+  margin-top: auto;
+
+  background-color: $yellow;
+
+  @include Breakpoint-tabletAndAbove {
+    margin-left: $spacing-28;
+  }
+
+  @include Breakpoint-mobileOnly {
+    margin: 0 auto;
+
+    text-align: center;
+  }
+}

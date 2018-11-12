@@ -5,28 +5,29 @@
 @import '../../styles/colors.css';
 
 .root {
-  position: relative;
-
   display: flex;
   flex-direction: column;
-  align-items: left;
 
   background-color: $red;
-
-  font-family: $font-family-sans-serif;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
 
-  @include Breakpoint-tabletAndAbove {
-    width: 100%;
-    max-width: $content-width;
+  margin: 0 auto;
 
-    margin: 0 auto;
+  @include Breakpoint-desktopOnly {
+    width: $inner-content-width;
+  }
+
+  @include Breakpoint-tabletOnly {
+    width: $inner-content-width-tablet;
+  }
+
+  @include Breakpoint-mobileOnly {
+    margin: 0 $gutter 0 $gutter;
   }
 }
 
@@ -39,12 +40,10 @@
   display: inline-flex;
   flex-direction: row;
 
-  margin-top: $spacing-224;
-
   @include Breakpoint-mobileOnly {
     flex-direction: column;
     max-width: calc($min-content-width - $gutter);
-    margin: $spacing-56 auto;
+    margin: 0 auto;
 
     text-align: center;
   }
@@ -72,16 +71,16 @@
   display: inline-flex;
   flex-direction: row;
 
-  margin: $spacing-224 $column-spacing $spacing-164 $column-spacing;
+  margin-top: $spacing-224;
 
   @include Breakpoint-tabletOnly {
-    margin: $spacing-224 auto $spacing-164 auto;
+    margin-top: $spacing-224;
   }
 
   @include Breakpoint-mobileOnly {
     flex-direction: column;
 
-    margin: $spacing-112 auto $spacing-112 auto;
+    margin-top: $spacing-112;
   }
 }
 
@@ -125,7 +124,7 @@
 
   background-color: $yellow;
 
-  @include Breakpoint-desktopOnly {
+  @include Breakpoint-tabletAndAbove {
     margin-left: auto;
   }
 

@@ -1,0 +1,36 @@
+@import '../../styles/breakpoints.css';
+@import '../../styles/layout.css';
+@import '../../styles/colors.css';
+
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.white {
+  background-color: white;
+}
+
+.red {
+  background-color: $red;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 0 auto;
+
+  @include Breakpoint-desktopOnly {
+    width: $inner-content-width;
+  }
+
+  @include Breakpoint-tabletOnly {
+    width: $inner-content-width-tablet;
+  }
+
+  @include Breakpoint-mobileOnly {
+    margin: 0 $gutter 0 $gutter;
+  }
+}

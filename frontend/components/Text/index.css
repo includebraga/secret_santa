@@ -34,7 +34,7 @@
 }
 
 .black {
-  color: black;
+  color: $black;
 }
 
 .red {

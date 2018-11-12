@@ -1,6 +1,15 @@
 @import '../../styles/reset.css';
 @import '../../styles/layout.css';
+@import '../../styles/breakpoints.css';
 
 .root {
   min-width: $min-content-width;
+}
+
+.root > * {
+  padding: $spacing-168 0;
+
+  @include Breakpoint-mobileOnly {
+    padding: $spacing-84 0;
+  }
 }
