@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   root "home#index"
 
-  resources :users, only: [:create, :new]
+  resources :users, only: [:create]
 
   namespace :api, as: "API" do
     post "/slack", to: "slack#callback"

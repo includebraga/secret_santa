@@ -63,6 +63,10 @@
   input:focus {
     outline: none;
   }
+
+  input[name='user[name]'] {
+    margin-bottom: $spacing-28;
+  }
 }
 
 .join-us {
