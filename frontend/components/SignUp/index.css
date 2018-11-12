@@ -59,7 +59,7 @@
   flex-direction: row;
   margin-top: $spacing-56;
 
-  @include Breakpoint-desktopOnly {
+  @include Breakpoint-tabletAndAbove {
     margin-left: auto;
   }
 
