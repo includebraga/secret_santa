@@ -16,8 +16,8 @@ const SignUp = () => (
         </div>
 
         <Text color="black">
-          Para começar a nossa aventura tudo o que precisamos é do teu e-mail e do teu nome.
-          As inscrições abrem a 15 de Novembro.
+          Para começar a nossa aventura tudo o que precisamos é do teu e-mail e
+          do teu nome. As inscrições abrem a 15 de Novembro.
         </Text>
         <Text color="black">
           Vais receber um e-mail de confirmação, com instruções para os próximos
@@ -29,21 +29,17 @@ const SignUp = () => (
         </Text>
       </div>
 
-      <div styleName="form">
+      <form styleName="form">
         <label htmlFor="email">
           <Text color="black">Email</Text>
-          <input
-            id="email"
-            type="email"
-            placeholder="o-teu-email@email.com"
-          />
+          <input id="email" type="email" placeholder="o-teu-email@email.com" />
         </label>
-        <div styleName="join-us" weight="bold">
+        <button styleName="join-us" weight="bold" type="submit">
           <Text fontFamily="mono" color="red" weight="bold">
             #inscreve-te
           </Text>
-        </div>
-      </div>
+        </button>
+      </form>
     </div>
   </div>
 );

@@ -93,8 +93,6 @@
 }
 
 .join-us {
-  height: $line-height-medium;
-
   padding: $spacing-12 $spacing-20 $spacing-12 $spacing-20;
 
   margin-top: auto;
