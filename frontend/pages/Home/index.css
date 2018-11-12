@@ -7,9 +7,9 @@
 }
 
 .root > * {
-  padding: $spacing-168 0 $spacing-168 0;
+  padding: $spacing-168 0;
 
   @include Breakpoint-mobileOnly {
-    padding: $spacing-84 0 $spacing-84 0;
+    padding: $spacing-84 0;
   }
 }

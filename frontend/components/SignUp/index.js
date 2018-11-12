@@ -14,7 +14,6 @@ const SignUp = () => (
           A Aventura
         </Heading>
       </div>
-
       <Text color="black">
         Para começar a nossa aventura tudo o que precisamos é do teu e-mail e do
         teu nome. As inscrições abrem a 15 de Novembro.
@@ -28,7 +27,6 @@ const SignUp = () => (
         de ti.
       </Text>
     </div>
-
     <form styleName="form">
       <label htmlFor="email">
         <Text color="black">Email</Text>
