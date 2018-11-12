@@ -6,6 +6,8 @@
 .root {
   position: relative;
 
+  display: inline;
+
   color: white;
 }
 
@@ -49,30 +51,15 @@
 }
 
 .black {
-  color: black;
+  color: $black;
 }
 
-.underline::after {
-  content: '';
+.red {
+  color: $red;
+}
 
-  position: absolute;
+.underline {
+  padding-bottom: calc($spacing-12 + 4px);
 
-  bottom: calc(-$spacing-12 - 4px);
-  left: 0;
-
-  width: 100%;
-  height: 4px;
-
-  background-color: $yellow;
-  background-position: 50% 100%;
-  background-repeat: no-repeat;
-  background-size: auto 16px;
-
-  @include Breakpoint-tabletOnly {
-
-  }
-
-  @include Breakpoint-mobileOnly {
-
-  }
+  border-bottom: solid $yellow 4px;
 }
