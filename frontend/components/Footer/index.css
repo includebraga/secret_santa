@@ -1,0 +1,56 @@
+@import '../../styles/variables.css';
+@import '../../styles/typography.css';
+@import '../../styles/layout.css';
+@import '../../styles/breakpoints.css';
+@import '../../styles/colors.css';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+.assembled {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @include Breakpoint-mobileOnly {
+    flex-direction: column;
+
+    text-align: center;
+  }
+}
+
+.include {
+  padding: $spacing-12 $spacing-20 $spacing-12 $spacing-20;
+
+  margin-top: auto;
+
+  background-color: white;
+
+  @include Breakpoint-tabletAndAbove {
+    margin-left: $spacing-28;
+  }
+
+  @include Breakpoint-mobileOnly {
+    display: inline-block;
+
+    margin: $spacing-28 auto;
+
+    text-align: center;
+  }
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+
+  margin-top: $spacing-56;
+}
+
+.social-links > *:not(:last-child) {
+  margin-right: $spacing-28;
+}
