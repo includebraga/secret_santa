@@ -60,7 +60,7 @@ RSpec.describe UsersController, type: :controller do
 
         response = post :create, params: { user: params }
 
-        expect(response).to redirect_to(new_user_path)
+        expect(response).to render_template("error")
       end
 
       it "correctly assigns the session variables" do
@@ -68,7 +68,7 @@ RSpec.describe UsersController, type: :controller do
 
         post :create, params: { user: params }
 
-        expect(session[:user]).to be
+        expect(session[:user]).not_to be
       end
     end
   end

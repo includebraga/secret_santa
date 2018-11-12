@@ -27,11 +27,27 @@ const SignUp = () => (
         de ti.
       </Text>
     </div>
-    <form styleName="form">
-      <label htmlFor="email">
-        <Text color="black">Email</Text>
-        <input id="email" type="email" placeholder="o-teu-email@email.com" />
-      </label>
+    <form styleName="form" action="/users" method="post">
+      <div>
+        <label htmlFor="Name">
+          <Text color="black">Name</Text>
+          <input
+            id="name"
+            name="user[name]"
+            type="name"
+            placeholder="Pai Natal"
+          />
+        </label>
+        <label htmlFor="email">
+          <Text color="black">Email</Text>
+          <input
+            id="email"
+            name="user[email]"
+            type="email"
+            placeholder="pai@natal.org"
+          />
+        </label>
+      </div>
       <button styleName="join-us" weight="bold" type="submit">
         <Text fontFamily="mono" color="red" weight="bold">
           #inscreve-te
