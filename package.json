@@ -17,6 +17,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-svg-loader": "^2.1.0",
     "react_ujs": "^2.4.4"
   },
   "devDependencies": {
