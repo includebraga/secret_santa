@@ -8,6 +8,7 @@ export default class Section extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     color: PropTypes.oneOf(['white', 'red']),
+    id: PropTypes.string.isRequired,
   };
 
   static defaultProps = {
@@ -15,15 +16,15 @@ export default class Section extends Component {
   };
 
   render() {
-    const { children, color } = this.props;
+    const { children, color, id } = this.props;
     const styles = classNames('root', {
       [color]: true,
     });
 
     return (
-      <div styleName={styles}>
+      <section styleName={styles} id={id}>
         <div styleName="content">{children}</div>
-      </div>
+      </section>
     );
   }
 }

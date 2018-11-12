@@ -10,7 +10,7 @@ import Github from 'root/assets/github.svg';
 import './index.css';
 
 const Footer = () => (
-  <Section color="red">
+  <Section color="red" id="footer">
     <div styleName="root">
       <div styleName="assembled">
         <Text fontFamily="mono">

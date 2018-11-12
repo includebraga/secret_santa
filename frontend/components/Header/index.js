@@ -2,12 +2,13 @@ import React from 'react';
 
 import Heading from 'root/components/Heading';
 import Text from 'root/components/Text';
+import Button from 'root/components/Button';
 
 import './index.css';
 import Section from '../Section';
 
 const Header = () => (
-  <Section color="red">
+  <Section color="red" id="header">
     <header styleName="title-container">
       <div styleName="title">
         <div styleName="secret-santa">
@@ -33,10 +34,8 @@ const Header = () => (
         </Text>
         <Text weight="bold">Este ano somos muitos mais.</Text>
       </div>
-      <div styleName="join-us" weight="bold">
-        <Text fontFamily="mono" color="red" weight="bold">
-          #inscreve-te
-        </Text>
+      <div styleName="join-us">
+        <Button href="#signUp" />
       </div>
     </div>
   </Section>

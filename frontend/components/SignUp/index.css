@@ -70,11 +70,7 @@
 }
 
 .join-us {
-  padding: $spacing-12 $spacing-20 $spacing-12 $spacing-20;
-
   margin-top: auto;
-
-  background-color: $yellow;
 
   @include Breakpoint-tabletAndAbove {
     margin-left: $spacing-28;

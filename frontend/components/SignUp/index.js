@@ -3,11 +3,12 @@ import React from 'react';
 import Section from 'root/components/Section';
 import Text from 'root/components/Text';
 import Heading from 'root/components/Heading';
+import Button from 'root/components/Button';
 
 import './index.css';
 
 const SignUp = () => (
-  <Section>
+  <Section id="signUp">
     <div styleName="copy">
       <div styleName="adventure">
         <Heading color="red" weight="bold" underline>
@@ -30,7 +31,7 @@ const SignUp = () => (
     <form styleName="form" action="/users" method="post">
       <div>
         <label htmlFor="Name">
-          <Text color="black">Name</Text>
+          <Text color="black">Nome</Text>
           <input
             id="name"
             name="user[name]"
@@ -48,11 +49,9 @@ const SignUp = () => (
           />
         </label>
       </div>
-      <button styleName="join-us" weight="bold" type="submit">
-        <Text fontFamily="mono" color="red" weight="bold">
-          #inscreve-te
-        </Text>
-      </button>
+      <div styleName="join-us">
+        <Button />
+      </div>
     </form>
   </Section>
 );
