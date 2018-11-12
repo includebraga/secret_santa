@@ -1,0 +1,14 @@
+@import '../../styles/breakpoints.css';
+@import '../../styles/layout.css';
+
+.root {
+  @include Breakpoint-desktopOnly {
+    max-width: $content-width;
+
+    margin: $spacing-112 auto $spacing-112 auto;
+  }
+
+  @include Breakpoint-tabletAndBelow {
+    margin: $spacing-84 $gutter $spacing-84 $gutter;
+  }
+}
