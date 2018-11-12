@@ -3,7 +3,7 @@ ActionMailer::Base.default_url_options = {
   protocol: "http",
 }
 
-if %w(production staging).include?(Rails.env)
+if Rails.env.production?
   ActionMailer::Base.raise_delivery_errors = true
   ActionMailer::Base.delivery_method = :smtp
 
@@ -16,4 +16,7 @@ if %w(production staging).include?(Rails.env)
     :authentication => :plain,
     :enable_starttls_auto => true
   }
+elsif Rails.env.staging?
+  ActionMailer::Base.raise_delivery_errors = true
+  ActionMailer::Base.delivery_method = :sendmail
 end
