@@ -15,7 +15,7 @@ export default class Heading extends React.Component {
   };
 
   static defaultProps = {
-    fontFamily: 'sans-serif',
+    fontFamily: 'mono',
     color: 'white',
     level: '1',
     weight: 'regular',

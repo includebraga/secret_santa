@@ -1,16 +1,12 @@
 @import '../../styles/typography.css';
 @import '../../styles/breakpoints.css';
+@import '../../styles/colors.css';
 
 .root {
   color: white;
 
   font-size: $font-size-medium;
   line-height: $line-height-medium;
-
-  @include Breakpoint-tabletAndAbove {
-    font-size: $font-size-large;
-    line-height: $line-height-large;
-  }
 }
 
 .sans-serif {
@@ -39,4 +35,8 @@
 
 .black {
   color: black;
+}
+
+.red {
+  color: $red;
 }

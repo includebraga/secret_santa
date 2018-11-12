@@ -1,1 +1,6 @@
 @import '../../styles/reset.css';
+@import '../../styles/layout.css';
+
+.root {
+  min-width: $min-content-width;
+}
