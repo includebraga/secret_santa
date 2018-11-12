@@ -19,4 +19,5 @@ if Rails.env.production?
 elsif Rails.env.staging?
   ActionMailer::Base.raise_delivery_errors = true
   ActionMailer::Base.delivery_method = :sendmail
+  ActionMailer::Base.default_url_options = { :host => "beltrano-cicrano.herokuapp.com" }
 end
