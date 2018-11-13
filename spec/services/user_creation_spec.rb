@@ -104,6 +104,7 @@ RSpec.describe UserCreation, type: :model do
         user_creation.perform
 
         expect(user_creation).not_to be_successful
+        expect(user_creation).to be_user_exists
       end
 
       it "emails if the user is unconfirmed" do

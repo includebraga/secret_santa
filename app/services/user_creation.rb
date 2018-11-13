@@ -5,6 +5,8 @@ class UserCreation
   end
 
   def perform
+    return if user_exists?
+
     User.transaction do
       find_or_create_user!
       notify_user!
@@ -17,6 +19,12 @@ class UserCreation
 
   def successful?
     success
+  end
+
+  def user_exists?
+    return false unless params[:email]
+
+    @_user_exists ||= User.where("email = ? AND confirmed_at IS NOT NULL", params[:email]).exists?
   end
 
   def user

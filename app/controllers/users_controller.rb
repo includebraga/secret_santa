@@ -9,6 +9,8 @@ class UsersController < ApplicationController
       @user = user_creation.user
 
       render "create"
+    elsif user_creation.user_exists?
+      render "email_in_use"
     else
       render "error"
     end
@@ -18,13 +20,5 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:email, :name)
-  end
-
-  def user_from_session
-    if user_session_params
-      User.new(user_session_params).with_validations
-    else
-      User.new
-    end
   end
 end
