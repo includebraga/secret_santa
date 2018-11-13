@@ -23,7 +23,7 @@ const ConfirmationsCreatePage = ({ username, letter }) => (
           {username}, acabaste de te tornar num Secret Santa!
         </Text>
         <Text color="black">
-          Em baixo tens a carta da criança que te foi atribuída.
+          Em baixo tens a carta da criança que te foi atribuída. Terás uma cópia desta carta no teu email se a quiseres voltar a consultar.
         </Text>
         <Text color="black">
           Fica atento às redes sociais para saberes como entregar a prenda num dos nossos pontos de recolha! Até breve {' '}
