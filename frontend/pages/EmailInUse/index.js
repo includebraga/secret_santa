@@ -18,7 +18,7 @@ const UserCreationError = () => (
       <div styleName="text">
         <Text color="black">Lamentamos imenso esta situação!</Text>
         <Text color="black">
-          Se achas que isto não é normal por favor contacta-nos via email para
+          Se achas que isto não é normal por favor contacta-nos via email para{' '}
           <a href="mailto:includebraga@gmail.com">includebraga@gmail.com</a>
         </Text>
       </div>
