@@ -20,7 +20,6 @@ const UserCreated = ({ username, email }) => (
       <div styleName="text">
         <Text color="black">Obrigado pelo teu registo!</Text>
         <Text color="black">A tua contribuição significa imenso para nós.</Text>
-        <Text color="black">Vemo-nos em breve!</Text>
         <Text color="black">
           Por favor confirma o teu email ao clicar no link que acabamos de
           enviar para {email}
