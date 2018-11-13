@@ -25,9 +25,8 @@ const ConfirmationsCreatePage = ({ username, letter }) => (
         <Text color="black">
           Em baixo tens a carta da criança que te foi atribuída.
         </Text>
-        <Text color="black">Vemo-nos em breve!</Text>
         <Text color="black">
-          Fica atento às redes sociais e vemo-nos em breve{' '}
+          Fica atento às redes sociais para saberes como entregar a prenda num dos nossos pontos de recolha! Até breve {' '}
           <span role="img" aria-label="santa">
             🎅
           </span>
