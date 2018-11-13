@@ -14,6 +14,7 @@ if %w(production staging).include?(Rails.env)
     address: Rails.application.secrets.mailer_address,
     port: Rails.application.secrets.mailer_port,
     :authentication => :plain,
-    :enable_starttls_auto => true
+    :enable_starttls_auto => true,
+    tls: true
   }
 end
