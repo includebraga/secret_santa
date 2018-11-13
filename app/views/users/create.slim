@@ -1,10 +1,1 @@
-/ TODO: Remove this when page is completed
-.Section
-  .Section-content
-    .Section-title
-      h1.Heading #include &lt;braga&gt; ❤️ #{@user.name}
-
-    .Section-text
-      p Obrigado pelo teu registo!
-      p A tua contribuição significa muito para nós.
-      p Por favor confirma o teu email ao clicar no link que acabamos de enviar para #{@user.email}
+= render_react_component(component: "UserCreated", props: { username: @user.name, email: @user.email }, prerender: true)

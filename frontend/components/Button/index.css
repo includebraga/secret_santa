@@ -1,0 +1,15 @@
+@import '../../styles/variables.css';
+@import '../../styles/colors.css';
+@import '../../styles/layout.css';
+
+.root {
+  display: flex;
+  box-sizing: border-box;
+  padding: $spacing-12 $spacing-20;
+
+  background-color: $yellow;
+
+  color: inherit;
+
+  text-decoration: inherit;
+}
