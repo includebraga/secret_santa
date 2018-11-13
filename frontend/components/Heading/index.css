@@ -58,6 +58,9 @@
   color: $red;
 }
 
+.yellow {
+  color: $yellow;
+}
 .underline {
   padding-bottom: calc($spacing-12 + 4px);
 

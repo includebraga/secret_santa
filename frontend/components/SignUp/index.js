@@ -10,9 +10,9 @@ import './index.css';
 const SignUp = () => (
   <Section id="signUp">
     <div styleName="copy">
-      <div styleName="adventure">
+      <div styleName="title">
         <Heading color="red" weight="bold" underline>
-          A Aventura
+          A Execução
         </Heading>
       </div>
       <Text color="black">

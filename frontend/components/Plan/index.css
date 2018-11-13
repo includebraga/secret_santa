@@ -1,0 +1,40 @@
+@import '../../styles/variables.css';
+@import '../../styles/typography.css';
+@import '../../styles/layout.css';
+@import '../../styles/breakpoints.css';
+@import '../../styles/colors.css';
+
+.copy {
+  display: flex;
+  flex-direction: column;
+
+  @include Breakpoint-tabletAndAbove {
+    width: $five-columns;
+  }
+
+  @include Breakpoint-mobileOnly {
+    margin: 0 auto;
+
+    text-align: center;
+  }
+}
+
+.copy > *:not(:last-child) {
+  padding-bottom: $spacing-28;
+}
+
+.title {
+  margin-bottom: $spacing-60;
+}
+
+.description {
+  margin-top: $spacing-28;
+
+  opacity: 0.7;
+}
+
+.events {
+  > *:not(:last-child) {
+    margin-bottom: $spacing-56;
+  }
+}

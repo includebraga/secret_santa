@@ -8,7 +8,7 @@ export default class Heading extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     fontFamily: PropTypes.oneOf(['sans-serif', 'mono']),
-    color: PropTypes.oneOf(['black', 'white', 'red']),
+    color: PropTypes.oneOf(['black', 'white', 'red', 'yellow']),
     level: PropTypes.oneOf(['1', '2', '3']),
     weight: PropTypes.oneOf(['regular', 'bold', 'italic']),
     underline: PropTypes.bool,
