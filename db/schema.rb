@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_195523) do
+ActiveRecord::Schema.define(version: 2018_11_13_140945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,16 @@ ActiveRecord::Schema.define(version: 2018_10_28_195523) do
     t.index ["key"], name: "index_settings_on_key", unique: true
   end
 
+  create_table "unreceived_matches", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "receiver_id", null: false
+    t.string "code", null: false
+    t.boolean "received", null: false
+    t.index ["receiver_id"], name: "index_unreceived_matches_on_receiver_id"
+    t.index ["user_id", "receiver_id"], name: "index_unreceived_matches_on_user_id_and_receiver_id", unique: true
+    t.index ["user_id"], name: "index_unreceived_matches_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.datetime "confirmed_at"
@@ -69,4 +79,6 @@ ActiveRecord::Schema.define(version: 2018_10_28_195523) do
   add_foreign_key "matches", "receivers"
   add_foreign_key "matches", "users"
   add_foreign_key "receivers", "institutions"
+  add_foreign_key "unreceived_matches", "receivers"
+  add_foreign_key "unreceived_matches", "users"
 end
