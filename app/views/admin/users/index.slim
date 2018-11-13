@@ -26,8 +26,8 @@ header.main-content__header role="banner"
       )
 
   - registrations_message = @registrations_enabled ? "Disable registrations" : "Enable registrations"
-  
-  div style="margin-left: 10px"    
+
+  div style="margin-left: 10px"
     = link_to(                                                                                               \
         registrations_message,                           \
         admin_users_set_registrations_path(value: !@registrations_enabled),                                  \
