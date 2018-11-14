@@ -1,5 +1,10 @@
 module Admin
   class UsersController < Admin::ApplicationController
+    def index
+      @registrations_enabled = Settings.registrations_enabled?
+      super
+    end
+
     def create
       user_creation = UserCreation.new(user_params)
       user_creation.perform
