@@ -55,7 +55,16 @@ RSpec.describe UsersController, type: :controller do
         end.not_to change { User.count }
       end
 
-      it "redirects to the sign up page" do
+      it "redirects to the email in use page" do
+        user = create(:user)
+        params = attributes_for(:user, email: user.email)
+
+        post :create, params: { user: params }
+
+        expect(response).to render_template("email_in_use")
+      end
+
+      it "redirects to the error page" do
         params = attributes_for(:user, email: nil)
 
         response = post :create, params: { user: params }
