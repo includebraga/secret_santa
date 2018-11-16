@@ -3,10 +3,9 @@ import React from 'react';
 import Section from 'root/components/Section';
 import Text from 'root/components/Text';
 import Heading from 'root/components/Heading';
-import Button from 'root/components/Button';
+import SignUpForm from '../SignUpForm';
 
 import './index.css';
-import SignUpForm from '../SignUpForm';
 
 const SignUp = () => (
   <Section id="signUp">
