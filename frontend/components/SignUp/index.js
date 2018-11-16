@@ -3,7 +3,7 @@ import React from 'react';
 import Section from 'root/components/Section';
 import Text from 'root/components/Text';
 import Heading from 'root/components/Heading';
-import Button from 'root/components/Button';
+import SignUpForm from '../SignUpForm';
 
 import './index.css';
 
@@ -28,31 +28,7 @@ const SignUp = () => (
         de ti.
       </Text>
     </div>
-    <form styleName="form" action="/users" method="post">
-      <div>
-        <label htmlFor="Name">
-          <Text color="black">Nome</Text>
-          <input
-            id="name"
-            name="user[name]"
-            type="name"
-            placeholder="Pai Natal"
-          />
-        </label>
-        <label htmlFor="email">
-          <Text color="black">Email</Text>
-          <input
-            id="email"
-            name="user[email]"
-            type="email"
-            placeholder="pai@natal.org"
-          />
-        </label>
-      </div>
-      <div styleName="join-us">
-        <Button />
-      </div>
-    </form>
+    <SignUpForm />
   </Section>
 );
 
