@@ -14,7 +14,7 @@ const Button = ({ handleClick, href, disabled }) => {
 
   return (
     <div styleName={rootStyles}>
-      <Component href={href} onClick={handleClick}>
+      <Component styleName="tag" href={href} onClick={handleClick}>
         <div styleName="content">
           <Text fontFamily="mono" color="red" weight="bold">
             #inscreve-te
