@@ -20,7 +20,6 @@ const Button = ({ handleClick, href, disabled }) => {
             #inscreve-te
           </Text>
         </div>
-
         <div styleName="shadow" />
       </Component>
     </div>
