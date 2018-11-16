@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_13_140945) do
+ActiveRecord::Schema.define(version: 2018_11_16_185810) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,13 @@ ActiveRecord::Schema.define(version: 2018_11_13_140945) do
     t.index ["receiver_id"], name: "index_matches_on_receiver_id"
     t.index ["user_id", "receiver_id"], name: "index_matches_on_user_id_and_receiver_id", unique: true
     t.index ["user_id"], name: "index_matches_on_user_id"
+  end
+
+  create_table "organizers", force: :cascade do |t|
+    t.string "email"
+    t.string "uuid"
+    t.index ["email"], name: "index_organizers_on_email", unique: true
+    t.index ["uuid"], name: "index_organizers_on_uuid", unique: true
   end
 
   create_table "receivers", force: :cascade do |t|

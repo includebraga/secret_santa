@@ -14,4 +14,13 @@
       class: "navigation__link navigation__link--#{nav_link_state(resource)}"
     ) %>
   <% end %>
+
+  <%= link_to(
+    "Sign Out",
+    delete_session_path,
+    method: :delete,
+    data: { confirm: "you are about to log out. you sure?" },
+    class: "navigation__link navigation__link--#{nav_link_state("pages")}"
+  )
+  %>
 </nav>

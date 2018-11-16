@@ -12,6 +12,7 @@ gem "administrate", github: "substancelab/administrate", branch: "276-collection
 gem "bootstrap-sass", "~> 3.2.0"
 gem "email_validator"
 gem "foreman"
+gem "google_sign_in"
 gem "httparty"
 gem "loofah", ">= 2.2.3"
 gem "pg"

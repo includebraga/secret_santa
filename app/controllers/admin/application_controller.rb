@@ -10,17 +10,17 @@ module Admin
     protected
 
     def authenticate_admin
-      basic_auth unless Rails.env.development?
-    end
-
-    def basic_auth
-      authenticate_or_request_with_http_basic do |username, password|
-        ENV["BASIC_AUTH"].split(":") == [username, password]
-      end
+      redirect_to new_session_path unless current_user
     end
 
     def set_default_locale
       I18n.default_locale = :en
+    end
+
+    def current_user
+      return unless session[:uuid]
+
+      Organizer.find_by(uuid: session[:uuid])
     end
   end
 end
