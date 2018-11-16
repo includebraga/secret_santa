@@ -6,6 +6,7 @@ import Heading from 'root/components/Heading';
 import Button from 'root/components/Button';
 
 import './index.css';
+import SignUpForm from '../SignUpForm';
 
 const SignUp = () => (
   <Section id="signUp">
@@ -28,31 +29,7 @@ const SignUp = () => (
         de ti.
       </Text>
     </div>
-    <form styleName="form" action="/users" method="post">
-      <div>
-        <label htmlFor="Name">
-          <Text color="black">Nome</Text>
-          <input
-            id="name"
-            name="user[name]"
-            type="name"
-            placeholder="Pai Natal"
-          />
-        </label>
-        <label htmlFor="email">
-          <Text color="black">Email</Text>
-          <input
-            id="email"
-            name="user[email]"
-            type="email"
-            placeholder="pai@natal.org"
-          />
-        </label>
-      </div>
-      <div styleName="join-us">
-        <Button />
-      </div>
-    </form>
+    <SignUpForm />
   </Section>
 );
 
