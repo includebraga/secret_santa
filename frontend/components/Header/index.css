@@ -89,7 +89,7 @@
 
   padding: $spacing-12 $spacing-20 $spacing-12 $spacing-20;
 
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255, 0.6);
 
   @include Breakpoint-mobileOnly {
     margin: 0 auto;
@@ -103,6 +103,8 @@
 
   margin-top: $spacing-12;
   margin-left: $spacing-28;
+
+  opacity: 0.7;
 
   @include Breakpoint-mobileOnly {
     padding: 0 $spacing-28 0 $spacing-28;

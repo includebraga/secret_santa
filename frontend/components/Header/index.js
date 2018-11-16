@@ -1,11 +1,12 @@
 import React from 'react';
 
+import Section from 'root/components/Section';
 import Heading from 'root/components/Heading';
 import Text from 'root/components/Text';
 import Button from 'root/components/Button';
 
 import './index.css';
-import Section from '../Section';
+
 
 const Header = () => (
   <Section color="red" id="header">
