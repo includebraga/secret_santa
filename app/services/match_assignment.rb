@@ -1,16 +1,17 @@
 class MatchAssignment
   attr_reader :match, :receiver
 
-  def initialize(user)
+  def initialize(user, receiver = nil)
     @user = user
+    @receiver = receiver
     @success = false
   end
 
   def perform
     ActiveRecord::Base.transaction do
-      rollback!("user already has match") if user.matches.any?
+      run_existing_match_validations
 
-      @receiver = available_receiver or rollback!("no receiver available")
+      @receiver ||= available_receiver or rollback!("no receiver available")
       @match = create_match
       send_match_email
 
@@ -27,6 +28,12 @@ class MatchAssignment
   private
 
   attr_reader :user, :success
+
+  def run_existing_match_validations
+    rollback!("user already has match") if user.matches.any?
+
+    rollback!("receiver already has match") if receiver&.matches&.any?
+  end
 
   def available_receiver
     Receiver.left_joins(:matches).where(matches: { id: nil }).first
