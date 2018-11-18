@@ -38,7 +38,7 @@ Política de retenção.
   ficarão dados anónimos que permitam realizar um conjunto de estatísticas:
   - total de cartas;
   - tempo médio de entrega dos presentes;
-  - percentagem de prendas com e sem _rematch_;
+  - percentagem de prendas com e sem _rematch_ (à qual foi necessário reatribuir um novo Pai Natal);
 
 ## Contacto
 
