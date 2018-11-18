@@ -10,6 +10,8 @@
 
   @include Breakpoint-tabletAndAbove {
     width: $five-columns;
+
+    margin-left: auto;
   }
 
   @include Breakpoint-mobileOnly {
@@ -24,7 +26,12 @@
 }
 
 .title {
-  margin-bottom: $spacing-60;
+  margin-bottom: $spacing-56;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
 }
 
 .description {
