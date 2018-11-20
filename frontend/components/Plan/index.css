@@ -21,11 +21,6 @@
   }
 }
 
-.event {
-  display: flex;
-  flex-direction: column;
-}
-
 .description {
   margin-top: $spacing-28;
 
@@ -34,18 +29,32 @@
 
 .events {
   @include Breakpoint-tabletAndAbove {
-    width: $five-columns;
+    width: $seven-columns;
 
     margin-left: auto;
   }
 
   @include Breakpoint-mobileOnly {
-    margin: 0 auto;
-
     text-align: center;
   }
 
   > *:not(:last-child) {
     margin-bottom: $spacing-56;
   }
+}
+
+.snowflake-container {
+  width: $spacing-56;
+}
+
+.event {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  width: $five-columns;
 }

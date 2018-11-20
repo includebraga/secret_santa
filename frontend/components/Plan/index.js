@@ -16,8 +16,8 @@ const Plan = () => (
         </Heading>
       </div>
       <div styleName="events">
-        {eventsList.map(event => (
-          <Event key={event.day} {...event} />
+        {eventsList.map((event, index) => (
+          <Event key={event.day} {...event} index={index} />
         ))}
       </div>
     </div>
