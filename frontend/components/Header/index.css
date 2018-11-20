@@ -39,6 +39,7 @@
 .title {
   display: inline-flex;
   flex-direction: row;
+  align-items: baseline;
 
   @include Breakpoint-mobileOnly {
     flex-direction: column;

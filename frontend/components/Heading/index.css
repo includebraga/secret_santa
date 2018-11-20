@@ -6,7 +6,7 @@
 .root {
   position: relative;
 
-  display: inline;
+  display: inline-block;
 
   color: white;
 }
@@ -61,8 +61,9 @@
 .yellow {
   color: $yellow;
 }
+
 .underline {
-  padding-bottom: calc($spacing-12 + 4px);
+  padding-bottom: $spacing-12;
 
   border-bottom: solid $yellow 4px;
 }

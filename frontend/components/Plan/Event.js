@@ -7,7 +7,7 @@ import Text from 'root/components/Text';
 import './index.css';
 
 const Event = ({ day, title, description }) => (
-  <div id={day}>
+  <div styleName="event" id={day}>
     <Heading level="2" weight="bold" color="yellow">
       {day}
     </Heading>
