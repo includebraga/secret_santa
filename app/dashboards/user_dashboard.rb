@@ -18,7 +18,6 @@ class UserDashboard < Administrate::BaseDashboard
     name: Field::String,
     observations: Field::Text,
     confirmation_token: Field::String,
-    redeem_token: Field::String,
     match_notice_sent: Field::Boolean
   }.freeze
 
@@ -47,7 +46,6 @@ class UserDashboard < Administrate::BaseDashboard
     created_at
     updated_at
     confirmation_token
-    redeem_token
     match_notice_sent
   ].freeze
 

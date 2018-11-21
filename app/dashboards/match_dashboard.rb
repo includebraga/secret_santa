@@ -3,7 +3,7 @@ require "administrate/base_dashboard"
 class MatchDashboard < Administrate::BaseDashboard
   COLLECTION_FILTERS = {
     received: ->(resources) { resources.received },
-    not_received: ->(resources) { !resources.received }
+    not_received: ->(resources) { resources.not_received }
   }.freeze
 
   # ATTRIBUTE_TYPES
