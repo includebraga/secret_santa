@@ -7,9 +7,8 @@ import Button from 'root/components/Button';
 
 import './index.css';
 
-
 const Header = () => (
-  <Section color="red" id="header">
+  <Section color="red" id="header" snowflakes>
     <header styleName="title-container">
       <div styleName="title">
         <div styleName="secret-santa">

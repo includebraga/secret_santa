@@ -56,6 +56,10 @@
   @include Breakpoint-tabletAndAbove {
     margin-right: $spacing-28;
   }
+
+  @include Breakpoint-mobileOnly {
+    margin: auto;
+  }
 }
 
 .the-impossible {

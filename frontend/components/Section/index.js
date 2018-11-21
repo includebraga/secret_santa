@@ -9,16 +9,19 @@ export default class Section extends Component {
     children: PropTypes.node.isRequired,
     color: PropTypes.oneOf(['white', 'red']),
     id: PropTypes.string.isRequired,
+    snowflakes: PropTypes.bool,
   };
 
   static defaultProps = {
     color: 'white',
+    snowflakes: false,
   };
 
   render() {
-    const { children, color, id } = this.props;
+    const { children, color, id, snowflakes } = this.props;
     const styles = classNames('root', {
       [color]: true,
+      snowflakes,
     });
 
     return (
