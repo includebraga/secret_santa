@@ -6,22 +6,31 @@
 
 .root {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include Breakpoint-mobileOnly {
+    flex-direction: column;
+  }
 }
 
-.root > * {
+.inner-section {
+  display: flex;
+  flex-direction: column;
+
   @include Breakpoint-tabletAndAbove {
     width: $five-columns;
   }
 
   @include Breakpoint-mobileOnly {
+    width: 100%;
     margin: 0 auto;
 
     text-align: center;
   }
 }
 
-.root > *:not(:last-child) {
+.inner-section > *:not(:last-child) {
   margin-bottom: $spacing-56;
 }
 
@@ -29,6 +38,63 @@
   padding-bottom: $spacing-28;
 }
 
-.right {
-  margin-left: auto;
+.left-snowflakes {
+  display: flex;
+  justify-content: center;
+  width: $four-columns;
+
+  @include Breakpoint-mobileOnly {
+    width: 100%;
+    margin-bottom: $spacing-56;
+  }
+}
+
+.left-section-left-snowflake {
+  width: $spacing-72;
+  margin-right: $gutter;
+}
+
+.left-section-right-snowflake {
+  width: $spacing-56;
+  margin-top: 92px;
+}
+
+.top-snowflake {
+  width: $spacing-84;
+  padding-left: $gutter;
+  margin: 0 auto $spacing-12;
+
+  @include Breakpoint-tabletAndBelow {
+    display: none;
+  }
+}
+
+.right-snowflakes {
+  display: flex;
+  justify-content: space-evenly;
+  width: calc($five-columns - $gutter);
+
+  @include Breakpoint-tabletAndBelow {
+    display: none;
+  }
+}
+
+.right-section-left-snowflake {
+  width: $spacing-56;
+  margin-right: $gutter;
+}
+
+.right-section-right-snowflake {
+  width: $spacing-72;
+  margin-top: $spacing-92;
+}
+
+.closing {
+  margin-top: $spacing-56;
+
+  @include Breakpoint-mobileOnly {
+    width: 100%;
+
+    text-align: center;
+  }
 }
