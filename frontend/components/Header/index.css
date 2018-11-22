@@ -73,7 +73,7 @@
   background-color: $yellow;
 
   @include Breakpoint-mobileOnly {
-    width: 264px;
+    width: 220px;
     height: 80px;
 
     margin-top: $spacing-28;
