@@ -29,7 +29,7 @@ const Header = () => (
       </div>
       <div styleName="a-year-ago">
         <Text>
-          Há um ano ajudamos mais de 160 crianças e idosos a passar um Natal
+          Há um ano ajudamos mais de 160 jovens e idosos a passar um Natal
           mais feliz.
         </Text>
         <Text weight="bold">Este ano somos muitos mais.</Text>
