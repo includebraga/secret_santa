@@ -15,9 +15,7 @@ export default class Magic extends Component {
     quoteIndex: 0,
   };
 
-  constructor(props) {
-    super(props);
-
+  componentDidMount() {
     this.interval = setInterval(() => {
       this.setState(prevState => {
         const newIndex =
@@ -27,7 +25,7 @@ export default class Magic extends Component {
 
         return { quoteIndex: newIndex };
       });
-    }, 3500);
+    }, 4500);
   }
 
   render() {
