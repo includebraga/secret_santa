@@ -1,1 +1,9 @@
-= render_react_component(component: "ConfirmationsCreate", props: { username: @user.name, letter: convert_line_breaks_to_html(@receiver) }, prerender: true)
+= render_react_component(                                   \
+  component: "ConfirmationsCreate",                         \
+  props: {                                                  \
+    username: @user.name,                                   \
+    letter: convert_line_breaks_to_html(@match.receiver),   \
+    code: @match.code                                       \
+  },                                                        \
+  prerender: true                                           \
+)

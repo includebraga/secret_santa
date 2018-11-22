@@ -9,7 +9,7 @@ const events = [
     day: '24 de Novembro',
     title: 'Início de Recolha de Prendas',
     description:
-      'Após comprar a prenda poderás entregá-la num conjunto de locais a designar — fica atento às nossas redes sociais para novidades.',
+      'Após comprar a prenda poderás entregá-la num conjunto de locais onde nós estaremos — visita o nosso Facebook para saberes o local onde poderás entregar a prenda',
   },
   {
     day: '07 de Dezembro',

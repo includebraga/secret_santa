@@ -5,7 +5,7 @@ class Users::ConfirmationsController < ApplicationController
 
     if user_confirmation_flow.successful?
       @user = user_confirmation_flow.user
-      @receiver = user_confirmation_flow.receiver
+      @match = user_confirmation_flow.match
     elsif user_confirmation_flow.user_deleted?
       render "closed"
     else
