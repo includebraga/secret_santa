@@ -13,4 +13,8 @@ class Institution < ApplicationRecord
   def obfuscated_short_name
     Digest::SHA2.hexdigest(short_name)[0..5]
   end
+
+  def total_receivers
+    receivers.count
+  end
 end
