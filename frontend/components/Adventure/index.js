@@ -16,12 +16,12 @@ const Adventure = () => (
         </Heading>
         <div styleName="copy">
           <Text color="black">
-            Nós recolhemos cartas de crianças e idosos necessitados que se
+            Nós recolhemos cartas de jovens e idosos necessitados que se
             encontram ligados a instituições de Braga.
           </Text>
           <Text color="black">
             Tu inscreves-te na nossa plataforma, onde te será atribuída uma
-            carta destas crianças ou idosos a quem darás uma prenda que lhes
+            carta destas jovens ou idosos a quem darás uma prenda que lhes
             proporcionará um Natal mais feliz.
           </Text>
         </div>
