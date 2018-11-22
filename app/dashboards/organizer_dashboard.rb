@@ -21,7 +21,6 @@ class OrganizerDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :email,
-    :uuid,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -37,7 +36,6 @@ class OrganizerDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :email,
-    :uuid,
   ].freeze
 
   # COLLECTION_FILTERS

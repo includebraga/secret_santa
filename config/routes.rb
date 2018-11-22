@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :users, :receivers, :matches, :institutions
+    resources :users, :organizers, :receivers, :matches, :institutions
 
     post "/confirm/:id", to: "users#confirm", as: :users_confirmation
     post "/confirm/", to: "users#batch_confirm", as: :users_batch_confirmation

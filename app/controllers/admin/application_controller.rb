@@ -1,6 +1,6 @@
 module Admin
   class ApplicationController < Administrate::ApplicationController
-    before_action :authenticate_admin
+    before_action :authenticate_admin if %w[staging production].include? Rails.env
     before_action :set_default_locale
 
     def records_per_page
