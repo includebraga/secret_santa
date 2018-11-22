@@ -72,6 +72,8 @@
 
   background-color: $yellow;
 
+  text-align: center;
+
   @include Breakpoint-mobileOnly {
     width: 220px;
     height: 80px;
