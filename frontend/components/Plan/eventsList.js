@@ -1,6 +1,6 @@
 const events = [
   {
-    day: '22 de Novembro',
+    day: '23 de Novembro',
     title: 'Abertura das Inscrições',
     description:
       'As inscrições na nossa plataforma abrem e assim que te inscreveres terás acesso à carta da pessoa que farás feliz este Natal.',
