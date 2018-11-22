@@ -4,6 +4,7 @@ import Section from 'root/components/Section';
 import Heading from 'root/components/Heading';
 import Text from 'root/components/Text';
 import Button from 'root/components/Button';
+import Magic from './Magic';
 
 import './index.css';
 
@@ -16,9 +17,7 @@ const Header = () => (
             Secret Santa
           </Heading>
         </div>
-        <div styleName="the-impossible">
-          <Heading weight="bold">O impossível acontece</Heading>
-        </div>
+        <Magic />
       </div>
     </header>
     <div styleName="description">

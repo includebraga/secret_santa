@@ -62,14 +62,41 @@
   }
 }
 
-.the-impossible {
+.magic {
+  display: inline;
+
+  width: 354px;
+  height: 40px;
+
   padding: $spacing-16 $spacing-28 $spacing-16 $spacing-28;
 
   background-color: $yellow;
 
   @include Breakpoint-mobileOnly {
+    width: 264px;
+    height: 80px;
+
     margin-top: $spacing-28;
   }
+}
+
+@keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.magic > * {
+  animation: fadeinout 3.5s infinite;
 }
 
 .description {
