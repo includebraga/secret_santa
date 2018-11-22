@@ -12,6 +12,8 @@ class InstitutionDashboard < Administrate::BaseDashboard
     name: Field::String,
     short_name: Field::String,
     total_receivers: Field::Number,
+    total_receivers_with_gift: Field::Number,
+    total_receivers_without_gift: Field::Number,
     receivers: Field::HasMany.with_options(limit: 20),
     created_at: Field::DateTime,
     updated_at: Field::DateTime
@@ -27,7 +29,8 @@ class InstitutionDashboard < Administrate::BaseDashboard
     name
     short_name
     total_receivers
-    created_at
+    total_receivers_with_gift
+    total_receivers_without_gift
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES

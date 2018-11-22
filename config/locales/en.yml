@@ -30,7 +30,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: 'Hello world'
   administrate:
     actions:
-      show_resource: "Show - %{name}"
+      show_resource: 'Show - %{name}'
+  helpers:
+    label:
+      institution:
+        total_receivers_with_gift: Receivers with gift
+        total_receivers_without_gift: Receivers without gift

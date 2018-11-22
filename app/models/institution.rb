@@ -1,5 +1,6 @@
 class Institution < ApplicationRecord
   has_many :receivers
+  has_many :matches, through: :receivers
 
   validates :name,
     presence: true,
@@ -16,5 +17,13 @@ class Institution < ApplicationRecord
 
   def total_receivers
     receivers.count
+  end
+
+  def total_receivers_with_gift
+    matches.received.count
+  end
+
+  def total_receivers_without_gift
+    receivers.count - matches.received.count
   end
 end
