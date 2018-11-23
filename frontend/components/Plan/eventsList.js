@@ -25,7 +25,7 @@ const events = [
   },
   {
     day: '16 de Dezembro',
-    title: 'Fim do Rematches',
+    title: 'Fim dos Rematches',
     description:
       'A segunda fase de inscrições é mais curta e terás apenas uma semana para fazer a entrega da prenda. Os locais de entrega serão os mesmos que da primeira fase.',
   },
