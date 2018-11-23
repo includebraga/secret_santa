@@ -48,7 +48,7 @@ const Adventure = () => (
             </div>
           </div>
           <Text color="black">
-            A carta contêm os gostos e sonhos da pessoa que a escreveu sem
+            A carta contém os gostos e sonhos da pessoa que a escreveu sem
             nunca revelar qualquer informação pessoal.
           </Text>
           <Text color="black">
