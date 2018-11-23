@@ -15,7 +15,7 @@ const ConfirmationsClosedPage = () => (
       <div styleName="text">
         <Text color="black">Lamentamos imenso esta situação!</Text>
         <Text color="black">
-          Infelizmente já temos registos suficientes para as jovens e idosos
+          Infelizmente já temos registos suficientes para os jovens e idosos
           que reunimos de momento.
         </Text>
         <Text color="black">

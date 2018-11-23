@@ -21,7 +21,7 @@ const Adventure = () => (
           </Text>
           <Text color="black">
             Tu inscreves-te na nossa plataforma, onde te será atribuída uma
-            carta destas jovens ou idosos a quem darás uma prenda que lhes
+            carta destes jovens ou idosos a quem darás uma prenda que lhes
             proporcionará um Natal mais feliz.
           </Text>
         </div>
@@ -49,7 +49,7 @@ const Adventure = () => (
           </div>
           <Text color="black">
             A carta contém os gostos e sonhos da pessoa que a escreveu sem
-            nunca, sem nunca revelar qualquer informação pessoal.
+            nunca revelar qualquer informação pessoal.
           </Text>
           <Text color="black">
             Durante vários dias estaremos a recolher as prendas em vários pontos
