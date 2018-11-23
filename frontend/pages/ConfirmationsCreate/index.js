@@ -27,7 +27,7 @@ const ConfirmationsCreatePage = ({ username, letter, code }) => (
           desta carta no teu email se a quiseres voltar a consultar.
         </Text>
         <Text color="black">
-          As cartas contém informações privadas por isso não partilhes a tua com
+          As cartas contêm informações privadas por isso não partilhes a tua com
           mais ninguém. Em especial, não partilhes nas redes sociais.
         </Text>
         <Text color="black">
