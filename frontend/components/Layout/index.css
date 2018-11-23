@@ -2,6 +2,12 @@
 @import '../../styles/layout.css';
 
 .root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner {
   @include Breakpoint-desktopOnly {
     max-width: $content-width;
 
@@ -9,6 +15,8 @@
   }
 
   @include Breakpoint-tabletAndBelow {
+    max-width: calc($content-width / 2);
+
     margin: $spacing-84 $gutter $spacing-84 $gutter;
   }
 }

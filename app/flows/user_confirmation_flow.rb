@@ -1,5 +1,5 @@
 class UserConfirmationFlow
-  attr_reader :user, :match, :receiver
+  attr_reader :user, :match
 
   def initialize(user_token)
     @user_token = user_token
@@ -13,7 +13,7 @@ class UserConfirmationFlow
 
       rollback!("registrations closed", cleanup: true) unless Settings.registrations_enabled?
 
-      @receiver = receiver_from_match or rollback!("no receivers available", cleanup: true)
+      @match = assign_match or rollback!("no receivers available", cleanup: true)
 
       @success = true
     end
@@ -42,13 +42,13 @@ class UserConfirmationFlow
     user_confirmation.user if user_confirmation.successful?
   end
 
-  def receiver_from_match
+  def assign_match
     match_assignment = MatchAssignment.new(user)
     match_assignment.perform
 
     Settings.put(:REGISTRATIONS_ENABLED, false) if Match.count == Receiver.count
 
-    match_assignment.receiver if match_assignment.successful?
+    match_assignment.match if match_assignment.successful?
   end
 
   def cleanup

@@ -65,15 +65,17 @@
 .magic {
   display: inline;
 
-  width: 354px;
+  width: 360px;
   height: 40px;
 
   padding: $spacing-16 $spacing-28 $spacing-16 $spacing-28;
 
   background-color: $yellow;
 
+  text-align: center;
+
   @include Breakpoint-mobileOnly {
-    width: 264px;
+    width: 220px;
     height: 80px;
 
     margin-top: $spacing-28;
