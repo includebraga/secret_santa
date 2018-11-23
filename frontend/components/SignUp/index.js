@@ -17,15 +17,14 @@ const SignUp = () => (
       </div>
       <Text color="black">
         Para começar a nossa aventura tudo o que precisamos é do teu e-mail e do
-        teu nome. As inscrições abrem a 15 de Novembro.
+        teu nome!
       </Text>
       <Text color="black">
         Vais receber um e-mail de confirmação, com instruções para os próximos
         passos.
       </Text>
       <Text color="black">
-        Até lá mantém esse espírito bem quentinho para ajudares os que precisam
-        de ti.
+        Ajuda-nos a iluminar o Natal dos que precisam!
       </Text>
     </div>
     <SignUpForm />
