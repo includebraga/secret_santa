@@ -57,6 +57,11 @@ export default class SignUpForm extends Component {
               onChange={this.handleChange}
             />
           </label>
+          <div styleName="policies-container">
+            <a styleName="policies" href="/policies/users/pt">
+              * O que fazem com os meus dados?
+            </a>
+          </div>
         </div>
         <div styleName="join-us">
           <Button disabled={!this.formIsValid()} />
