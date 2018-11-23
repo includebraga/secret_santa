@@ -65,7 +65,7 @@
 .magic {
   display: inline;
 
-  width: 354px;
+  width: 360px;
   height: 40px;
 
   padding: $spacing-16 $spacing-28 $spacing-16 $spacing-28;

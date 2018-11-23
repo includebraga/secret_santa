@@ -14,7 +14,10 @@ class MatchDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     user: Field::BelongsTo,
-    receiver: Field::BelongsTo,
+    receiver: Field::BelongsTo.with_options(
+      searchable: true,
+      seachable_field: "email",
+    ),
     id: Field::Number,
     code: Field::String,
     created_at: Field::DateTime,
