@@ -8,8 +8,8 @@ class SessionsController < ActionController::Base
       session[:uuid] = admin.uuid
       redirect_to admin_root_url
     else
-      Slack::MessageDelivery.new("attempted access to admin panel by: #{admin.email}").perform
-      redirect_to new_session_url, alert: "you can't do that mate. we're telling"
+      Slack::MessageDelivery.new("Attempted access to admin panel by: #{admin.email}").perform
+      redirect_to new_session_url, alert: "you can't do that mate. i'm telling."
     end
   end
 
