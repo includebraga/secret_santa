@@ -15,7 +15,7 @@ const events = [
     day: '07 de Dezembro',
     title: 'Fim da Recolha de Prendas',
     description:
-      'Tens até dia 30 para proceder à entrega da prenda. Após esta data, não poderemos aceitar mais nenhuma entrega.',
+      'Tens até dia 7 para proceder à entrega da prenda. Após esta data, não poderemos aceitar mais nenhuma entrega.',
   },
   {
     day: '08 de Dezembro',
@@ -33,7 +33,7 @@ const events = [
     day: '17 de Dezembro',
     title: 'Início das Entregas',
     description:
-      'Missão cumprida! Os Pais Natais vão para a estrada e durante 14 dias vão fazer entregas em várias instituições para garantir um Natal recheado de alegria e carinho.',
+      'Missão cumprida! Os Pais Natais vão para a estrada e durante 7 dias vão fazer entregas em várias instituições para garantir um Natal recheado de alegria e carinho.',
   },
 ];
 
