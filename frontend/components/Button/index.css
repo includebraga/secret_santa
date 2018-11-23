@@ -7,8 +7,12 @@ $button-offset: 4px;
 .root {
   position: relative;
 
+  outline: none;
+
   .tag {
     cursor: pointer;
+
+    outline: none;
 
     text-decoration: none;
   }
@@ -25,6 +29,8 @@ $button-offset: 4px;
 
   color: inherit;
 
+  outline: none;
+
   transition: transform 0.3s ease-in-out;
 }
 
@@ -38,9 +44,12 @@ $button-offset: 4px;
 
   background-color: $yellow;
   opacity: 0.5;
+
+  outline: none;
 }
 
-.root:hover {
+.root:hover,
+.root:focus {
   .content {
     transform: translate($button-offset, $button-offset);
   }
