@@ -9,6 +9,9 @@ module Admin
       @normal_receivers = analytics.normal_receivers
       @golden_receivers = analytics.golden_receivers
       @total_receivers = analytics.total_receivers
+      @unconfirmed_users = analytics.unconfirmed_users
+      @confirmed_users = analytics.confirmed_users
+      @total_users = analytics.total_users
     end
   end
 end

@@ -13,6 +13,8 @@ class Slack::ProgressUpdate
     @successful
   end
 
+  # rubocop:disable Metrics/MethodLength
+  # rubocop:disable Metrics/AbcSize
   def reply
     @_reply ||= [
       "Gifts Received - #{analytics.gifts_received}",
@@ -21,8 +23,13 @@ class Slack::ProgressUpdate
       "Normal Receivers - #{analytics.normal_receivers}",
       "Golden Receivers - #{analytics.golden_receivers}",
       "Total Receivers - #{analytics.total_receivers}",
+      "Unconfirmed Users - #{analytics.unconfirmed_users}",
+      "Confirmed Users - #{analytics.confirmed_users}",
+      "Total Users - #{analytics.total_users}",
     ].join("\n")
   end
+  # rubocop:enable Metrics/MethodLength
+  # rubocop:enable Metrics/AbcSize
 
   private
 
