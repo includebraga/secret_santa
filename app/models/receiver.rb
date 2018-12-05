@@ -1,5 +1,6 @@
 class Receiver < ApplicationRecord
   has_many :matches
+  has_many :unreceived_matches
   has_many :users, through: :matches
   belongs_to :institution
 
