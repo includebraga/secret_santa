@@ -9,4 +9,8 @@ class UnreceivedMatch < ApplicationRecord
   validates :receiver_id, presence: true
   validates :code, presence: true
   validates :received, inclusion: { in: [true, false] }
+
+  scope :received_late, -> { where(received: true) }
+  scope :missing, -> { where(received: false) }
+  scope :not_received, -> { where(received: false) }
 end

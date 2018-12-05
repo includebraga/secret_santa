@@ -4,7 +4,9 @@ module Admin
       analytics = Analytics.build
 
       @gifts_received = analytics.gifts_received
+      @gifts_received_late = analytics.gifts_received_late
       @gifts_missing = analytics.gifts_missing
+      @gifts_missing_before_rematch = analytics.gifts_missing_before_rematch
       @gifts_matched = analytics.gifts_matched
       @normal_receivers = analytics.normal_receivers
       @golden_receivers = analytics.golden_receivers
