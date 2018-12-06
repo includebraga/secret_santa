@@ -17,6 +17,7 @@ class CleanUnreceivedMatches
         code: match.code,
         received: false,
       )
+
       match.destroy!
     end
   end

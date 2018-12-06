@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :users, :organizers, :receivers, :matches, :institutions
+    resources :users, :organizers, :receivers, :matches
+    resources :unreceived_matches, except: %i[create new]
+    resources :institutions
 
     post "/confirm/:id", to: "users#confirm", as: :users_confirmation
     post "/confirm/", to: "users#batch_confirm", as: :users_batch_confirmation
     post "/set_registrations", to: "users#set_registrations", as: :users_set_registrations
     post "/institution/:institution_id/import_receivers", to: "institutions#import_receivers", as: :institutions_import_receivers
     post "/match/:match_id/received", to: "matches#received", as: :match_received
+    post "/unreceived_match/:unreceived_match_id/received", to: "unreceived_matches#received", as: :unreceived_match_received
 
     root "pages#index"
   end

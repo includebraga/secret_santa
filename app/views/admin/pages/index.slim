@@ -4,60 +4,74 @@
 .main-content__body
   strong
     ' Gifts received:
-  = @gifts_received
+  = @analytics.gifts_received
+
+  br
+  br
+
+  strong
+    ' Gifts received late:
+  = @analytics.gifts_received_late
 
   br
   br
 
   strong
     ' Gifts matched:
-  = @gifts_matched
+  = @analytics.gifts_matched
+
+  br
+  br
+
+  strong
+    ' Gifts missing before rematch:
+  = @analytics.gifts_missing_before_rematch
 
   br
   br
 
   strong
     ' Gifts missing:
-  = @gifts_missing
+  = @analytics.gifts_missing
 
   br
   br
 
   strong
     ' Normal receivers:
-  = @normal_receivers
+  = @analytics.normal_receivers
 
   br
   br
 
   strong
     ' Golden receivers:
-  = @golden_receivers
+  = @analytics.golden_receivers
 
   br
   br
 
   strong
     ' Total receivers:
-  = @total_receivers
+  = @analytics.total_receivers
 
   br
   br
 
   strong
     ' Unconfirmed users:
-  = @unconfirmed_users
+  = @analytics.unconfirmed_users
 
   br
   br
 
   strong
     ' Confirmed users:
-  = @confirmed_users
+  = @analytics.confirmed_users
 
   br
   br
 
   strong
     ' Total users:
-  = @total_users
+  = @analytics.total_users

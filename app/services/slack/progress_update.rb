@@ -18,6 +18,8 @@ class Slack::ProgressUpdate
   def reply
     @_reply ||= [
       "Gifts Received - #{analytics.gifts_received}",
+      "Gifts Received Late - #{analytics.gifts_received_late}",
+      "Gifts Missing Before Rematch - #{analytics.gifts_missing_before_rematch}",
       "Gifts Missing - #{analytics.gifts_missing}",
       "Gifts Matched - #{analytics.gifts_matched}",
       "Normal Receivers - #{analytics.normal_receivers}",
