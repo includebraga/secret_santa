@@ -16,7 +16,7 @@ class UserDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     name: Field::String,
-    observations: Field::Text,
+    observations: Field::Text.with_options(searchable: true),
     confirmation_token: Field::String,
     match_notice_sent: Field::Boolean
   }.freeze

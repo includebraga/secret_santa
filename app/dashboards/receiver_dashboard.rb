@@ -26,7 +26,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
     golden: Field::Boolean,
     age: Field::Number,
     gender: SelectField.with_options(choices: Receiver.genders.keys),
-    observations: Field::Text,
+    observations: Field::Text.with_options(searchable: true),
     created_at: Field::DateTime,
     updated_at: Field::DateTime
   }.freeze
