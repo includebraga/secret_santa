@@ -13,7 +13,10 @@ class UnreceivedMatchDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    user: Field::BelongsTo,
+    user: Field::BelongsTo.with_options(
+      searchable: true,
+      searchable_field: "email",
+    ),
     receiver: Field::BelongsTo,
     id: Field::Number,
     code: Field::String,
