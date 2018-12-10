@@ -6,4 +6,32 @@ RSpec.describe Receiver, type: :model do
 
   it { should validate_presence_of(:letter) }
   it { should validate_presence_of(:institution_id) }
+
+  it "should have a gift" do
+    receiver = create(:receiver)
+    create(:match, receiver: receiver, received: true)
+
+    expect(receiver.number_of_gifts).to eq(1)
+  end
+
+  it "should have a gift" do
+    receiver = create(:receiver)
+    create(:unreceived_match, receiver: receiver, received: true)
+
+    expect(receiver.number_of_gifts).to eq(1)
+  end
+
+  it "should have a gift" do
+    receiver = create(:receiver)
+    create(:unreceived_match, receiver: receiver, received: true)
+    create(:match, receiver: receiver, received: true)
+
+    expect(receiver.number_of_gifts).to eq(2)
+  end
+
+  it "should not have a gift" do
+    receiver = create(:receiver)
+
+    expect(receiver.number_of_gifts).to eq(0)
+  end
 end

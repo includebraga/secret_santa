@@ -26,6 +26,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
     golden: Field::Boolean,
     age: Field::Number,
     gender: SelectField.with_options(choices: Receiver.genders.keys),
+    number_of_gifts: Field::Number,
     observations: Field::Text.with_options(searchable: true),
     created_at: Field::DateTime,
     updated_at: Field::DateTime
@@ -41,6 +42,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
     name
     institution
     golden
+    number_of_gifts
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -54,6 +56,7 @@ class ReceiverDashboard < Administrate::BaseDashboard
     golden
     letter
     observations
+    number_of_gifts
     matches
     unreceived_matches
     created_at

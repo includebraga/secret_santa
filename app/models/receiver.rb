@@ -16,4 +16,8 @@ class Receiver < ApplicationRecord
 
   scope :golden, -> { where(golden: true) }
   scope :normal, -> { where(golden: false) }
+
+  def number_of_gifts
+    matches.received.count + unreceived_matches.received_late.count
+  end
 end
