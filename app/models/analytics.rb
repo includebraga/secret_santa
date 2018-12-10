@@ -6,6 +6,7 @@ class Analytics
     :gifts_missing,
     :gifts_matched,
     :gifts_missing_before_rematch,
+    :matches_needed,
     :normal_receivers,
     :golden_receivers,
     :total_receivers,
@@ -17,11 +18,12 @@ class Analytics
   # rubocop:disable Metrics/AbcSize
   def self.build
     new(
-      gifts_received: Match.received.count,
+      gifts_received: Match.received.count + UnreceivedMatch.received_late.count,
       gifts_received_late: UnreceivedMatch.received_late.count,
       gifts_missing: Match.missing.count,
       gifts_missing_before_rematch: UnreceivedMatch.missing.count,
       gifts_matched: Match.count,
+      matches_needed: Receiver.count - Match.count,
       normal_receivers: Receiver.normal.count,
       golden_receivers: Receiver.golden.count,
       total_receivers: Receiver.count,
