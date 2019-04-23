@@ -23,16 +23,16 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.7.0",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-react": "^7.11.1",
-    "stylelint": "^9.6.0",
-    "stylelint-config-prettier": "^4.0.0",
-    "stylelint-order": "^1.0.0",
-    "webpack-dev-server": "2.11.2"
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "stylelint": "^10.0.1",
+    "stylelint-config-prettier": "^5.1.0",
+    "stylelint-order": "^3.0.0",
+    "webpack-dev-server": "3.3.1"
   }
 }
