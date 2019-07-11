@@ -8,31 +8,31 @@
     "lint-styles-fix": "stylelint \"frontend/**/*.css\" \"app/**/*.scss\" --fix"
   },
   "dependencies": {
-    "@rails/webpacker": "3.5",
-    "babel-plugin-react-css-modules": "^3.4.2",
+    "@rails/webpacker": "4.0.7",
+    "babel-plugin-react-css-modules": "^5.2.6",
     "babel-preset-react": "^6.24.1",
     "classnames": "^2.2.6",
     "postcss-calc": "^7.0.1",
     "postcss-modules": "^1.4.1",
-    "precss": "^3.1.2",
-    "prop-types": "^15.6.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-svg-loader": "^2.1.0",
-    "react_ujs": "^2.4.4"
+    "precss": "^4.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-svg-loader": "^3.0.3",
+    "react_ujs": "^2.5.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.12.4",
-    "stylelint": "^10.0.1",
-    "stylelint-config-prettier": "^5.1.0",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
     "stylelint-order": "^3.0.0",
-    "webpack-dev-server": "3.3.1"
+    "webpack-dev-server": "3.7.2"
   }
 }
